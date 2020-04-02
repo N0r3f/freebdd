@@ -132,9 +132,7 @@ select{vertical-align:middle}
     min-height: 140px;
     margin: 0px;
 	border-radius: 0 0 0px 0px;
-	opacity:100%;
-	
-	
+	opacity:100%;	
 }
 .windowHeader > strong {
     float: left;
@@ -143,6 +141,11 @@ select{vertical-align:middle}
     font-size: 17px;
 }
 
+/*----------modif Matt----------*/
+.window iframe {
+  max-height: 370px;
+}
+/*----------fin modif Matt----------*/
 
 div > button {
 	display: block;
