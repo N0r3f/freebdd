@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../css/freeBDD/jquery-ui.css">
+	<link rel="canonical" href="https://internet.org" />
+	<script src="../js/freeBDD/jquery-1.12.4.js"></script>
+	<script src="../js/freeBDD/jquery-ui.js"></script>
+	<script src="../js/script.js"></script>	
+	<link rel="stylesheet" type="text/css" href="../css/freeBDD/style.css" />
+	<title>Défiweb</title>
+</head>
+<body>
+<div id="desktop">
+
+	
+		<div class="window closed" data-title="HTML5">
+		<h1>HyperText Markup Language</h1>
+		<iframe 
+ src="https://jaetheme.com/balises-html5/"
+ width="100%" height="750vh"
+ ></iframe> 
+		</div>
+		<div class="window closed" data-title="CSS3">
+		<h1>Cascade Style Sheet</h1>
+		<iframe 
+ src="http://stylescss.free.fr/	"
+ width="100%" height="750vh"
+ ></iframe>
+	</div>
+		<div class="window closed" data-title="Javascript">
+			
+		</div>
+		<div class="window closed" data-title="PHP">
+			
+		</div>
+		<div class="window" data-title="Bienvenue!">
+			<h1>Défiweb c'est quoi?</h1>
+			<p>Cliquez sur les icônes pour ouvrir les fenêtres.</p>
+			<p>Vous pouvez les agrandir ou les réduire sur la barre des tâches.</p>
+			<p>Vous pouvez à présent fermer cette fenêtre.</p>
+			<hr />
+			<p><strong>Ce site est déployé dans le cadre du chantier d'insertion Défiweb, initié par la Ligue de l'enseignement de l'Hérault.</strong></p>
+		</div>
+		
+		<div id="fullscreen"><button id="fullscreen">
+ <input type="image" src="../img/fullscreen.svg" name="fullscreen" id="fullscreen">
+<script>
+ 
+function fullscreen(element) {
+   return (element.requestFullscreen ||
+      element.webkitRequestFullscreen ||
+      element.mozRequestFullScreen ||
+      element.msRequestFullscreen).call(element);
+} 
+  
+var $bouton = document.getElementById('fullscreen')
+ 
+$bouton.addEventListener('click', function() {
+   
+   fullscreen(document.body);
+   if (document.fullscreenElement) { 
+    document.exitFullscreen() 
+  } else { 
+    document.documentElement.requestFullscreen() 
+   
+}});
+ 
+</script>
+</button></div>
+				
+		<div id="taskbar">		
+		</div>
+		
+		<div id="icons">
+			<a class="openWindow" class="transformation" data-id="0"><img src="../img/html5-brands.svg" alt="HTML5" title="HTML5"/></a>
+			<a class="openWindow" data-id="1"><img src="../img/css3-alt-brands.svg" alt="CSS3" title="CSS3"/></a>
+			<a class="openWindow" data-id="2"><img src="../img/js-square-brands.svg" alt="Javascript" title="Javascript"/></a>
+			<a class="openWindow" data-id="3"><img src="../img/php-brands.svg" alt="PHP" title="PHP"/></a>
+			<a class="openWindow" data-id="4"><img src="../img/home-solid.svg" alt="HOME" title="HOME"/></a>
+		</div>	
+	</div>
+	
+	
+ 		
+</body>
+
+</html>
