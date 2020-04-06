@@ -1,0 +1,1327 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<pays>
+	<departement id="D01">
+		<no-dept>01</no-dept>
+		<image-carte>dept_map_01.png</image-carte>
+		<nom>Ain</nom>
+		<url>http://fr.wikipedia.org/wiki/Ain_(d%C3%A9partement)</url>
+		<surface>5762</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Bourg-en-Bresse</chef-lieu>
+		<nom-region>Rhône-Alpes</nom-region>
+		<villes>
+			<ville type="sous-prefecture">Belley</ville>
+			<ville type="prefecture">Bourg-en-Bresse</ville>
+			<ville type="sous-prefecture">Gex</ville>
+			<ville type="sous-prefecture">Nantua</ville>
+		</villes>
+	</departement>
+	<departement id="D02">
+		<no-dept>02</no-dept>
+		<image-carte>dept_map_02.png</image-carte>
+		<nom>Aisne</nom>
+		<url>http://fr.wikipedia.org/wiki/Aisne_(d%C3%A9partement)</url>
+		<surface>7369</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Laon</chef-lieu>
+		<nom-region>Picardie</nom-region>
+		<villes>
+			<ville type="sous-prefecture">Château-Thierry</ville>
+			<ville type="prefecture">Laon</ville>
+			<ville type="sous-prefecture">Saint-Quentin</ville>
+			<ville type="sous-prefecture">Soissons</ville>
+			<ville type="sous-prefecture">Vervins</ville>
+		</villes>
+	</departement>
+	<departement id="D03">
+		<no-dept>03</no-dept>
+		<image-carte>dept_map_03.png</image-carte>
+		<nom>Allier </nom>
+		<url>http://fr.wikipedia.org/wiki/Allier_(d%C3%A9partement)</url>
+		<surface>7340</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Moulins</chef-lieu>
+		<nom-region>Auvergne</nom-region>
+		<villes>
+			<ville type="sous-prefecture">Montluçon</ville>
+			<ville type="prefecture">Moulins</ville>
+			<ville type="sous-prefecture">Vichy</ville>
+		</villes>
+	</departement>
+	<departement id="D04">
+		<no-dept>04</no-dept>
+		<image-carte>dept_map_04.png</image-carte>
+		<nom>Alpes-de-Haute-Provence</nom>
+		<url>http://fr.wikipedia.org/wiki/Alpes-de-Haute-Provence</url>
+		<surface>6925</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Digne</chef-lieu>
+		<nom-region>Provence-Alpes-Côte d'Azur</nom-region>
+		<villes>
+			<ville type="sous-prefecture">Barcelonnette</ville>
+			<ville type="sous-prefecture">Castellane</ville>
+			<ville type="prefecture">Digne-les-Bains</ville>
+			<ville type="sous-prefecture">Forcalquier</ville>
+		</villes>
+	</departement>
+	<departement id="D05">
+		<no-dept>05</no-dept>
+		<image-carte>dept_map_05.png</image-carte>
+		<nom>Alpes (Hautes)</nom>
+		<url>http://fr.wikipedia.org/wiki/Hautes-Alpes</url>
+		<surface>5549</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Gap</chef-lieu>
+		<nom-region>Provence-Alpes-Côte d'Azur</nom-region>
+		<villes>
+			<ville type="sous-prefecture">Briançon</ville>
+			<ville type="prefecture">Gap</ville>
+		</villes>
+	</departement>
+	<departement id="D06">
+		<no-dept>06</no-dept>
+		<image-carte>dept_map_06.png</image-carte>
+		<nom>Alpes-Maritimes</nom>
+		<url>http://fr.wikipedia.org/wiki/Alpes-Maritimes</url>
+		<surface>4299</surface>
+		<date-creation>1860-06-14</date-creation>
+		<chef-lieu>Nice</chef-lieu>
+		<nom-region>Provence-Alpes-Côte d'Azur</nom-region>
+		<villes>
+			<ville type="sous-prefecture">Grasse</ville>
+			<ville type="prefecture">Nice</ville>
+		</villes>
+	</departement>
+	<departement id="D07">
+		<no-dept>07</no-dept>
+		<image-carte>dept_map_07.png</image-carte>
+		<nom>Ardéche</nom>
+		<url>http://fr.wikipedia.org/wiki/Ard%C3%A8che_(d%C3%A9partement)</url>
+		<surface>5529</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Privas</chef-lieu>
+		<nom-region>Rhône-Alpes</nom-region>
+		<villes>
+			<ville type="sous-prefecture">Largentière</ville>
+			<ville type="prefecture">Privas</ville>
+			<ville type="sous-prefecture">Tournon-sur-Rhône</ville>
+		</villes>
+	</departement>
+	<departement id="D08">
+		<no-dept>08</no-dept>
+		<image-carte>dept_map_08.png</image-carte>
+		<nom>Ardennes</nom>
+		<url>http://fr.wikipedia.org/wiki/Ardennes_(d%C3%A9partement)</url>
+		<surface>5229</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Charleville-Mézières</chef-lieu>
+		<nom-region>Champagne-Ardenne</nom-region>
+		<villes>
+			<ville type="prefecture">Charleville-Mézières</ville>
+			<ville type="sous-prefecture">Rethel</ville>
+			<ville type="sous-prefecture">Sedan</ville>
+			<ville type="sous-prefecture">Vouziers</ville>
+		</villes>
+	</departement>
+	<departement id="D09">
+		<no-dept>09</no-dept>
+		<image-carte>dept_map_09.png</image-carte>
+		<nom>Ariége</nom>
+		<url>http://fr.wikipedia.org/wiki/Ari%C3%A8ge_(d%C3%A9partement)</url>
+		<surface>4890</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Foix</chef-lieu>
+		<nom-region>Midi-Pyrénées</nom-region>
+		<villes>
+			<ville type="prefecture">Foix</ville>
+			<ville type="sous-prefecture">Pamiers</ville>
+			<ville type="sous-prefecture">Saint-Girons</ville>
+		</villes>
+	</departement>
+	<departement id="D10">
+		<no-dept>10</no-dept>
+		<image-carte>dept_map_10.png</image-carte>
+		<nom>Aube</nom>
+		<url>http://fr.wikipedia.org/wiki/Aube_(d%C3%A9partement)</url>
+		<surface>6004</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Troyes</chef-lieu>
+		<nom-region>Champagne-Ardenne</nom-region>
+		<villes>
+			<ville type="sous-prefecture">Bar-sur-Aube</ville>
+			<ville type="sous-prefecture">Nogent-sur-Seine</ville>
+			<ville type="prefecture">Troyes</ville>
+		</villes>
+	</departement>
+	<departement id="D11">
+		<no-dept>11</no-dept>
+		<image-carte>dept_map_11.png</image-carte>
+		<nom>Aude</nom>
+		<url>http://fr.wikipedia.org/wiki/Aude_(d%C3%A9partement)</url>
+		<surface>6139</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Carcassonne</chef-lieu>
+		<nom-region>Languedoc-Roussillon</nom-region>
+		<villes>
+			<ville type="prefecture">Carcassonne</ville>
+			<ville type="sous-prefecture">Limoux</ville>
+			<ville type="sous-prefecture">Narbonne</ville>
+		</villes>
+	</departement>
+	<departement id="D12">
+		<no-dept>12</no-dept>
+		<image-carte>dept_map_12.png</image-carte>
+		<nom>Aveyron</nom>
+		<url>http://fr.wikipedia.org/wiki/Aveyron_(d%C3%A9partement)</url>
+		<surface>8735</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Rodez</chef-lieu>
+		<nom-region>Midi-Pyrénées</nom-region>
+		<villes>
+			<ville type="sous-prefecture">Millau</ville>
+			<ville type="prefecture">Rodez</ville>
+			<ville type="sous-prefecture">Villefranche-de-Rouergue</ville>
+		</villes>
+	</departement>
+	<departement id="D13">
+		<no-dept>13</no-dept>
+		<image-carte>dept_map_13.png</image-carte>
+		<nom>Bouches-du-Rhône</nom>
+		<url>http://fr.wikipedia.org/wiki/Bouches-du-Rh%C3%B4ne</url>
+		<surface>5087</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Marseille</chef-lieu>
+		<nom-region>Provence-Alpes-Côte d'Azur</nom-region>
+		<villes>
+			<ville type="sous-prefecture">Aix-en-Provence</ville>
+			<ville type="sous-prefecture">Arles</ville>
+			<ville type="sous-prefecture">Istres</ville>
+			<ville type="prefecture">Marseille</ville>
+		</villes>
+	</departement>
+	<departement id="D14">
+		<no-dept>14</no-dept>
+		<image-carte>dept_map_14.png</image-carte>
+		<nom>Calvados</nom>
+		<url>http://fr.wikipedia.org/wiki/Calvados_(d%C3%A9partement)</url>
+		<surface>5548</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Caen</chef-lieu>
+		<nom-region>Basse-Normandie</nom-region>
+		<villes>
+			<ville type="sous-prefecture">Bayeux</ville>
+			<ville type="prefecture">Caen</ville>
+			<ville type="sous-prefecture">Lisieux</ville>
+			<ville type="sous-prefecture">Vire</ville>
+		</villes>
+	</departement>
+	<departement id="D15">
+		<no-dept>15</no-dept>
+		<image-carte>dept_map_15.png</image-carte>
+		<nom>Cantal</nom>
+		<url>http://fr.wikipedia.org/wiki/Cantal_%28d%C3%A9partement%29</url>
+		<surface>5726</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Aurillac</chef-lieu>
+		<nom-region>Auvergne</nom-region>
+		<villes>
+			<ville type="prefecture">Aurillac</ville>
+			<ville type="sous-prefecture">Mauriac</ville>
+			<ville type="sous-prefecture">Saint-Flour</ville>
+		</villes>
+	</departement>
+	<departement id="D16">
+		<no-dept>16</no-dept>
+		<image-carte>dept_map_16.png</image-carte>
+		<nom>Charente</nom>
+		<url>http://fr.wikipedia.org/wiki/Charente_(d%C3%A9partement)</url>
+		<surface>5956</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Angoulême</chef-lieu>
+		<nom-region>Poitou-Charentes</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D17">
+		<no-dept>17</no-dept>
+		<image-carte>dept_map_17.png</image-carte>
+		<nom>Charente-Maritime</nom>
+		<url>http://fr.wikipedia.org/wiki/Charente-Maritime</url>
+		<surface>6864</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>La Rochelle</chef-lieu>
+		<nom-region>Poitou-Charentes</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D18">
+		<no-dept>18</no-dept>
+		<image-carte>dept_map_18.png</image-carte>
+		<nom>Cher</nom>
+		<url>http://fr.wikipedia.org/wiki/Cher_(d%C3%A9partement)</url>
+		<surface>7235</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Bourges</chef-lieu>
+		<nom-region>Centre</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D19">
+		<no-dept>19</no-dept>
+		<image-carte>dept_map_19.png</image-carte>
+		<nom>Corréze</nom>
+		<url>http://fr.wikipedia.org/wiki/Corr%C3%A8ze_(d%C3%A9partement)</url>
+		<surface>5857</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Tulle</chef-lieu>
+		<nom-region>Limousin</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D21">
+		<no-dept>21</no-dept>
+		<image-carte>dept_map_21.png</image-carte>
+		<nom>Côte d'or</nom>
+		<url>http://fr.wikipedia.org/wiki/C%C3%B4te-d%27Or</url>
+		<surface>8763</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Dijon</chef-lieu>
+		<nom-region>Bourgogne</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D22">
+		<no-dept>22</no-dept>
+		<image-carte>dept_map_22.png</image-carte>
+		<nom>Côtes d'armor</nom>
+		<url>http://fr.wikipedia.org/wiki/C%C3%B4tes-d%27Armor</url>
+		<surface>6878</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>St-Brieuc</chef-lieu>
+		<nom-region>Bretagne</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D23">
+		<no-dept>23</no-dept>
+		<image-carte>dept_map_23.png</image-carte>
+		<nom>Creuse</nom>
+		<url>http://fr.wikipedia.org/wiki/Creuse_(d%C3%A9partement)</url>
+		<surface>5565</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Guéret</chef-lieu>
+		<nom-region>Limousin</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D24">
+		<no-dept>24</no-dept>
+		<image-carte>dept_map_24.png</image-carte>
+		<nom>Dordogne</nom>
+		<url>http://fr.wikipedia.org/wiki/Dordogne_(d%C3%A9partement)</url>
+		<surface>9060</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Périgueux</chef-lieu>
+		<nom-region>Aquitaine</nom-region>
+		<villes>
+			<ville type="sous-prefecture">Bergerac</ville>
+			<ville type="sous-prefecture">Nontron</ville>
+			<ville type="prefecture">Périgueux</ville>
+			<ville type="sous-prefecture">Sarlat-la-Canéda</ville>
+		</villes>
+	</departement>
+	<departement id="D25">
+		<no-dept>25</no-dept>
+		<image-carte>dept_map_25.png</image-carte>
+		<nom>Doubs</nom>
+		<url>http://fr.wikipedia.org/wiki/Doubs_(d%C3%A9partement)</url>
+		<surface>5234</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Besançon</chef-lieu>
+		<nom-region>Franche-Comté</nom-region>
+		<villes>
+			<ville type="prefecture">Besançon</ville>
+			<ville type="sous-prefecture">Montbéliard</ville>
+			<ville type="sous-prefecture">Pontarlier</ville>
+		</villes>
+	</departement>
+	<departement id="D26">
+		<no-dept>26</no-dept>
+		<image-carte>dept_map_26.png</image-carte>
+		<nom>Drôme</nom>
+		<url>http://fr.wikipedia.org/wiki/Dr%C3%B4me_(d%C3%A9partement)</url>
+		<surface>6530</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Valence</chef-lieu>
+		<nom-region>Rhône-Alpes</nom-region>
+		<villes>
+			<ville type="sous-prefecture">Die</ville>
+			<ville type="sous-prefecture">Nyons</ville>
+			<ville type="prefecture">Valence</ville>
+		</villes>
+	</departement>
+	<departement id="D27">
+		<no-dept>27</no-dept>
+		<image-carte>dept_map_27.png</image-carte>
+		<nom>Eure</nom>
+		<url>http://fr.wikipedia.org/wiki/Eure_(d%C3%A9partement)</url>
+		<surface>6040</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Evreux</chef-lieu>
+		<nom-region>Haute-Normandie</nom-region>
+		<villes>
+			<ville type="sous-prefecture">Andelys</ville>
+			<ville type="sous-prefecture">Bernay</ville>
+			<ville type="prefecture">Évreux</ville>
+		</villes>
+	</departement>
+	<departement id="D28">
+		<no-dept>28</no-dept>
+		<image-carte>dept_map_28.png</image-carte>
+		<nom>Eure et Loir</nom>
+		<url>http://fr.wikipedia.org/wiki/Eure-et-Loir</url>
+		<surface>5880</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Chartres</chef-lieu>
+		<nom-region>Centre</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D29">
+		<no-dept>29</no-dept>
+		<image-carte>dept_map_29.png</image-carte>
+		<nom>Finistére</nom>
+		<url>http://fr.wikipedia.org/wiki/Finist%C3%A8re</url>
+		<surface>6733</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Quimper</chef-lieu>
+		<nom-region>Bretagne</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D2A">
+		<no-dept>2A</no-dept>
+		<image-carte>dept_map_2A.png</image-carte>
+		<nom>Corse du sud</nom>
+		<url>http://fr.wikipedia.org/wiki/Corse-du-Sud</url>
+		<surface>4014</surface>
+		<date-creation>1976-01-01</date-creation>
+		<chef-lieu>Ajaccio</chef-lieu>
+		<nom-region>Corse</nom-region>
+		<villes>
+			<ville type="prefecture">Ajaccio</ville>
+			<ville type="sous-prefecture">Sartène</ville>
+		</villes>
+	</departement>
+	<departement id="D2B">
+		<no-dept>2B</no-dept>
+		<image-carte>dept_map_2B.png</image-carte>
+		<nom>Haute corse</nom>
+		<url>http://fr.wikipedia.org/wiki/Haute-Corse</url>
+		<surface>4666</surface>
+		<date-creation>1976-01-01</date-creation>
+		<chef-lieu>Bastia</chef-lieu>
+		<nom-region>Corse</nom-region>
+		<villes>
+			<ville type="prefecture">Bastia</ville>
+			<ville type="sous-prefecture">Calvi</ville>
+			<ville type="sous-prefecture">Corte</ville>
+		</villes>
+	</departement>
+	<departement id="D30">
+		<no-dept>30</no-dept>
+		<image-carte>dept_map_30.png</image-carte>
+		<nom>Gard</nom>
+		<url>http://fr.wikipedia.org/wiki/Gard</url>
+		<surface>5853</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Nîmes</chef-lieu>
+		<nom-region>Languedoc-Roussillon</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D31">
+		<no-dept>31</no-dept>
+		<image-carte>dept_map_31.png</image-carte>
+		<nom>Garonne (Haute)</nom>
+		<url>http://fr.wikipedia.org/wiki/Haute-Garonne</url>
+		<surface>6309</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Toulouse</chef-lieu>
+		<nom-region>Midi-Pyrénées</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D32">
+		<no-dept>32</no-dept>
+		<image-carte>dept_map_32.png</image-carte>
+		<nom>Gers</nom>
+		<url>http://fr.wikipedia.org/wiki/Gers_(d%C3%A9partement)</url>
+		<surface>6257</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Auch</chef-lieu>
+		<nom-region>Midi-Pyrénées</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D33">
+		<no-dept>33</no-dept>
+		<image-carte>dept_map_33.png</image-carte>
+		<nom>Gironde</nom>
+		<url>http://fr.wikipedia.org/wiki/Gironde_(d%C3%A9partement)</url>
+		<surface>10725</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Bordeaux</chef-lieu>
+		<nom-region>Aquitaine</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D34">
+		<no-dept>34</no-dept>
+		<image-carte>dept_map_34.png</image-carte>
+		<nom>Hérault</nom>
+		<url>http://fr.wikipedia.org/wiki/H%C3%A9rault_(d%C3%A9partement)</url>
+		<surface>6224</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Montpellier</chef-lieu>
+		<nom-region>Languedoc-Roussillon</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D35">
+		<no-dept>35</no-dept>
+		<image-carte>dept_map_35.png</image-carte>
+		<nom>Ile et Vilaine</nom>
+		<url>http://fr.wikipedia.org/wiki/Ille-et-Vilaine</url>
+		<surface>6775</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Rennes</chef-lieu>
+		<nom-region>Bretagne</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D36">
+		<no-dept>36</no-dept>
+		<image-carte>dept_map_36.png</image-carte>
+		<nom>Indre</nom>
+		<url>http://fr.wikipedia.org/wiki/Indre_(d%C3%A9partement)</url>
+		<surface>6903</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Châteauroux</chef-lieu>
+		<nom-region>Centre</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D37">
+		<no-dept>37</no-dept>
+		<image-carte>dept_map_37.png</image-carte>
+		<nom>Indre et Loire</nom>
+		<url>http://fr.wikipedia.org/wiki/Indre-et-Loire</url>
+		<surface>6127</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Tours</chef-lieu>
+		<nom-region>Centre</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D38">
+		<no-dept>38</no-dept>
+		<image-carte>dept_map_38.png</image-carte>
+		<nom>Isére</nom>
+		<url>http://fr.wikipedia.org/wiki/Is%C3%A8re_(d%C3%A9partement)</url>
+		<surface>7431</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Grenoble</chef-lieu>
+		<nom-region>Rhône-Alpes</nom-region>
+		<villes>
+			<ville type="prefecture">Grenoble</ville>
+			<ville type="sous-prefecture">Tour-du-Pin</ville>
+			<ville type="sous-prefecture">Vienne</ville>
+		</villes>
+	</departement>
+	<departement id="D39">
+		<no-dept>39</no-dept>
+		<image-carte>dept_map_39.png</image-carte>
+		<nom>Jura</nom>
+		<url>http://fr.wikipedia.org/wiki/Jura_(d%C3%A9partement)</url>
+		<surface>4999</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Lons-le-Saunier</chef-lieu>
+		<nom-region>Franche-Comté</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D40">
+		<no-dept>40</no-dept>
+		<image-carte>dept_map_40.png</image-carte>
+		<nom>Landes</nom>
+		<url>http://fr.wikipedia.org/wiki/Landes_(d%C3%A9partement)</url>
+		<surface>9243</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Mont-de-Marsan</chef-lieu>
+		<nom-region>Aquitaine</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D41">
+		<no-dept>41</no-dept>
+		<image-carte>dept_map_41.png</image-carte>
+		<nom>Loir et Cher</nom>
+		<url>http://fr.wikipedia.org/wiki/Loir-et-Cher</url>
+		<surface>6343</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Blois</chef-lieu>
+		<nom-region>Centre</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D42">
+		<no-dept>42</no-dept>
+		<image-carte>dept_map_42.png</image-carte>
+		<nom>Loire</nom>
+		<url>http://fr.wikipedia.org/wiki/Loire_(d%C3%A9partement)</url>
+		<surface>4781</surface>
+		<date-creation>1793-08-12</date-creation>
+		<chef-lieu>St-Étienne</chef-lieu>
+		<nom-region>Rhône-Alpes</nom-region>
+		<villes>
+			<ville type="sous-prefecture">Montbrison</ville>
+			<ville type="sous-prefecture">Roanne</ville>
+			<ville type="prefecture">Saint-Étienne</ville>
+		</villes>
+	</departement>
+	<departement id="D43">
+		<no-dept>43</no-dept>
+		<image-carte>dept_map_43.png</image-carte>
+		<nom>Loire (Haute)</nom>
+		<url>http://fr.wikipedia.org/wiki/Haute-Loire</url>
+		<surface>4977</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Le Puy</chef-lieu>
+		<nom-region>Auvergne</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D44">
+		<no-dept>44</no-dept>
+		<image-carte>dept_map_44.png</image-carte>
+		<nom>Loire Atlantique</nom>
+		<url>http://fr.wikipedia.org/wiki/Loire-Atlantique</url>
+		<surface>6815</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Nantes</chef-lieu>
+		<nom-region>Pays de la Loire</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D45">
+		<no-dept>45</no-dept>
+		<image-carte>dept_map_45.png</image-carte>
+		<nom>Loiret</nom>
+		<url>http://fr.wikipedia.org/wiki/Loiret_(d%C3%A9partement)</url>
+		<surface>6775</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Orléans</chef-lieu>
+		<nom-region>Centre</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D46">
+		<no-dept>46</no-dept>
+		<image-carte>dept_map_46.png</image-carte>
+		<nom>Lot</nom>
+		<url>http://fr.wikipedia.org/wiki/Lot_(d%C3%A9partement)</url>
+		<surface>5217</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Cahors</chef-lieu>
+		<nom-region>Midi-Pyrénées</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D47">
+		<no-dept>47</no-dept>
+		<image-carte>dept_map_47.png</image-carte>
+		<nom>Lot et Garonne</nom>
+		<url>http://fr.wikipedia.org/wiki/Lot-et-Garonne</url>
+		<surface>5361</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Agen</chef-lieu>
+		<nom-region>Aquitaine</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D48">
+		<no-dept>48</no-dept>
+		<image-carte>dept_map_48.png</image-carte>
+		<nom>Lozére</nom>
+		<url>http://fr.wikipedia.org/wiki/Loz%C3%A8re_(d%C3%A9partement)</url>
+		<surface>5167</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Mende</chef-lieu>
+		<nom-region>Languedoc-Roussillon</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D49">
+		<no-dept>49</no-dept>
+		<image-carte>dept_map_49.png</image-carte>
+		<nom>Maine et Loire</nom>
+		<url>http://fr.wikipedia.org/wiki/Maine-et-Loire</url>
+		<surface>7166</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Angers</chef-lieu>
+		<nom-region>Pays de la Loire</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D50">
+		<no-dept>50</no-dept>
+		<image-carte>dept_map_50.png</image-carte>
+		<nom>Manche</nom>
+		<url>http://fr.wikipedia.org/wiki/Manche_(d%C3%A9partement)</url>
+		<surface>5938</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>St-Lô</chef-lieu>
+		<nom-region>Basse-Normandie</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D51">
+		<no-dept>51</no-dept>
+		<image-carte>dept_map_51.png</image-carte>
+		<nom>Marne</nom>
+		<url>http://fr.wikipedia.org/wiki/Marne_(d%C3%A9partement)</url>
+		<surface>8162</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Châlons-sur-Marne</chef-lieu>
+		<nom-region>Champagne-Ardenne</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D52">
+		<no-dept>52</no-dept>
+		<image-carte>dept_map_52.png</image-carte>
+		<nom>Marne (Haute)</nom>
+		<url>http://fr.wikipedia.org/wiki/Haute-Marne</url>
+		<surface>6211</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Chaumont</chef-lieu>
+		<nom-region>Champagne-Ardenne</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D53">
+		<no-dept>53</no-dept>
+		<image-carte>dept_map_53.png</image-carte>
+		<nom>Mayenne</nom>
+		<url>http://fr.wikipedia.org/wiki/Mayenne_(d%C3%A9partement)</url>
+		<surface>5175</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Laval</chef-lieu>
+		<nom-region>Pays de la Loire</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D54">
+		<no-dept>54</no-dept>
+		<image-carte>dept_map_54.png</image-carte>
+		<nom>Meurthe et Moselle</nom>
+		<url>http://fr.wikipedia.org/wiki/Meurthe-et-Moselle</url>
+		<surface>5246</surface>
+		<date-creation>1871-09-07</date-creation>
+		<chef-lieu>Nancy</chef-lieu>
+		<nom-region>Lorraine</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D55">
+		<no-dept>55</no-dept>
+		<image-carte>dept_map_55.png</image-carte>
+		<nom>Meuse</nom>
+		<url>http://fr.wikipedia.org/wiki/Meuse_(d%C3%A9partement)</url>
+		<surface>6211</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Bar-le-Duc</chef-lieu>
+		<nom-region>Lorraine</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D56">
+		<no-dept>56</no-dept>
+		<image-carte>dept_map_56.png</image-carte>
+		<nom>Morbihan</nom>
+		<url>http://fr.wikipedia.org/wiki/Morbihan</url>
+		<surface>6823</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Vannes</chef-lieu>
+		<nom-region>Bretagne</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D57">
+		<no-dept>57</no-dept>
+		<image-carte>dept_map_57.png</image-carte>
+		<nom>Moselle</nom>
+		<url>http://fr.wikipedia.org/wiki/Moselle_(d%C3%A9partement)</url>
+		<surface>6216</surface>
+		<date-creation>1919-06-28</date-creation>
+		<chef-lieu>Metz</chef-lieu>
+		<nom-region>Lorraine</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D58">
+		<no-dept>58</no-dept>
+		<image-carte>dept_map_58.png</image-carte>
+		<nom>Niévre</nom>
+		<url>http://fr.wikipedia.org/wiki/Ni%C3%A8vre_(d%C3%A9partement)</url>
+		<surface>6817</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Nevers</chef-lieu>
+		<nom-region>Bourgogne</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D59">
+		<no-dept>59</no-dept>
+		<image-carte>dept_map_59.png</image-carte>
+		<nom>Nord</nom>
+		<url>http://fr.wikipedia.org/wiki/Nord_(d%C3%A9partement)</url>
+		<surface>5743</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Lille</chef-lieu>
+		<nom-region>Nord-Pas-de-Calais</nom-region>
+		<villes>
+			<ville type="sous-prefecture">Avesnes-sur-Helpe</ville>
+			<ville type="sous-prefecture">Cambrai</ville>
+			<ville type="sous-prefecture">Douai</ville>
+			<ville type="sous-prefecture">Dunkerque</ville>
+			<ville type="prefecture">Lille</ville>
+			<ville type="sous-prefecture">Valenciennes</ville>
+		</villes>
+	</departement>
+	<departement id="D60">
+		<no-dept>60</no-dept>
+		<image-carte>dept_map_60.png</image-carte>
+		<nom>Oise</nom>
+		<url>http://fr.wikipedia.org/wiki/Oise_(d%C3%A9partement)</url>
+		<surface>5860</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Beauvais</chef-lieu>
+		<nom-region>Picardie</nom-region>
+		<villes>
+			<ville type="prefecture">Beauvais</ville>
+			<ville type="sous-prefecture">Clermont</ville>
+			<ville type="sous-prefecture">Compiègne</ville>
+			<ville type="sous-prefecture">Senlis</ville>
+		</villes>
+	</departement>
+	<departement id="D61">
+		<no-dept>61</no-dept>
+		<image-carte>dept_map_61.png</image-carte>
+		<nom>Orne</nom>
+		<url>http://fr.wikipedia.org/wiki/Orne_(d%C3%A9partement)</url>
+		<surface>6103</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Alençon</chef-lieu>
+		<nom-region>Basse-Normandie</nom-region>
+		<villes>
+			<ville type="prefecture">Alençon</ville>
+			<ville type="sous-prefecture">Argentan</ville>
+			<ville type="sous-prefecture">Mortagne-au-Perche</ville>
+		</villes>
+	</departement>
+	<departement id="D62">
+		<no-dept>62</no-dept>
+		<image-carte>dept_map_62.png</image-carte>
+		<nom>Pas de Calais</nom>
+		<url>http://fr.wikipedia.org/wiki/Pas-de-Calais</url>
+		<surface>6671</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Arras</chef-lieu>
+		<nom-region>Nord-Pas-de-Calais</nom-region>
+		<villes>
+			<ville type="prefecture">Arras</ville>
+			<ville type="sous-prefecture">Béthune</ville>
+			<ville type="sous-prefecture">Boulogne-sur-Mer</ville>
+			<ville type="sous-prefecture">Calais</ville>
+			<ville type="sous-prefecture">Lens</ville>
+			<ville type="sous-prefecture">Montreuil</ville>
+			<ville type="sous-prefecture">Saint-Omer</ville>
+		</villes>
+	</departement>
+	<departement id="D63">
+		<no-dept>63</no-dept>
+		<image-carte>dept_map_63.png</image-carte>
+		<nom>Puy de Dôme</nom>
+		<url>http://fr.wikipedia.org/wiki/Puy-de-D%C3%B4me</url>
+		<surface>7970</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Clermont-Ferrand</chef-lieu>
+		<nom-region>Auvergne</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D64">
+		<no-dept>64</no-dept>
+		<image-carte>dept_map_64.png</image-carte>
+		<nom>Pyrénées Atlantiques</nom>
+		<url>http://fr.wikipedia.org/wiki/Pyr%C3%A9n%C3%A9es-Atlantiques</url>
+		<surface>7645</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Pau</chef-lieu>
+		<nom-region>Aquitaine</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D65">
+		<no-dept>65</no-dept>
+		<image-carte>dept_map_65.png</image-carte>
+		<nom>Pyrénées (Hautes)</nom>
+		<url>http://fr.wikipedia.org/wiki/Hautes-Pyr%C3%A9n%C3%A9es</url>
+		<surface>4464</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Tarbes</chef-lieu>
+		<nom-region>Midi-Pyrénées</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D66">
+		<no-dept>66</no-dept>
+		<image-carte>dept_map_66.png</image-carte>
+		<nom>Pyrénées Orientales</nom>
+		<url>http://fr.wikipedia.org/wiki/Pyr%C3%A9n%C3%A9es-Orientales</url>
+		<surface>4116</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Perpignan</chef-lieu>
+		<nom-region>Languedoc-Roussillon</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D67">
+		<no-dept>67</no-dept>
+		<image-carte>dept_map_67.png</image-carte>
+		<nom>Rhin (Bas)</nom>
+		<url>http://fr.wikipedia.org/wiki/Bas-Rhin</url>
+		<surface>4755</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Strasbourg</chef-lieu>
+		<nom-region>Alsace</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D68">
+		<no-dept>68</no-dept>
+		<image-carte>dept_map_68.png</image-carte>
+		<nom>Rhin (Haut)</nom>
+		<url>http://fr.wikipedia.org/wiki/Haut-Rhin</url>
+		<surface>3525</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Colmar</chef-lieu>
+		<nom-region>Alsace</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D69">
+		<no-dept>69</no-dept>
+		<image-carte>dept_map_69.png</image-carte>
+		<nom>Rhône</nom>
+		<url>http://fr.wikipedia.org/wiki/Rh%C3%B4ne_(d%C3%A9partement)</url>
+		<surface>3249</surface>
+		<date-creation>1793-08-12</date-creation>
+		<chef-lieu>Lyon</chef-lieu>
+		<nom-region>Rhône-Alpes</nom-region>
+		<villes>
+			<ville type="prefecture">Lyon</ville>
+			<ville type="sous-prefecture">Villefranche-sur-Saône</ville>
+		</villes>
+	</departement>
+	<departement id="D70">
+		<no-dept>70</no-dept>
+		<image-carte>dept_map_70.png</image-carte>
+		<nom>Saône (Haute)</nom>
+		<url>http://fr.wikipedia.org/wiki/Haute-Sa%C3%B4ne</url>
+		<surface>5360</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Vesoul</chef-lieu>
+		<nom-region>Franche-Comté</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D71">
+		<no-dept>71</no-dept>
+		<image-carte>dept_map_71.png</image-carte>
+		<nom>Saône et Loire</nom>
+		<url>http://fr.wikipedia.org/wiki/Sa%C3%B4ne-et-Loire</url>
+		<surface>8575</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Mâcon</chef-lieu>
+		<nom-region>Bourgogne</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D72">
+		<no-dept>72</no-dept>
+		<image-carte>dept_map_72.png</image-carte>
+		<nom>Sarthe</nom>
+		<url>http://fr.wikipedia.org/wiki/Sarthe_(d%C3%A9partement)</url>
+		<surface>6206</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Le Mans</chef-lieu>
+		<nom-region>Pays de la Loire</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D73">
+		<no-dept>73</no-dept>
+		<image-carte>dept_map_73.png</image-carte>
+		<nom>Savoie</nom>
+		<url>http://fr.wikipedia.org/wiki/Savoie_(d%C3%A9partement)</url>
+		<surface>6028</surface>
+		<date-creation>1860-06-15</date-creation>
+		<chef-lieu>Chambéry</chef-lieu>
+		<nom-region>Rhône-Alpes</nom-region>
+		<villes>
+			<ville type="sous-prefecture">Albertville</ville>
+			<ville type="prefecture">Chambéry</ville>
+			<ville type="sous-prefecture">Saint-Jean-de-Maurienne</ville>
+		</villes>
+	</departement>
+	<departement id="D74">
+		<no-dept>74</no-dept>
+		<image-carte>dept_map_74.png</image-carte>
+		<nom>Savoie (Haute)</nom>
+		<url>http://fr.wikipedia.org/wiki/Haute-Savoie</url>
+		<surface>4388</surface>
+		<date-creation>1860-06-14</date-creation>
+		<chef-lieu>Annecy</chef-lieu>
+		<nom-region>Rhône-Alpes</nom-region>
+		<villes>
+			<ville type="prefecture">Annecy</ville>
+			<ville type="sous-prefecture">Bonneville</ville>
+			<ville type="sous-prefecture">Saint-Julien-en-Genevois</ville>
+			<ville type="sous-prefecture">Thonon-les-Bains</ville>
+		</villes>
+	</departement>
+	<departement id="D75">
+		<no-dept>75</no-dept>
+		<image-carte>dept_map_75.png</image-carte>
+		<nom>Paris</nom>
+		<url>http://fr.wikipedia.org/wiki/Paris</url>
+		<surface>105</surface>
+		<date-creation/>
+		<chef-lieu>Paris</chef-lieu>
+		<nom-region>Île-de-France</nom-region>
+		<villes>
+			<ville type="prefecture">Paris</ville>
+		</villes>
+	</departement>
+	<departement id="D76">
+		<no-dept>76</no-dept>
+		<image-carte>dept_map_76.png</image-carte>
+		<nom>Seine Maritime</nom>
+		<url>http://fr.wikipedia.org/wiki/Seine-Maritime</url>
+		<surface>6278</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Rouen</chef-lieu>
+		<nom-region>Haute-Normandie</nom-region>
+		<villes>
+			<ville type="sous-prefecture">Dieppe</ville>
+			<ville type="sous-prefecture">Le Havre</ville>
+			<ville type="prefecture">Rouen</ville>
+		</villes>
+	</departement>
+	<departement id="D77">
+		<no-dept>77</no-dept>
+		<image-carte>dept_map_77.png</image-carte>
+		<nom>Seine et Marne</nom>
+		<url>http://fr.wikipedia.org/wiki/Seine-et-Marne</url>
+		<surface>5915</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Melun</chef-lieu>
+		<nom-region>Île-de-France</nom-region>
+		<villes>
+			<ville type="sous-prefecture">Fontainebleau</ville>
+			<ville type="sous-prefecture">Meaux</ville>
+			<ville type="prefecture">Melun</ville>
+			<ville type="sous-prefecture">Provins</ville>
+			<ville type="sous-prefecture">Torcy</ville>
+		</villes>
+	</departement>
+	<departement id="D78">
+		<no-dept>78</no-dept>
+		<image-carte>dept_map_78.png</image-carte>
+		<nom>Yvelines</nom>
+		<url>http://fr.wikipedia.org/wiki/Yvelines</url>
+		<surface>2284</surface>
+		<date-creation>1968-01-01</date-creation>
+		<chef-lieu>Versailles</chef-lieu>
+		<nom-region>Île-de-France</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D79">
+		<no-dept>79</no-dept>
+		<image-carte>dept_map_79.png</image-carte>
+		<nom>Sèvres (Deux)</nom>
+		<url>http://fr.wikipedia.org/wiki/Deux-S%C3%A8vres</url>
+		<surface>5999</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Niort</chef-lieu>
+		<nom-region>Poitou-Charentes</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D80">
+		<no-dept>80</no-dept>
+		<image-carte>dept_map_80.png</image-carte>
+		<nom>Somme</nom>
+		<url>http://fr.wikipedia.org/wiki/Somme_(d%C3%A9partement)</url>
+		<surface>6170</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Amiens</chef-lieu>
+		<nom-region>Picardie</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D81">
+		<no-dept>81</no-dept>
+		<image-carte>dept_map_81.png</image-carte>
+		<nom>Tarn</nom>
+		<url>http://fr.wikipedia.org/wiki/Tarn_(d%C3%A9partement)</url>
+		<surface>5758</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Albi</chef-lieu>
+		<nom-region>Midi-Pyrénées</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D82">
+		<no-dept>82</no-dept>
+		<image-carte>dept_map_82.png</image-carte>
+		<nom>Tarn et Garonne</nom>
+		<url>http://fr.wikipedia.org/wiki/Tarn-et-Garonne</url>
+		<surface>3718</surface>
+		<date-creation>1808-11-21</date-creation>
+		<chef-lieu>Montauban</chef-lieu>
+		<nom-region>Midi-Pyrénées</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D83">
+		<no-dept>83</no-dept>
+		<image-carte>dept_map_83.png</image-carte>
+		<nom>Var</nom>
+		<url>http://fr.wikipedia.org/wiki/Var_(d%C3%A9partement)</url>
+		<surface>5973</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Toulon</chef-lieu>
+		<nom-region>Provence-Alpes-Côte d'Azur</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D84">
+		<no-dept>84</no-dept>
+		<image-carte>dept_map_84.png</image-carte>
+		<nom>Vaucluse</nom>
+		<url>http://fr.wikipedia.org/wiki/Vaucluse_(d%C3%A9partement)</url>
+		<surface>3567</surface>
+		<date-creation>1793-08-12</date-creation>
+		<chef-lieu>Avignon</chef-lieu>
+		<nom-region>Provence-Alpes-Côte d'Azur</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D85">
+		<no-dept>85</no-dept>
+		<image-carte>dept_map_85.png</image-carte>
+		<nom>Vendée</nom>
+		<url>http://fr.wikipedia.org/wiki/Vend%C3%A9e_(d%C3%A9partement)</url>
+		<surface>6720</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>La Roche-sur-Yon</chef-lieu>
+		<nom-region>Pays de la Loire</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D86">
+		<no-dept>86</no-dept>
+		<image-carte>dept_map_86.png</image-carte>
+		<nom>Vienne</nom>
+		<url>http://fr.wikipedia.org/wiki/Vienne_(d%C3%A9partement)</url>
+		<surface>6990</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Poitiers</chef-lieu>
+		<nom-region>Poitou-Charentes</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D87">
+		<no-dept>87</no-dept>
+		<image-carte>dept_map_87.png</image-carte>
+		<nom>Vienne (Haute)</nom>
+		<url>http://fr.wikipedia.org/wiki/Haute-Vienne</url>
+		<surface>5520</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Limoges</chef-lieu>
+		<nom-region>Limousin</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D88">
+		<no-dept>88</no-dept>
+		<image-carte>dept_map_88.png</image-carte>
+		<nom>Vosges</nom>
+		<url>http://fr.wikipedia.org/wiki/Vosges_(d%C3%A9partement)</url>
+		<surface>5874</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Épinal</chef-lieu>
+		<nom-region>Lorraine</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D89">
+		<no-dept>89</no-dept>
+		<image-carte>dept_map_89.png</image-carte>
+		<nom>Yonne</nom>
+		<url>http://fr.wikipedia.org/wiki/Yonne_(d%C3%A9partement)</url>
+		<surface>7427</surface>
+		<date-creation>1790-03-04</date-creation>
+		<chef-lieu>Auxerre</chef-lieu>
+		<nom-region>Bourgogne</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D90">
+		<no-dept>90</no-dept>
+		<image-carte>dept_map_90.png</image-carte>
+		<nom>Belfort (Territoire de)</nom>
+		<url>http://fr.wikipedia.org/wiki/Territoire_de_Belfort</url>
+		<surface>609</surface>
+		<date-creation>1922-01-01</date-creation>
+		<chef-lieu>Belfort</chef-lieu>
+		<nom-region>Franche-Comté</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D91">
+		<no-dept>91</no-dept>
+		<image-carte>dept_map_91.png</image-carte>
+		<nom>Essonne</nom>
+		<url>http://fr.wikipedia.org/wiki/Essonne_(d%C3%A9partement)</url>
+		<surface>1804</surface>
+		<date-creation>1968-01-01</date-creation>
+		<chef-lieu>Evry</chef-lieu>
+		<nom-region>Île-de-France</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D92">
+		<no-dept>92</no-dept>
+		<image-carte>dept_map_92.png</image-carte>
+		<nom>Hauts de Seine</nom>
+		<url>http://fr.wikipedia.org/wiki/Hauts-de-Seine</url>
+		<surface>176</surface>
+		<date-creation>1968-01-01</date-creation>
+		<chef-lieu>Nanterre</chef-lieu>
+		<nom-region>Île-de-France</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D93">
+		<no-dept>93</no-dept>
+		<image-carte>dept_map_93.png</image-carte>
+		<nom>Seine Saint Denis</nom>
+		<url>http://fr.wikipedia.org/wiki/Seine-Saint-Denis</url>
+		<surface>236</surface>
+		<date-creation>1968-01-01</date-creation>
+		<chef-lieu>Bobigny</chef-lieu>
+		<nom-region>Île-de-France</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D94">
+		<no-dept>94</no-dept>
+		<image-carte>dept_map_94.png</image-carte>
+		<nom>Val de Marne</nom>
+		<url>http://fr.wikipedia.org/wiki/Val-de-Marne</url>
+		<surface>245</surface>
+		<date-creation>1968-01-01</date-creation>
+		<chef-lieu>Créteil</chef-lieu>
+		<nom-region>Île-de-France</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D95">
+		<no-dept>95</no-dept>
+		<image-carte>dept_map_95.png</image-carte>
+		<nom>Val d'oise</nom>
+		<url>http://fr.wikipedia.org/wiki/Val-d%27Oise</url>
+		<surface>1246</surface>
+		<date-creation>1968-01-01</date-creation>
+		<chef-lieu>Pontoise</chef-lieu>
+		<nom-region>Île-de-France</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D971">
+		<no-dept>971</no-dept>
+		<image-carte>dept_map_971.png</image-carte>
+		<nom>Guadeloupe</nom>
+		<url>http://fr.wikipedia.org/wiki/Guadeloupe</url>
+		<surface>1628</surface>
+		<date-creation/>
+		<chef-lieu>Basse-Terre</chef-lieu>
+		<nom-region>DOM (Départements d'outre mer)</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D972">
+		<no-dept>972</no-dept>
+		<image-carte>dept_map_972.png</image-carte>
+		<nom>Martinique</nom>
+		<url>http://fr.wikipedia.org/wiki/Martinique</url>
+		<surface>1128</surface>
+		<date-creation/>
+		<chef-lieu>Fort-de-France</chef-lieu>
+		<nom-region>DOM (Départements d'outre mer)</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D973">
+		<no-dept>973</no-dept>
+		<image-carte>dept_map_973.png</image-carte>
+		<nom>Guyane</nom>
+		<url>http://fr.wikipedia.org/wiki/Guyane</url>
+		<surface>83846</surface>
+		<date-creation/>
+		<chef-lieu>Cayenne</chef-lieu>
+		<nom-region>DOM (Départements d'outre mer)</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D974">
+		<no-dept>974</no-dept>
+		<image-carte>dept_map_974.png</image-carte>
+		<nom>Réunion</nom>
+		<url>http://fr.wikipedia.org/wiki/La_R%C3%A9union</url>
+		<surface>2512</surface>
+		<date-creation/>
+		<chef-lieu>Saint-Denis</chef-lieu>
+		<nom-region>DOM (Départements d'outre mer)</nom-region>
+		<villes>
+		</villes>
+	</departement>
+	<departement id="D976">
+		<no-dept>976</no-dept>
+		<image-carte>dept_map_976.png</image-carte>
+		<nom>Mayotte</nom>
+		<url>http://fr.wikipedia.org/wiki/Mayotte</url>
+		<surface>376</surface>
+		<date-creation/>
+		<chef-lieu>Mamoudzou</chef-lieu>
+		<nom-region>DOM (Départements d'outre mer)</nom-region>
+		<villes>
+		</villes>
+	</departement>
+</pays>

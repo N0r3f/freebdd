@@ -1,0 +1,18 @@
+
+.ui-dialog {
+	position: fixed;	/* ALP anciennement absolute */
+	box-shadow:10px 10px 10px lightblue;
+	max-width:90vw;
+}
+.ui-dialog-titlebar {background:lightblue;}
+
+.ui-widget-overlay {
+	background: #black;
+	opacity: .8;
+	filter: Alpha(Opacity=80); /* pour IE8 */
+}
+.ui-dialog  style { /* Pour affichage des codes CSS */
+	font-family:courrier, monospace;  
+	white-space:pre;
+	tab-size:3;
+}

@@ -1,0 +1,1095 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<!-- Mirrored from stylescss.free.fr/v2-properties/font-feature-settings.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Apr 2020 15:05:04 GMT -->
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="Propriété,font-feature-settings,otf,woff,CSS,Tutoriel,français">
+	<meta name="description" content="Propriété CSS font-feature-settings : Permet d'exploiter les fonctionnalités spécifiques des polices de caractères OTF, WOFF, etc. (otf,woff)">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta name="robots" content="index,follow" />
+
+	<script src="../v2-js/jquery/jquery-3.3.1.min.js"></script>
+	<script src="../v2-js/jquery-ui/jquery-ui.min.js"></script>
+	<script src="../v2-js/general8e0e.js?v=8"></script>
+	<script src="../v2-js/caniuse3860.js?v=1"></script>
+
+	<link rel="shortcut icon" href="../v2-img/icone5e1f.png?v=2" />	
+	<link rel="stylesheet" href="../v2-js/jquery-ui/jquery-ui.min.css" type="text/css"/>
+	<link rel="stylesheet" href="../v2-css/jquery-ui-alp3860.css?v=1" type="text/css"/>
+	<link rel="stylesheet" href="../v2-css/general8fa7.css?v=18" type="text/css"/>
+	<link rel="stylesheet" href="../v2-css/print3860.css?v=1" media="print" type="text/css"/>
+	<link rel="canonical" href="font-feature-settings.html" />
+	<meta name="google-site-verification" content="reqp0hShXC1ODVxZiPpy4b_7T6c86o39Tz4tT92N2uw" />
+
+	<meta property="og:url" content="http://stylescss.free.fr/v2-properties/font-feature-settings.php" />
+	<meta property="og:title" content="CSS - Propriété font-feature-settings"/>
+	<meta property="og:image" content="http://stylescss.free.fr/v2-img/og-image.png"/>
+	<meta property="og:image:width" content="1200"/>
+	<meta property="og:image:height" content="630"/>
+	<meta property="og:description" content="Propriété CSS font-feature-settings : Permet d'exploiter les fonctionnalités spécifiques des polices de caractères OTF, WOFF, etc. (otf,woff)"/>
+	<meta property="og:type" content="article"/>
+	<meta property="og:locale" content="fr_FR"/>
+	<meta property="og:site_name" content="Tutoriels CSS"/>
+	<meta property="article:author" content="StylesCSS" />
+	<script>$(document).ready(function() {
+var divTest=document.createElement('div');
+divTest.style['font-feature-settings']='';divTest.style['font-feature-settings']='auto';if(divTest.style.fontFeatureSettings=='') {$('#label-auto').addClass('not-supported');}if(!('font-feature-settings' in document.documentElement.style)) {$('#demo-std .demo-title code').addClass('not-supported');}});</script><style> @supports not (font-feature-settings:auto) {#label-auto,#value-auto {text-decoration:line-through;color:red;} }</style><link href="https://fonts.googleapis.com/css?family=Fira+Sans&amp;display=swap" rel="stylesheet">
+<script>
+	function changeFeature(obj,feature,no) {
+		if(no==undefined) {no='on';}
+		var style='';
+		if($(obj).attr('style')!=undefined) {style=$(obj).attr('style');} 
+		var re = /ss01.{1,2}0/;
+		if(re.test(style)) { /* Pour IE */
+			$(obj).attr('style','font-feature-settings:\''+feature+'\''+no);
+			$(obj).children('.feature').text('\''+feature+'\''+no);
+		}
+		else if(style.indexOf('off')>0) {
+			$(obj).attr('style','font-feature-settings:\''+feature+'\''+no);
+			$(obj).children('.feature').text('\''+feature+'\''+no);
+		}
+		else {
+			$(obj).attr('style','font-feature-settings:\''+feature+'\'off');
+			$(obj).children('.feature').text('\''+feature+'\'off');
+		}
+	}
+</script>
+
+<style>
+	@font-face{font-family:'Comic Jens';	src:url('fonts/comic-jens.ttf');}
+	@font-face{font-family:'Warnock';		src:url('fonts/warnock-regular.otf');}	
+	@font-face{font-family:'Kleymissky'; 	src:url('fonts/kleymissky.otf');}	
+	@font-face{font-family:'Countryside';	src:url('fonts/countryside.ttf');}	
+	@font-face{font-family:'Amstelvar';		src:url('fonts/amstelvar.ttf');}
+	.exemples {text-align:center; display:flex; flex-wrap:wrap; margin:10px 0 0 0;}
+	.exemple {font-size:2rem; border:solid 1px silver; padding:5px 10px; margin:5px; width:max-content; transition:background-color 0.5s;}
+	.exemple:hover {background:lightgreen;}
+	.feature {font-family:monospace; font-size:1rem;}
+</style>
+			<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-36064604-1']);
+		_gaq.push(['_trackPageview']);
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+	
+	<title>CSS - Propriété font-feature-settings</title>
+</head><body id="page-top">
+	<nav id="hamburger">	<a href="../tdm.html" title="Menu">
+	<img src="../v2-img/hamburger.png" alt="Menu" />
+	</a></nav>
+	<div id="page">		
+		<nav id="tdm" class="tdm-screen">	<h2 onclick="tdmToggle('tdm-index')">Index</h2>
+		<div id="tdm-index" class="tdm-toggle">
+		<div class="tdm-item"><a href="../index-2.html" title="Accueil">Page d'accueil</a></div>
+		<div class="tdm-item"><a href="../index-2.html#index-families" title="Index thématique">Index thématique</a></div>
+	</div>
+	
+	<h2>Rechercher sur le site.</h2>
+	<form id="frm-search" name="frm-search" role="search" method="GET" action="http://stylescss.free.fr/v2-search.php">
+	<input id="search" type="text" name="search" value="" />
+	<input id="submit" type="submit" value="Chercher" onclick=""/>
+</form>
+	
+	<h2>Participer.</h2>
+	<input id="btn-remarque" type="button" value="Signaler une erreur" onclick="$('#frm-remarque').show(500)"/>
+	
+	<h2 onclick="tdmToggle('tdm-tutoriels')">Tutoriels sur CSS</h2>
+		<div id="tdm-tutoriels" class="tdm-toggle">
+		<div class="tdm-item"><a href="../v2-tutoriels/intro-css.html" title="Tutoriel CSS : introduction aux CSS">Introduction aux CSS</a></div>
+		<div class="tdm-item"><a href="../v2-tutoriels/html-css.html" title="Tutoriel CSS : association de HTML et de CSS">Associer HTML et CSS</a></div>
+		<div class="tdm-item"><a href="../v2-tutoriels/syntaxe-css.html" title="Tutoriel CSS : syntaxe CSS">Syntaxe de base des CSS</a></div>
+		<div class="tdm-item"><a href="../v2-tutoriels/box-model.html" title="Tutoriel CSS : block, inline, box-model">Box model et autres choses</a></div>
+		<div class="tdm-item"></div>
+		<div class="tdm-item"><a href="../v2-tutoriels/priorities.html" title="Tutoriel CSS : les priorités CSS">Les règles de priorité</a></div>
+		<div class="tdm-item">Les <a href="../v2-tutoriels/flex-box.html" title="Tutoriel CSS : les flex-box">flex-box</a></div>
+		<div class="tdm-item">Les <a href="../v2-tutoriels/grid.html" title="Tutoriel CSS : les grilles">grilles CSS</a></div>
+		<div class="tdm-item">Les <a href="transform.html" title="Tutoriel CSS : les transformations géométriques">transformations géométriques</a></div>
+		<div class="tdm-item">Les <a href="animation.html" title="Tutoriel CSS : les animations">animations en CSS</a></div>
+		<div class="tdm-item"><a href="../v2-tutoriels/responsive.html" title="Tutoriel CSS : mises en page responsives">Mises en page responsive</a></div>
+	</div>
+	
+	<h2 onclick="tdmToggle('tdm-tools')">Outils CSS</h2>
+		<div id="tdm-tools" class="tdm-toggle">
+		<div class="tdm-item"><a href="../v2-tools/colors-synth.html" title="Outils pour synthétiser les couleurs">Synthétiseur de couleurs</a></div>
+		<div class="tdm-item"><a href="../v2-tools/entities.html" title="rechercher des codes de caractères">Outil de recherche de caractères</a></div>
+		<div class="tdm-item"><a href="../v2-tools/external-tools.html" title="Outils proposés par d'autres sites">Outils sur d'autres sites</a></div>
+	</div>
+
+	<!-- <h2>Nouveauté :</h2>
+<div id="flash">
+	Un nouvel outil est en ligne. 
+	Il permet de trouver les caractères spéciaux à partir de mots-clé.
+	<br/><br/>
+	A ajouter dans vos favoris : 
+	<a href="http://stylescss.free.fr/v2-tools/entities.php">Recherche de caractères</a>.
+</div> -->
+	
+	<h2 onclick="tdmToggle('tdm-tricks')">Astuces en CSS</h2>
+		<div id="tdm-tricks" class="tdm-toggle">
+		<div class="tdm-item"><a href="../v2-tricks/cube.html" title="Un cube de photos tournant, en CSS">Un cube photos en CSS pur</a></div>
+		<div class="tdm-item"><a href="../v2-tricks/fixed-headers.html" title="Un tableau avec en-têtes fixes">Un tableau avec défilement</a></div>
+		<div class="tdm-item"><a href="../v2-tricks/geometrics.html" title="Formes géométriques en CSS">Des formes géométriques</a></div>
+		<div class="tdm-item"><a href="../v2-tricks/lettrine.html" title="Des lettrines en CSS">Des lettrines en CSS</a></div>
+		<div class="tdm-item"><a href="../v2-tricks/responsive-square.html" title="Un élément carré et responsif">Carré et responsive</a></div>
+		<div class="tdm-item"><a href="../v2-tricks/round-images.html" title="Des images rondes en CSS">Des images rondes en CSS</a></div>
+		<div class="tdm-item"><a href="../v2-tricks/text-shape.html" title="Afficher du texte dans une forme">Du texte dans une forme</a></div>
+		<div class="tdm-item"><a href="../v2-tricks/tags.html" title="Afficher du code HTML CSS">Afficher de l'HTML avec CSS</a></div>
+		<div class="tdm-item"><a href="../v2-tricks/tricks.html" title="Astuces en CSS">D'autres astuces avec CSS</a></div>
+	</div>
+
+	<h2 onclick="tdmToggle('tdm-functions')">Fonctions</h2>
+	<div id="tdm-functions" class="tdm-toggle"><a href="../v2-functions/attr.html" title="attr()"><div class="tdm-item experimental">attr()</div></a><a href="../v2-functions/blur.html" title="blur()"><div class="tdm-item standardized">blur()</div></a><a href="../v2-functions/brightness.html" title="brightness()"><div class="tdm-item standardized">brightness()</div></a><a href="../v2-functions/calc.html" title="calc()"><div class="tdm-item standardized">calc()</div></a><a href="../v2-functions/circle.html" title="circle()"><div class="tdm-item standardized">circle()</div></a><a href="../v2-functions/clamp.html" title="clamp()"><div class="tdm-item standardized">clamp()</div></a><a href="../v2-functions/conic-gradient.html" title="conic-gradient()"><div class="tdm-item standardized">conic-gradient()</div></a><a href="../v2-functions/contrast.html" title="contrast()"><div class="tdm-item standardized">contrast()</div></a><a href="../v2-functions/counter.html" title="counter()"><div class="tdm-item standardized">counter()</div></a><a href="../v2-functions/counters.html" title="counters()"><div class="tdm-item standardized">counters()</div></a><a href="../v2-functions/cross-fade.html" title="cross-fade()"><div class="tdm-item experimental">cross-fade()</div></a><a href="../v2-functions/cubic-bezier.html" title="cubic-bezier()"><div class="tdm-item standardized">cubic-bezier()</div></a><a href="../v2-functions/drop-shadow.html" title="drop-shadow()"><div class="tdm-item standardized">drop-shadow()</div></a><a href="../v2-functions/element.html" title="element()"><div class="tdm-item standardized">element()</div></a><a href="../v2-functions/ellipse.html" title="ellipse()"><div class="tdm-item standardized">ellipse()</div></a><a href="../v2-functions/fit-content.html" title="fit-content()"><div class="tdm-item standardized">fit-content()</div></a><a href="../v2-functions/grayscale.html" title="grayscale()"><div class="tdm-item standardized">grayscale()</div></a><a href="../v2-functions/hsl.html" title="hsl()"><div class="tdm-item standardized">hsl()</div></a><a href="../v2-functions/hsl.html" title="hsla()"><div class="tdm-item standardized">hsla()</div></a><a href="../v2-functions/hue-rotate.html" title="hue-rotate()"><div class="tdm-item standardized">hue-rotate()</div></a><a href="../v2-functions/hwb.html" title="hwb()"><div class="tdm-item standardized">hwb()</div></a><a href="../v2-functions/image.html" title="image()"><div class="tdm-item experimental">image()</div></a><a href="../v2-functions/inset.html" title="inset()"><div class="tdm-item standardized">inset()</div></a><a href="../v2-functions/invert.html" title="invert()"><div class="tdm-item standardized">invert()</div></a><a href="../v2-functions/linear-gradient.html" title="linear-gradient()"><div class="tdm-item standardized">linear-gradient()</div></a><a href="../v2-functions/matrix.html" title="matrix()"><div class="tdm-item standardized">matrix()</div></a><a href="../v2-functions/matrix3d.html" title="matrix3d()"><div class="tdm-item standardized">matrix3d()</div></a><a href="../v2-functions/min-max.html" title="max()"><div class="tdm-item standardized">max()</div></a><a href="../v2-functions/min-max.html" title="min()"><div class="tdm-item standardized">min()</div></a><a href="../v2-functions/minmax.html" title="minmax()"><div class="tdm-item standardized">minmax()</div></a><a href="../v2-functions/opacity.html" title="opacity()"><div class="tdm-item standardized">opacity()</div></a><a href="../v2-functions/perspective.html" title="perspective()"><div class="tdm-item standardized">perspective()</div></a><a href="../v2-functions/polygon.html" title="polygon()"><div class="tdm-item standardized">polygon()</div></a><a href="../v2-functions/radial-gradient.html" title="radial-gradient()"><div class="tdm-item standardized">radial-gradient()</div></a><a href="../v2-functions/rect.html" title="rect()"><div class="tdm-item deprecated">rect()</div></a><a href="../v2-functions/repeat.html" title="repeat()"><div class="tdm-item standardized">repeat()</div></a><a href="../v2-functions/repeating-conic-gradient.html" title="repeating-conic-gradient()"><div class="tdm-item experimental">repeating-conic-gradient()</div></a><a href="../v2-functions/repeating-linear-gradient.html" title="repeating-linear-gradient()"><div class="tdm-item standardized">repeating-linear-gradient()</div></a><a href="../v2-functions/repeating-radial-gradient.html" title="repeating-radial-gradient()"><div class="tdm-item standardized">repeating-radial-gradient()</div></a><a href="../v2-functions/rgb.html" title="rgb()"><div class="tdm-item standardized">rgb()</div></a><a href="../v2-functions/rgb.html" title="rgba()"><div class="tdm-item standardized">rgba()</div></a><a href="../v2-functions/rotate.html" title="rotate()"><div class="tdm-item standardized">rotate()</div></a><a href="../v2-functions/rotate3d.html" title="rotate3d()"><div class="tdm-item standardized">rotate3d()</div></a><a href="../v2-functions/rotate3d.html" title="rotateX()"><div class="tdm-item standardized">rotateX()</div></a><a href="../v2-functions/rotate3d.html" title="rotateY()"><div class="tdm-item standardized">rotateY()</div></a><a href="../v2-functions/rotate3d.html" title="rotateZ()"><div class="tdm-item standardized">rotateZ()</div></a><a href="../v2-functions/saturate.html" title="saturate()"><div class="tdm-item standardized">saturate()</div></a><a href="../v2-functions/scale.html" title="scale()"><div class="tdm-item standardized">scale()</div></a><a href="../v2-functions/scale3d.html" title="scale3d()"><div class="tdm-item standardized">scale3d()</div></a><a href="../v2-functions/scale3d.html" title="scaleX()"><div class="tdm-item standardized">scaleX()</div></a><a href="../v2-functions/scale3d.html" title="scaleY()"><div class="tdm-item standardized">scaleY()</div></a><a href="../v2-functions/scale3d.html" title="scaleZ()"><div class="tdm-item standardized">scaleZ()</div></a><a href="../v2-functions/sepia.html" title="sepia()"><div class="tdm-item standardized">sepia()</div></a><a href="../v2-functions/skew.html" title="skew()"><div class="tdm-item standardized">skew()</div></a><a href="../v2-functions/skew.html" title="skewX()"><div class="tdm-item standardized">skewX()</div></a><a href="../v2-functions/skew.html" title="skewY()"><div class="tdm-item standardized">skewY()</div></a><a href="../v2-functions/steps.html" title="steps()"><div class="tdm-item standardized">steps()</div></a><a href="../v2-functions/symbols.html" title="symbols()"><div class="tdm-item standardized">symbols()</div></a><a href="../v2-functions/translate.html" title="translate()"><div class="tdm-item standardized">translate()</div></a><a href="../v2-functions/translate3d.html" title="translate3d()"><div class="tdm-item standardized">translate3d()</div></a><a href="../v2-functions/translate.html" title="translateX()"><div class="tdm-item standardized">translateX()</div></a><a href="../v2-functions/translate.html" title="translateY"><div class="tdm-item standardized">translateY</div></a><a href="../v2-functions/translate3d.html" title="translateZ()"><div class="tdm-item standardized">translateZ()</div></a><a href="../v2-functions/url.html" title="url()"><div class="tdm-item standardized">url()</div></a><a href="../v2-functions/var.html" title="var()"><div class="tdm-item standardized">var()</div></a></div>
+	
+	<h2 onclick="tdmToggle('tdm-references')">Références CSS</h2>
+		<div id="tdm-references" class="tdm-toggle">
+		<div class="tdm-item"><a href="../v2-selectors/selectors.html" title="selectors : Liste des sélecteurs CSS, et leur description."><code>selectors</code></a></div>
+		<div class="tdm-item"><a href="../v2-selectors/pseudo-elements.html" title="pseudo-elements : Liste des pseudo-éléments."><code>pseudo-elements</code></a></div>
+		<div class="tdm-item"><a href="../v2-selectors/pseudo-class.html" title="pseudo-class : Liste des pseudo-classes."><code>pseudo-class</code></a></div>
+		<div class="tdm-item"><a href="../v2-references/units.html" title="Unités CSS">unités CSS</a></div>
+		<div class="tdm-item"><a href="../v2-tutoriels/colors.html" title="Les couleurs CSS">couleurs CSS</a></div>
+		<div class="tdm-item"><a href="../v2-tutoriels/entities.html" title="Les entités CSS">Entités</a></div>
+	</div>
+	
+	<h2 onclick="tdmToggle('tdm-properties')">Propriétés CSS</h2>
+	<div id="tdm-lettres"><div class="tdm-lettre"><a href="#tdm-AA" title="@" onclick="tdmToggle('tdm-AA')">@</a></div><div class="tdm-lettre"><a href="#tdm-A" title="A" onclick="tdmToggle('tdm-A')">A</a></div><div class="tdm-lettre"><a href="#tdm-B" title="B" onclick="tdmToggle('tdm-B')">B</a></div><div class="tdm-lettre"><a href="#tdm-C" title="C" onclick="tdmToggle('tdm-C')">C</a></div><div class="tdm-lettre"><a href="#tdm-D" title="D" onclick="tdmToggle('tdm-D')">D</a></div><div class="tdm-lettre"><a href="#tdm-E" title="E" onclick="tdmToggle('tdm-E')">E</a></div><div class="tdm-lettre"><a href="#tdm-F" title="F" onclick="tdmToggle('tdm-F')">F</a></div><div class="tdm-lettre"><a href="#tdm-G" title="G" onclick="tdmToggle('tdm-G')">G</a></div><div class="tdm-lettre"><a href="#tdm-H" title="H" onclick="tdmToggle('tdm-H')">H</a></div><div class="tdm-lettre"><a href="#tdm-I" title="I" onclick="tdmToggle('tdm-I')">I</a></div><div class="tdm-lettre"><a href="#tdm-J" title="J" onclick="tdmToggle('tdm-J')">J</a></div><div class="tdm-lettre"><a href="#tdm-L" title="L" onclick="tdmToggle('tdm-L')">L</a></div><div class="tdm-lettre"><a href="#tdm-M" title="M" onclick="tdmToggle('tdm-M')">M</a></div><div class="tdm-lettre"><a href="#tdm-O" title="O" onclick="tdmToggle('tdm-O')">O</a></div><div class="tdm-lettre"><a href="#tdm-P" title="P" onclick="tdmToggle('tdm-P')">P</a></div><div class="tdm-lettre"><a href="#tdm-Q" title="Q" onclick="tdmToggle('tdm-Q')">Q</a></div><div class="tdm-lettre"><a href="#tdm-R" title="R" onclick="tdmToggle('tdm-R')">R</a></div><div class="tdm-lettre"><a href="#tdm-S" title="S" onclick="tdmToggle('tdm-S')">S</a></div><div class="tdm-lettre"><a href="#tdm-T" title="T" onclick="tdmToggle('tdm-T')">T</a></div><div class="tdm-lettre"><a href="#tdm-U" title="U" onclick="tdmToggle('tdm-U')">U</a></div><div class="tdm-lettre"><a href="#tdm-V" title="V" onclick="tdmToggle('tdm-V')">V</a></div><div class="tdm-lettre"><a href="#tdm-W" title="W" onclick="tdmToggle('tdm-W')">W</a></div><div class="tdm-lettre"><a href="#tdm-Z" title="Z" onclick="tdmToggle('tdm-Z')">Z</a></div></div><div style="margin-top:20px;"><input id="cbDeprecated" type="checkbox" onclick="showDeprecated(this.checked)"> <label for="cbDeprecated">Montrer les obsolètes</label><br/><input id="cbExperimental" type="checkbox" onclick="showExperimental(this.checked)"> <label for="cbExperimental">Montrer les nouveautés</label></div><div id="tdm-AA" class="tdm-alpha tdm-toggle"><h3><span>@</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="%40apply.html" title="@apply"><div class="tdm-item standardized">@apply</div></a><a href="%40charset.html" title="@charset"><div class="tdm-item standardized">@charset</div></a><a href="%40counter-style.html" title="@counter-style"><div class="tdm-item standardized">@counter-style</div></a><a href="%40font-face.html" title="@font-face"><div class="tdm-item standardized">@font-face</div></a><a href="%40font-feature-values.html" title="@font-feature-values"><div class="tdm-item experimental">@font-feature-values</div></a><a href="%40import.html" title="@import"><div class="tdm-item standardized">@import</div></a><a href="%40keyframes.html" title="@keyframes"><div class="tdm-item standardized">@keyframes</div></a><a href="%40media.html" title="@media"><div class="tdm-item standardized">@media</div></a><a href="%40page.html" title="@page"><div class="tdm-item standardized">@page</div></a><a href="%40supports.html" title="@supports"><div class="tdm-item standardized">@supports</div></a></div><div id="tdm-A" class="tdm-alpha tdm-toggle"><h3><span>A</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="align-content.html" title="align-content"><div class="tdm-item standardized">align-content</div></a><a href="align-items.html" title="align-items"><div class="tdm-item standardized">align-items</div></a><a href="align-self.html" title="align-self"><div class="tdm-item standardized">align-self</div></a><a href="all.html" title="all"><div class="tdm-item standardized">all</div></a><a href="animation.html" title="animation"><div class="tdm-item standardized">animation</div></a><a href="animation-delay.html" title="animation-delay"><div class="tdm-item standardized">animation-delay</div></a><a href="animation-direction.html" title="animation-direction"><div class="tdm-item standardized">animation-direction</div></a><a href="animation-duration.html" title="animation-duration"><div class="tdm-item standardized">animation-duration</div></a><a href="animation-fill-mode.html" title="animation-fill-mode"><div class="tdm-item standardized">animation-fill-mode</div></a><a href="animation-iteration-count.html" title="animation-iteration-count"><div class="tdm-item standardized">animation-iteration-count</div></a><a href="animation-name.html" title="animation-name"><div class="tdm-item standardized">animation-name</div></a><a href="animation-play-state.html" title="animation-play-state"><div class="tdm-item standardized">animation-play-state</div></a><a href="animation-timing-function.html" title="animation-timing-function"><div class="tdm-item standardized">animation-timing-function</div></a><a href="appearance.html" title="appearance"><div class="tdm-item experimental">appearance</div></a><a href="azimuth.html" title="azimuth"><div class="tdm-item deprecated">azimuth</div></a></div><div id="tdm-B" class="tdm-alpha tdm-toggle"><h3><span>B</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="backdrop-filter.html" title="backdrop-filter"><div class="tdm-item standardized">backdrop-filter</div></a><a href="backface-visibility.html" title="backface-visibility"><div class="tdm-item standardized">backface-visibility</div></a><a href="background.html" title="background"><div class="tdm-item standardized">background</div></a><a href="background-attachment.html" title="background-attachment"><div class="tdm-item standardized">background-attachment</div></a><a href="background-blend-mode.html" title="background-blend-mode"><div class="tdm-item standardized">background-blend-mode</div></a><a href="background-clip.html" title="background-clip"><div class="tdm-item standardized">background-clip</div></a><a href="background-color.html" title="background-color"><div class="tdm-item standardized">background-color</div></a><a href="background-image.html" title="background-image"><div class="tdm-item standardized">background-image</div></a><a href="background-origin.html" title="background-origin"><div class="tdm-item standardized">background-origin</div></a><a href="background-position.html" title="background-position"><div class="tdm-item standardized">background-position</div></a><a href="background-repeat.html" title="background-repeat"><div class="tdm-item standardized">background-repeat</div></a><a href="background-size.html" title="background-size"><div class="tdm-item standardized">background-size</div></a><a href="bleed.html" title="bleed"><div class="tdm-item standardized">bleed</div></a><a href="border.html" title="border"><div class="tdm-item standardized">border</div></a><a href="border-xxx-radius.html" title="border-bottom-left-radius"><div class="tdm-item standardized">border-bottom-left-radius</div></a><a href="border-xxx-radius.html" title="border-bottom-right-radius"><div class="tdm-item standardized">border-bottom-right-radius</div></a><a href="border-collapse.html" title="border-collapse"><div class="tdm-item standardized">border-collapse</div></a><a href="border-color.html" title="border-color"><div class="tdm-item standardized">border-color</div></a><a href="border-image.html" title="border-image"><div class="tdm-item standardized">border-image</div></a><a href="border-image-outset.html" title="border-image-outset"><div class="tdm-item standardized">border-image-outset</div></a><a href="border-image-repeat.html" title="border-image-repeat"><div class="tdm-item standardized">border-image-repeat</div></a><a href="border-image-slice.html" title="border-image-slice"><div class="tdm-item standardized">border-image-slice</div></a><a href="border-image-source.html" title="border-image-source"><div class="tdm-item standardized">border-image-source</div></a><a href="border-image-width.html" title="border-image-width"><div class="tdm-item standardized">border-image-width</div></a><a href="border-radius.html" title="border-radius"><div class="tdm-item standardized">border-radius</div></a><a href="border-spacing.html" title="border-spacing"><div class="tdm-item standardized">border-spacing</div></a><a href="border-style.html" title="border-style"><div class="tdm-item standardized">border-style</div></a><a href="border-xxx-radius.html" title="border-top-left-radius"><div class="tdm-item standardized">border-top-left-radius</div></a><a href="border-xxx-radius.html" title="border-top-right-radius"><div class="tdm-item standardized">border-top-right-radius</div></a><a href="border-width.html" title="border-width"><div class="tdm-item standardized">border-width</div></a><a href="top-right-bottom-left.html" title="bottom"><div class="tdm-item standardized">bottom</div></a><a href="box-decoration-break.html" title="box-decoration-break"><div class="tdm-item standardized">box-decoration-break</div></a><a href="box-shadow.html" title="box-shadow"><div class="tdm-item standardized">box-shadow</div></a><a href="box-sizing.html" title="box-sizing"><div class="tdm-item standardized">box-sizing</div></a><a href="break-before-after.html" title="break-after"><div class="tdm-item standardized">break-after</div></a><a href="break-before-after.html" title="break-before"><div class="tdm-item standardized">break-before</div></a><a href="break-inside.html" title="break-inside"><div class="tdm-item standardized">break-inside</div></a></div><div id="tdm-C" class="tdm-alpha tdm-toggle"><h3><span>C</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="caption-side.html" title="caption-side"><div class="tdm-item standardized">caption-side</div></a><a href="caret-color.html" title="caret-color"><div class="tdm-item standardized">caret-color</div></a><a href="clear.html" title="clear"><div class="tdm-item standardized">clear</div></a><a href="clip.html" title="clip"><div class="tdm-item deprecated">clip</div></a><a href="clip-path.html" title="clip-path"><div class="tdm-item standardized">clip-path</div></a><a href="color.html" title="color"><div class="tdm-item standardized">color</div></a><a href="color-adjust.html" title="color-adjust"><div class="tdm-item standardized">color-adjust</div></a><a href="column-count.html" title="column-count"><div class="tdm-item standardized">column-count</div></a><a href="column-fill.html" title="column-fill"><div class="tdm-item standardized">column-fill</div></a><a href="column-gap.html" title="column-gap"><div class="tdm-item standardized">column-gap</div></a><a href="column-rule.html" title="column-rule"><div class="tdm-item standardized">column-rule</div></a><a href="column-rule-color.html" title="column-rule-color"><div class="tdm-item standardized">column-rule-color</div></a><a href="column-rule-style.html" title="column-rule-style"><div class="tdm-item standardized">column-rule-style</div></a><a href="column-rule-width.html" title="column-rule-width"><div class="tdm-item standardized">column-rule-width</div></a><a href="column-span.html" title="column-span"><div class="tdm-item standardized">column-span</div></a><a href="column-width.html" title="column-width"><div class="tdm-item standardized">column-width</div></a><a href="columns.html" title="columns"><div class="tdm-item standardized">columns</div></a><a href="content.html" title="content"><div class="tdm-item standardized">content</div></a><a href="counter-reset-increment.html" title="counter-increment"><div class="tdm-item standardized">counter-increment</div></a><a href="counter-reset-increment.html" title="counter-reset"><div class="tdm-item standardized">counter-reset</div></a><a href="cue.html" title="cue"><div class="tdm-item deprecated">cue</div></a><a href="cue.html" title="cue-after"><div class="tdm-item deprecated">cue-after</div></a><a href="cue.html" title="cue-before"><div class="tdm-item deprecated">cue-before</div></a><a href="cursor.html" title="cursor"><div class="tdm-item standardized">cursor</div></a></div><div id="tdm-D" class="tdm-alpha tdm-toggle"><h3><span>D</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="direction.html" title="direction"><div class="tdm-item standardized">direction</div></a><a href="display.html" title="display"><div class="tdm-item standardized">display</div></a></div><div id="tdm-E" class="tdm-alpha tdm-toggle"><h3><span>E</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="elevation.html" title="elevation"><div class="tdm-item deprecated">elevation</div></a><a href="empty-cells.html" title="empty-cells"><div class="tdm-item standardized">empty-cells</div></a></div><div id="tdm-F" class="tdm-alpha tdm-toggle"><h3><span>F</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="filter.html" title="filter"><div class="tdm-item standardized">filter</div></a><a href="flex.html" title="flex"><div class="tdm-item standardized">flex</div></a><a href="flex-basis.html" title="flex-basis"><div class="tdm-item standardized">flex-basis</div></a><a href="flex-direction.html" title="flex-direction"><div class="tdm-item standardized">flex-direction</div></a><a href="flex-flow.html" title="flex-flow"><div class="tdm-item standardized">flex-flow</div></a><a href="flex-grow.html" title="flex-grow"><div class="tdm-item standardized">flex-grow</div></a><a href="flex-shrink.html" title="flex-shrink"><div class="tdm-item standardized">flex-shrink</div></a><a href="flex-wrap.html" title="flex-wrap"><div class="tdm-item standardized">flex-wrap</div></a><a href="float.html" title="float"><div class="tdm-item standardized">float</div></a><a href="font.html" title="font"><div class="tdm-item standardized">font</div></a><a href="font-display.html" title="font-display"><div class="tdm-item experimental">font-display</div></a><a href="font-family.html" title="font-family"><div class="tdm-item standardized">font-family</div></a><a href="font-feature-settings.html" title="font-feature-settings"><div class="tdm-item experimental">font-feature-settings</div></a><a href="font-kerning.html" title="font-kerning"><div class="tdm-item standardized">font-kerning</div></a><a href="font-optical-sizing.html" title="font-optical-sizing"><div class="tdm-item experimental">font-optical-sizing</div></a><a href="font-size.html" title="font-size"><div class="tdm-item standardized">font-size</div></a><a href="font-size-adjust.html" title="font-size-adjust"><div class="tdm-item standardized">font-size-adjust</div></a><a href="font-stretch.html" title="font-stretch"><div class="tdm-item standardized">font-stretch</div></a><a href="font-style.html" title="font-style"><div class="tdm-item standardized">font-style</div></a><a href="font-synthesis.html" title="font-synthesis"><div class="tdm-item standardized">font-synthesis</div></a><a href="font-variant.html" title="font-variant"><div class="tdm-item standardized">font-variant</div></a><a href="font-variant-alternates.html" title="font-variant-alternates"><div class="tdm-item standardized">font-variant-alternates</div></a><a href="font-variant-caps.html" title="font-variant-caps"><div class="tdm-item standardized">font-variant-caps</div></a><a href="font-variant-east-asian.html" title="font-variant-east-asian"><div class="tdm-item standardized">font-variant-east-asian</div></a><a href="font-variant-ligatures.html" title="font-variant-ligatures"><div class="tdm-item standardized">font-variant-ligatures</div></a><a href="font-variant-numeric.html" title="font-variant-numeric"><div class="tdm-item standardized">font-variant-numeric</div></a><a href="font-variant-position.html" title="font-variant-position"><div class="tdm-item standardized">font-variant-position</div></a><a href="font-weight.html" title="font-weight"><div class="tdm-item standardized">font-weight</div></a></div><div id="tdm-G" class="tdm-alpha tdm-toggle"><h3><span>G</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="grid.html" title="grid"><div class="tdm-item standardized">grid</div></a><a href="grid-area.html" title="grid-area"><div class="tdm-item standardized">grid-area</div></a><a href="grid-auto-columns.html" title="grid-auto-columns"><div class="tdm-item standardized">grid-auto-columns</div></a><a href="grid-auto-flow.html" title="grid-auto-flow"><div class="tdm-item standardized">grid-auto-flow</div></a><a href="grid-auto-rows.html" title="grid-auto-rows"><div class="tdm-item standardized">grid-auto-rows</div></a><a href="grid-row-column.html" title="grid-column"><div class="tdm-item standardized">grid-column</div></a><a href="grid-row-column.html" title="grid-column-end"><div class="tdm-item standardized">grid-column-end</div></a><a href="grid-gap.html" title="grid-column-gap"><div class="tdm-item standardized">grid-column-gap</div></a><a href="grid-row-column.html" title="grid-column-start"><div class="tdm-item standardized">grid-column-start</div></a><a href="grid-gap.html" title="grid-gap"><div class="tdm-item standardized">grid-gap</div></a><a href="grid-row-column.html" title="grid-row"><div class="tdm-item standardized">grid-row</div></a><a href="grid-row-column.html" title="grid-row-end"><div class="tdm-item standardized">grid-row-end</div></a><a href="grid-gap.html" title="grid-row-gap"><div class="tdm-item standardized">grid-row-gap</div></a><a href="grid-row-column.html" title="grid-row-start"><div class="tdm-item standardized">grid-row-start</div></a><a href="grid-template.html" title="grid-template"><div class="tdm-item standardized">grid-template</div></a><a href="grid-template-areas.html" title="grid-template-areas"><div class="tdm-item standardized">grid-template-areas</div></a><a href="grid-template-columns.html" title="grid-template-columns"><div class="tdm-item standardized">grid-template-columns</div></a><a href="grid-template-rows.html" title="grid-template-rows"><div class="tdm-item standardized">grid-template-rows</div></a></div><div id="tdm-H" class="tdm-alpha tdm-toggle"><h3><span>H</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="hanging-punctuation.html" title="hanging-punctuation"><div class="tdm-item experimental">hanging-punctuation</div></a><a href="height-width.html" title="height"><div class="tdm-item standardized">height</div></a><a href="hyphens.html" title="hyphens"><div class="tdm-item standardized">hyphens</div></a></div><div id="tdm-I" class="tdm-alpha tdm-toggle"><h3><span>I</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="image-rendering.html" title="image-rendering"><div class="tdm-item standardized">image-rendering</div></a><a href="ime-mode.html" title="ime-mode"><div class="tdm-item deprecated">ime-mode</div></a><a href="isolation.html" title="isolation"><div class="tdm-item standardized">isolation</div></a></div><div id="tdm-J" class="tdm-alpha tdm-toggle"><h3><span>J</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="justify-content.html" title="justify-content"><div class="tdm-item standardized">justify-content</div></a><a href="justify-items.html" title="justify-items"><div class="tdm-item standardized">justify-items</div></a><a href="justify-self.html" title="justify-self"><div class="tdm-item standardized">justify-self</div></a></div><div id="tdm-L" class="tdm-alpha tdm-toggle"><h3><span>L</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="top-right-bottom-left.html" title="left"><div class="tdm-item standardized">left</div></a><a href="letter-spacing.html" title="letter-spacing"><div class="tdm-item standardized">letter-spacing</div></a><a href="line-break.html" title="line-break"><div class="tdm-item standardized">line-break</div></a><a href="line-height.html" title="line-height"><div class="tdm-item standardized">line-height</div></a><a href="list-style.html" title="list-style"><div class="tdm-item standardized">list-style</div></a><a href="list-style-image.html" title="list-style-image"><div class="tdm-item standardized">list-style-image</div></a><a href="list-style-position.html" title="list-style-position"><div class="tdm-item standardized">list-style-position</div></a><a href="list-style-type.html" title="list-style-type"><div class="tdm-item standardized">list-style-type</div></a></div><div id="tdm-M" class="tdm-alpha tdm-toggle"><h3><span>M</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="margin.html" title="margin"><div class="tdm-item standardized">margin</div></a><a href="margin.html" title="margin-block-end"><div class="tdm-item standardized">margin-block-end</div></a><a href="margin.html" title="margin-block-start"><div class="tdm-item standardized">margin-block-start</div></a><a href="margin.html" title="margin-bottom"><div class="tdm-item standardized">margin-bottom</div></a><a href="margin.html" title="margin-inline-end"><div class="tdm-item standardized">margin-inline-end</div></a><a href="margin.html" title="margin-inline-start"><div class="tdm-item standardized">margin-inline-start</div></a><a href="margin.html" title="margin-left"><div class="tdm-item standardized">margin-left</div></a><a href="margin.html" title="margin-right"><div class="tdm-item standardized">margin-right</div></a><a href="margin.html" title="margin-top"><div class="tdm-item standardized">margin-top</div></a><a href="margin-trim.html" title="margin-trim"><div class="tdm-item experimental">margin-trim</div></a><a href="marker-offset.html" title="marker-offset"><div class="tdm-item deprecated">marker-offset</div></a><a href="marks.html" title="marks"><div class="tdm-item deprecated">marks</div></a><a href="mask.html" title="mask"><div class="tdm-item experimental">mask</div></a><a href="mask-border.html" title="mask-border"><div class="tdm-item experimental">mask-border</div></a><a href="mask-clip.html" title="mask-clip"><div class="tdm-item experimental">mask-clip</div></a><a href="mask-image.html" title="mask-image"><div class="tdm-item experimental">mask-image</div></a><a href="mask-mode.html" title="mask-mode"><div class="tdm-item experimental">mask-mode</div></a><a href="mask-origin.html" title="mask-origin"><div class="tdm-item experimental">mask-origin</div></a><a href="mask-position.html" title="mask-position"><div class="tdm-item experimental">mask-position</div></a><a href="mask-repeat.html" title="mask-repeat"><div class="tdm-item experimental">mask-repeat</div></a><a href="mask-size.html" title="mask-size"><div class="tdm-item experimental">mask-size</div></a><a href="min-max.html" title="max-height"><div class="tdm-item standardized">max-height</div></a><a href="min-max.html" title="max-width"><div class="tdm-item standardized">max-width</div></a><a href="min-max.html" title="min-height"><div class="tdm-item standardized">min-height</div></a><a href="min-max.html" title="min-width"><div class="tdm-item standardized">min-width</div></a><a href="mix-blend-mode.html" title="mix-blend-mode"><div class="tdm-item standardized">mix-blend-mode</div></a><a href="moz-border.html" title="moz-border-colors"><div class="tdm-item deprecated">moz-border-colors</div></a></div><div id="tdm-O" class="tdm-alpha tdm-toggle"><h3><span>O</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="object-fit.html" title="object-fit"><div class="tdm-item standardized">object-fit</div></a><a href="object-position.html" title="object-position"><div class="tdm-item standardized">object-position</div></a><a href="opacity.html" title="opacity"><div class="tdm-item standardized">opacity</div></a><a href="order.html" title="order"><div class="tdm-item standardized">order</div></a><a href="orphans-widows.html" title="orphans"><div class="tdm-item standardized">orphans</div></a><a href="outline.html" title="outline"><div class="tdm-item standardized">outline</div></a><a href="outline-color.html" title="outline-color"><div class="tdm-item standardized">outline-color</div></a><a href="outline-offset.html" title="outline-offset"><div class="tdm-item standardized">outline-offset</div></a><a href="outline-style.html" title="outline-style"><div class="tdm-item standardized">outline-style</div></a><a href="outline-width.html" title="outline-width"><div class="tdm-item standardized">outline-width</div></a><a href="overflow.html" title="overflow"><div class="tdm-item standardized">overflow</div></a><a href="word-break-wrap.html" title="overflow-wrap"><div class="tdm-item standardized">overflow-wrap</div></a><a href="overflow.html" title="overflow-x"><div class="tdm-item standardized">overflow-x</div></a><a href="overflow.html" title="overflow-y"><div class="tdm-item standardized">overflow-y</div></a></div><div id="tdm-P" class="tdm-alpha tdm-toggle"><h3><span>P</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="padding.html" title="padding"><div class="tdm-item standardized">padding</div></a><a href="padding.html" title="padding-block-end"><div class="tdm-item standardized">padding-block-end</div></a><a href="padding-2.html" title="padding-block-start"><div class="tdm-item standardized">padding-block-start</div></a><a href="padding.html" title="padding-bottom"><div class="tdm-item standardized">padding-bottom</div></a><a href="padding.html" title="padding-inline-end"><div class="tdm-item standardized">padding-inline-end</div></a><a href="padding.html" title="padding-inline-start"><div class="tdm-item standardized">padding-inline-start</div></a><a href="padding.html" title="padding-left"><div class="tdm-item standardized">padding-left</div></a><a href="padding.html" title="padding-right"><div class="tdm-item standardized">padding-right</div></a><a href="padding.html" title="padding-top"><div class="tdm-item standardized">padding-top</div></a><a href="page-break.html" title="page-break-after"><div class="tdm-item deprecated">page-break-after</div></a><a href="page-break.html" title="page-break-before"><div class="tdm-item deprecated">page-break-before</div></a><a href="page-break.html" title="page-break-inside"><div class="tdm-item deprecated">page-break-inside</div></a><a href="pause.html" title="pause"><div class="tdm-item deprecated">pause</div></a><a href="perspective.html" title="perspective"><div class="tdm-item standardized">perspective</div></a><a href="perspective-origin.html" title="perspective-origin"><div class="tdm-item standardized">perspective-origin</div></a><a href="pitch.html" title="pitch"><div class="tdm-item deprecated">pitch</div></a><a href="pitch-range.html" title="pitch-range"><div class="tdm-item deprecated">pitch-range</div></a><a href="play-during.html" title="play-during"><div class="tdm-item deprecated">play-during</div></a><a href="pointer-events.html" title="pointer-events"><div class="tdm-item standardized">pointer-events</div></a><a href="position.html" title="position"><div class="tdm-item standardized">position</div></a></div><div id="tdm-Q" class="tdm-alpha tdm-toggle"><h3><span>Q</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="quotes.html" title="quotes"><div class="tdm-item standardized">quotes</div></a></div><div id="tdm-R" class="tdm-alpha tdm-toggle"><h3><span>R</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="resize.html" title="resize"><div class="tdm-item standardized">resize</div></a><a href="richness.html" title="richness"><div class="tdm-item deprecated">richness</div></a><a href="top-right-bottom-left.html" title="right"><div class="tdm-item standardized">right</div></a></div><div id="tdm-S" class="tdm-alpha tdm-toggle"><h3><span>S</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="scroll-behavior.html" title="scroll-behavior"><div class="tdm-item standardized">scroll-behavior</div></a><a href="scrollbar.html" title="scrollbar-3dlight-color"><div class="tdm-item deprecated">scrollbar-3dlight-color</div></a><a href="scrollbar.html" title="scrollbar-arrow-color"><div class="tdm-item deprecated">scrollbar-arrow-color</div></a><a href="scrollbar.html" title="scrollbar-base-color"><div class="tdm-item deprecated">scrollbar-base-color</div></a><a href="scrollbar.html" title="scrollbar-darkshadow-colo"><div class="tdm-item deprecated">scrollbar-darkshadow-colo</div></a><a href="scrollbar.html" title="scrollbar-face-color"><div class="tdm-item deprecated">scrollbar-face-color</div></a><a href="scrollbar.html" title="scrollbar-highlight-color"><div class="tdm-item deprecated">scrollbar-highlight-color</div></a><a href="scrollbar.html" title="scrollbar-shadow-color"><div class="tdm-item deprecated">scrollbar-shadow-color</div></a><a href="scrollbar.html" title="scrollbar-track-color"><div class="tdm-item deprecated">scrollbar-track-color</div></a><a href="shape-outside.html" title="shape-outside"><div class="tdm-item standardized">shape-outside</div></a><a href="size.html" title="size"><div class="tdm-item standardized">size</div></a><a href="speak.html" title="speak"><div class="tdm-item deprecated">speak</div></a><a href="speak2.html" title="speak-header"><div class="tdm-item deprecated">speak-header</div></a><a href="speak2.html" title="speak-numeral"><div class="tdm-item deprecated">speak-numeral</div></a><a href="speak2.html" title="speak-punctuation"><div class="tdm-item deprecated">speak-punctuation</div></a><a href="speech-rate.html" title="speech-rate"><div class="tdm-item deprecated">speech-rate</div></a><a href="stress.html" title="stress"><div class="tdm-item deprecated">stress</div></a></div><div id="tdm-T" class="tdm-alpha tdm-toggle"><h3><span>T</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="tab-size.html" title="tab-size"><div class="tdm-item standardized">tab-size</div></a><a href="table-layout.html" title="table-layout"><div class="tdm-item standardized">table-layout</div></a><a href="text-align.html" title="text-align"><div class="tdm-item standardized">text-align</div></a><a href="text-align-last.html" title="text-align-last"><div class="tdm-item standardized">text-align-last</div></a><a href="text-decoration.html" title="text-decoration"><div class="tdm-item standardized">text-decoration</div></a><a href="text-decoration-color.html" title="text-decoration-color"><div class="tdm-item standardized">text-decoration-color</div></a><a href="text-decoration-line.html" title="text-decoration-line"><div class="tdm-item standardized">text-decoration-line</div></a><a href="text-decoration-style.html" title="text-decoration-style"><div class="tdm-item standardized">text-decoration-style</div></a><a href="text-emphasis.html" title="text-emphasis"><div class="tdm-item standardized">text-emphasis</div></a><a href="text-emphasis-color.html" title="text-emphasis-color"><div class="tdm-item standardized">text-emphasis-color</div></a><a href="text-emphasis-position.html" title="text-emphasis-position"><div class="tdm-item standardized">text-emphasis-position</div></a><a href="text-emphasis-style.html" title="text-emphasis-style"><div class="tdm-item standardized">text-emphasis-style</div></a><a href="text-indent.html" title="text-indent"><div class="tdm-item standardized">text-indent</div></a><a href="text-justify.html" title="text-justify"><div class="tdm-item standardized">text-justify</div></a><a href="text-overflow.html" title="text-overflow"><div class="tdm-item standardized">text-overflow</div></a><a href="text-rendering.html" title="text-rendering"><div class="tdm-item standardized">text-rendering</div></a><a href="text-shadow.html" title="text-shadow"><div class="tdm-item standardized">text-shadow</div></a><a href="text-transform.html" title="text-transform"><div class="tdm-item standardized">text-transform</div></a><a href="top-right-bottom-left.html" title="top"><div class="tdm-item standardized">top</div></a><a href="touch-action.html" title="touch-action"><div class="tdm-item standardized">touch-action</div></a><a href="transform.html" title="transform"><div class="tdm-item standardized">transform</div></a><a href="transform-origin.html" title="transform-origin"><div class="tdm-item standardized">transform-origin</div></a><a href="transform-style.html" title="transform-style"><div class="tdm-item standardized">transform-style</div></a><a href="transition.html" title="transition"><div class="tdm-item standardized">transition</div></a><a href="transition-delay.html" title="transition-delay"><div class="tdm-item standardized">transition-delay</div></a><a href="transition-duration.html" title="transition-duration"><div class="tdm-item standardized">transition-duration</div></a><a href="transition-property.html" title="transition-property"><div class="tdm-item standardized">transition-property</div></a><a href="transition-timing-function.html" title="transition-timing-function"><div class="tdm-item standardized">transition-timing-function</div></a></div><div id="tdm-U" class="tdm-alpha tdm-toggle"><h3><span>U</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="unicode-bidi.html" title="unicode-bidi"><div class="tdm-item standardized">unicode-bidi</div></a><a href="user-select.html" title="user-select"><div class="tdm-item standardized">user-select</div></a></div><div id="tdm-V" class="tdm-alpha tdm-toggle"><h3><span>V</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="vertical-align.html" title="vertical-align"><div class="tdm-item standardized">vertical-align</div></a><a href="visibility.html" title="visibility"><div class="tdm-item standardized">visibility</div></a><a href="voice-family.html" title="voice-family"><div class="tdm-item deprecated">voice-family</div></a><a href="volume.html" title="volume"><div class="tdm-item deprecated">volume</div></a></div><div id="tdm-W" class="tdm-alpha tdm-toggle"><h3><span>W</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="white-space.html" title="white-space"><div class="tdm-item standardized">white-space</div></a><a href="orphans-widows.html" title="widows"><div class="tdm-item standardized">widows</div></a><a href="height-width.html" title="width"><div class="tdm-item standardized">width</div></a><a href="will-change.html" title="will-change"><div class="tdm-item standardized">will-change</div></a><a href="word-break-wrap.html" title="word-break"><div class="tdm-item standardized">word-break</div></a><a href="word-spacing.html" title="word-spacing"><div class="tdm-item standardized">word-spacing</div></a><a href="word-break-wrap.html" title="word-wrap"><div class="tdm-item standardized">word-wrap</div></a><a href="writing-mode.html" title="writing-mode"><div class="tdm-item standardized">writing-mode</div></a></div><div id="tdm-Z" class="tdm-alpha tdm-toggle"><h3><span>Z</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="z-index.html" title="z-index"><div class="tdm-item standardized">z-index</div></a></div>
+</nav>
+		<div id="contenu">
+			<div class="adsense-in-article">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-6434138622132038"
+     data-ad-slot="7328470077"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+			<form id="frm-remarque" method="post" action="http://stylescss.free.fr/v2-lib/remarque-post.php">
+	<input id="rem-number" name="rem-number" type="hidden" value="10"/>
+	<input id="rem-url" name="rem-url" type="hidden" value="/v2-properties/font-feature-settings.php"/>
+	<h3>Une remarque ? Une suggestion ?...</h3>
+	<div>
+		Merci de participer à l'amélioration de ce site.
+		Prenez le temps de rédiger votre remarque le plus précisément possible :<br/>
+		<textarea id="rem-description" name="rem-description" ></textarea>
+	</div>
+	<div>
+		<label for="rem-antispam">Question anti-spam :<br/>Quel est le prénom de Michael Jackson ?</label><br/>
+		<input id="rem-antispam" name="rem-antispam" type="text" />
+	</div>
+	<div id="rem-buttons">
+		<input type="button" value="Annuler" onclick="$('#frm-remarque').hide()"/>
+		<input type="button" value="Envoyer" onclick="postRemarque()"/>
+	</div>
+	<div id="rem-ar"></div>
+</form>
+			<main>
+				<h1>CSS - Propriété font-feature-settings</h1>
+				<section id="description"><h2>Description de la propriété <code>font-feature-settings</code>.</h2>
+	<p class="experimental">
+		Cette propriété n'est pas standardisée par le W3C. 
+		De plus sa syntaxe (une énumération d'options) perturbe le mécanisme d'héritage.
+		Nous vous conseillons d'utiliser plutôt la propriété <a href="font-variant.html" title="font-variant : Attributs typographiques évolués."><code>font-variant</code></a> et ses dérivées.
+		<br/><br/>
+		La lecture de cette page est néanmoins utile pour la compréhension des possibilités des polices OTF.
+	</p>
+	<p><code>font-feature-settings</code> permet d'exploiter toutes les possibilités typographiques des polices de caractères
+		OTF (<code>O</code>pen <code>T</code>ype <code>F</code>ont) : substitution de caractères,
+		ligatures, gestion des espacements, etc.
+	</p>
+	<p>Il est donc clair que le résultat sera fortement dépendant de la police utilisée.
+		Si une des options demandées n'est pas traitée par la police, elle est simplement ignorée.
+	</p>
+	<p><code>font-feature-settings</code> accepte une ou plusieurs valeurs parmi celles qui sont énumérées ci-dessous, séparées
+		par des virgules.
+		Les valeurs doivent être entre guillemets ou entre apostrophes ce qui est inhabituel dans la syntaxe CSS.
+		Cela s'explique par le fait que ces valeurs ne sont pas des valeurs CSS mais des options proposées par la
+		police de caractères.
+		Certaines valeurs sont suivies d'un nombre ou bien de <code>on</code> ou <code>off</code>.
+	</p>
+	<p class="experimental">
+		Les possibilités de <code>font-feature-settings</code> sont fortement liées à la police utilisée.
+		Si certaines valeurs comme <code>tnum</code> ou <code>smcp</code> donnent des résultats à peu
+		équivalents dans toutes les polices, il n'en est pas de même pour la plupart des autres valeurs.
+		<code>swsh</code> par exemple peut être tout simplement sans effet sur certaines polices,
+		ou produire un résultat spécifique à la police utilisée.<br/><br/>
+		Pour cette raison, les exemples illustrant cette page utilisent parfois des polices fantaisistes :
+		les polices courantes ne proposaient pas la fonctionnalité nécessaire.
+	</p>
+</section>
+
+
+<section><h2>Syntaxe de <code>font-feature-settings</code>.</h2>
+	<p>Il est fréquent de définir plusieurs valeurs, en les séparant par des virgules. 
+		Il est possible également de désactiver une valeur en la faisant suivre de <code>off</code> 
+		(le mot <code>on</code> peut être utilisé mais est facultatif).<br/>
+		Certaines valeurs comme <code>ornm</code> donnent accès à plusieurs variantes. Il convient alors
+		de préciser la variante à utiliser.
+	</p>
+<div class="syntaxe"><code>
+font-feature-settings: 'smcp', 'c2sc';
+font-feature-settings: 'tnum'off, 'pnum'on;
+font-feature-settings: 'ornm'2;
+</code></div>
+	<p>Cette notation "cumulative" pose des problèmes lors de l'héritage. En effet, pour ajouter une option à 
+		celles qui sont héritées, il faut lister à nouveau toutes les options héritées, 
+		ce qui suppose de les connaître.
+	</p>
+<div class="syntaxe"><code>
+body {
+   font-feature-settings: 'smcp';
+}
+div {
+   font-feature-settings: 'c2sc';         /* Efface l'option héritée 'smcp' */
+}
+div {
+   font-feature-settings: 'smcp','c2sc';  /* Ce qu'il aurait fallu écrire */
+}
+</code></div>
+</section>
+
+	<h2>Accès rapide aux valeurs pour <code>font-feature-settings</code>.</h2>
+	<ul>
+		<li><a href="#capitalisation" title="Capitalisation">Capitalisation.</a></li>
+		<li><a href="#ligatures" title="Ligatures">Ligatures.</a></li>
+		<li><a href="#nombres" title="Affichage des nombres">Affichage des nombres.</a></li>
+		<li><a href="#exposant-indice" title="Indices et exposants">Indices et exposants.</a></li>
+		<li><a href="#substitutions" title="Substitution de caractères">Substitution de caractères.</a></li>
+		<li><a href="#vertical" title="Écriture verticales">Écriture verticale.</a></li>
+		<li><a href="#divers" title="Effets divers">Autres effets stylistiques.</a></li>
+	</ul>
+	
+<section id="fonts"><h2>Polices de caractères utilisées sur cette page.</h2>
+	<h4>Des polices fournies par Google.</h4>
+	<p>Pour consulter un catalogue des polices disponibles chez Google,
+		reportez-vous à la page <a href="https://fonts.google.com/" title="Google Fonts" target="_blank">Google Fonts</a>.<br/>
+		La mise en œuvre de ces polices nécessite une déclaration dans la section <kbd>head</kbd> de chacune 
+		des pages qui les utilise :
+	</p>
+<div class="syntaxe"><code>
+<kbd>link href="https://fonts.googleapis.com/css?family=nom_de_la_police" rel="stylesheet"</kbd>
+</code></div>
+
+	<h4>Des polices téléchargées depuis notre serveur.</h4>
+	<p>Leur mise en œuvre se fait avec une directive <a href="%40font-face.html" title="@font-face : Police de caractères téléchargeable."><code>@font-face</code></a> dans la feuille de styles.
+	</p>
+<div class="syntaxe"><code>
+@font-face {
+   font-family:'nom de la police';
+   src:url('chemin/fichier.otf');
+}
+</code></div>
+
+	<h4>Crédit des polices utilisées sur cette page.</h4>
+	<ul>
+		<li><code>Fira Sans</code> : 
+			Designer : Carrois Apostrophe. 
+			Disponible sur <a href="https://fonts.google.com/specimen/Fira+Sans" target="_blank">Google Fonts</a>.
+		</li>
+		<li><code>Kleymissky</code> : 
+			Designer : <a href="http://www.glukfonts.pl/" target="_blank">Gluk</a>. 
+			Licence : <a href="http://scripts.sil.org/OFL" target="SIL">SIL Open Font License</a>.
+		</li>
+		<li><code>Comic Jens</code> : 
+			Designer : <a href="https://www.fontshop.com/designers/jens-kutilek" target="_blank">Jens Kutilek</a>. 
+			Police distribuée sous licence <a href="https://creativecommons.org/licenses/by-nd/3.0/" target="_blank">Creative Common</a>.
+		</li>
+		<li><code>Countryside</code> : 
+			Designer : <a href="https://billyargel.com/" target="_blank">Billy Argel</a>. 
+			Licence : usage personnel uniquement.
+		</li>
+<!--	<li><code>Warnock Pro</code>  :
+			Designer : <a href="https://fonts.adobe.com/designers/robert-slimbach" target="_blank">Robert Slimbach (Adobe)</a>.
+		</li>
+-->	</ul>
+</section>
+
+
+<!-- ----------------------------------------------------------------------- -->	
+<section id="capitalisation"><h2>Capitalisation des caractères avec <code>font-feature-settings</code>.</h2>
+<!-- ----------------------------------------------------------------------- -->	
+	
+	<p>Lorsque c'est possible, utilisez de préférence la propriété standardisée <a href="font-variant-caps.html" title="font-variant-caps : Capitalisation des caractères."><code>font-variant-caps</code></a> mais 
+		cette dernière n'implémente pas encore toutes les possibilités de capitalisation.
+	</p>
+
+<ul class="syntaxes">
+<li><div class="syntaxe"><code>
+font-feature-settings: 'smcp';
+</code></div>
+	<p>Transforme les caractères minuscules en petites majuscules : le glyphe est celui des majuscules 
+		et la hauteur celle des minuscules.	
+		Les caractères en majuscules ne sont pas modifiés.
+	</p>
+	<div class="exemples">
+		<div class="exemple" style="font-feature-settings:'smcp'off;" onclick="changeFeature(this,'smcp')">
+			Démonstration
+			<div class="feature">'smcp'off</div>
+		</div>
+	</div>
+</li>
+	
+<li><div class="syntaxe"><code>
+font-feature-settings: 'c2sc';
+</code></div>
+	<p>Transforme les caractères majuscules en petites majuscules. Leur glyphe est inchangé mais leur
+		taille est réduite à celle des minuscules.
+		Les caractères en minuscules ne sont pas modifiés.
+	</p>
+	<div class="exemples">
+		<div class="exemple" style="font-feature-settings:'c2sc'off;" onclick="changeFeature(this,'c2sc')">
+			Démonstration
+			<div class="feature">'cs2c'off</div>
+		</div>
+	</div>
+</li>
+	
+<li><div class="syntaxe"><code>
+font-feature-settings: 'pcap';
+</code></div>
+	<p>Transforme les caractères minuscules en petites capitales.
+		Les caractères en majuscules ne sont pas modifiés.
+	</p>
+	<div class="exemples">
+		<div class="exemple" style="font-feature-settings:'pcap'off;" onclick="changeFeature(this,'pcap')">
+			Démonstration
+			<div class="feature">'pcap'off</div>
+		</div>
+	</div>
+</li>
+
+<li><div class="syntaxe"><code>
+font-feature-settings: 'c2pc';
+</code></div>
+	<p>Transforme les caractères majuscules en petites capitales.
+		Les caractères en minuscules ne sont pas modifiés.
+	</p>
+	<div class="exemples">
+		<div class="exemple" style="font-feature-settings:'c2pc'off;" onclick="changeFeature(this,'c2pc')">
+			Démonstration
+			<div class="feature">'c2pc'off</div>
+		</div>
+	</div>
+</li>
+
+<li><div class="syntaxe"><code>
+font-feature-settings: 'unic';
+</code></div>
+	<p>Remplace minuscules et majuscules par un jeu de caractères unique. 
+		La taille des lettres sera celle des majuscules. Leur glyphe peut être soit celui de la minuscule, 
+		soit de la majuscule, suivant celui qui sera le plus adapté.<br/>
+		Dans notre exemple, le <code>T</code> et le <code>R</code> ont le glyphe de la lettre majuscule
+		tandis que les autres lettres ont le glyphe de la minuscule.
+	</p>
+	<div class="exemples">
+		<div class="exemple" style="font-feature-settings:'unic'off;" onclick="changeFeature(this,'unic')">
+			Démonstration
+			<div class="feature">'cs2c'off</div>
+		</div>
+	</div>
+</li>
+
+<li><div class="syntaxe"><code>
+font-feature-settings: 'cpsp';
+</code></div>
+	<p>Agrandit légèrement l'espace entre les majuscules successives.
+		L'espace standard est prévu pour une écriture essentiellement en minuscules avec seulement 
+		une majuscule en début des phrases ou de certains mots.
+		Lorsque tout le texte est en majuscules il est plus esthétique d'augmenter un peu cet espace
+		entre les lettres.<br/>
+		En cliquant sur les exemples ci-dessus, on voit que cette valeur n'a d'effet que sur les 
+		textes en majuscules.
+	</p>
+	<div class="exemples">
+		<div class="exemple" style="font-feature-settings:'cpsp'off;" onclick="changeFeature(this,'cpsp')">
+			EXEMPLE
+			<div class="feature">'cpsp'off</div>
+		</div>
+		<div class="exemple" style="font-feature-settings:'cpsp'off;" onclick="changeFeature(this,'cpsp')">
+			exemple
+			<div class="feature">'cpsp'off</div>
+		</div>
+	</div>
+</li>
+
+<li><div class="syntaxe"><code>
+font-feature-settings: 'opsz';
+</code></div>
+	<p>Met en œuvre la modification des formes des glyphes en fonction de la taille des caractères.
+		Les très gros caractères permettent des glyphes plus sophistiqués, qui rendraient la lecture difficile
+		sur des caractères plus petit.<br/>
+		Sur les gros caractères, il est courant par exemple d'augmenter la différence d'épaisseur entre les 
+		pleins et les déliés, ou d'augmenter la taille des empattements.
+	</p>
+	<p>Cette fonctionnalité peut être ajustée plus facilement par La propriété <a href="font-optical-sizing.html" title="font-optical-sizing : Optimisation visuelle des caractères."><code>font-optical-sizing</code></a>.
+	</p>
+	<div class="exemples" style="font-family:'Amstelvar';">
+		<div class="exemple" style="font-feature-settings:'opsz'off;" onclick="changeFeature(this,'opsz')">
+			<span style="font-size:1em;font-feature-settings:inherit;">EXEMPLE</span><br/>
+			<span style="font-size:4em;font-feature-settings:inherit;">EXEMPLE</span>
+			<div class="feature">'opsz'off</div>
+		</div>
+	</div>
+</li>
+
+<li><div class="syntaxe"><code>
+font-feature-settings: 'kern';
+</code></div>
+	<p>Ajuste le crénage, c'est à dire l'espace entre les lettres successives lorsque leur forme nécessite 
+		un ajustement de cet espace. Dans le mot <code>AVION</code> en majuscules, les lettres <code>A</code> 
+		et <code>V</code> ont des formes qui peuvent facilement s'imbriquer pour un rendu plus harmonieux : 
+		on voit que, lorsque le crénage est désactivé, la lettre <code>A</code> semble séparée du reste du mot.<br/>
+		Cette valeur est souvent activée par défaut.
+	</p>
+	<div class="exemples" style="font-family:serif">
+		<div class="exemple" style="font-feature-settings:'kern'off;" onclick="changeFeature(this,'kern')">
+			AVION
+			<div class="feature">'kern'off</div>
+		</div>
+	</div>
+</li>
+
+</ul>
+
+	
+<!-- ----------------------------------------------------------------------- -->	
+<h2 id="ligatures">Gestion des ligatures avec <code>font-feature-settings</code>.</h2>
+<!-- ----------------------------------------------------------------------- -->
+
+	<p>Une ligature est un caractère unique qui remplace une suite de deux ou trois caractères distincts.
+		On utilise les ligatures lorsque les glyphes de deux caractères s'enchaînent mal.
+		Les deux exemples les plus connus sont orthographiques : ae et oe qui se ligaturent en &aelig; et &oelig;.
+		Mais d'autres ligatures visent surtout à améliorer l'esthétique et/ou la lisibilité, 
+		comme les lettres f i qui se ligaturent en &filig; afin d'éviter la collision entre le point 
+		du <code>i</code> et la boucle du <code>f</code>.
+	</p>
+	<p style="font-family:serif;font-size:2em;text-align:center;">
+		ae&rarr;&aelig; &nbsp; fi&rarr;&filig; &nbsp; sz&rarr;&szlig;
+	</p>
+	<p>Certaines polices de caractères utilisent des ligatures pour faciliter la saisie : par exemple
+		la suite des trois caractères (C) est remplacée par le symbole &copy;, qui n'est pas disponible 
+		directement au clavier. De même la suite (P) sera remplacés par &copysr;.
+	</p>
+	<p style="font-family:serif;font-size:2em;text-align:center;">
+		(C)&rarr;&copy; &nbsp; (P)&rarr;&copysr;
+	</p>
+	<p>On voit que les possibilités offertes par les ligatures sont très dépendantes de la police utilisée.
+		Rien n'est vraiment normalisé dans ce domaine.
+	</p>
+	
+	<p>La propriété standardisée équivalente pour gérer les ligatures est <a href="font-variant-ligatures.html" title="font-variant-ligatures : Ligature des caractères."><code>font-variant-ligatures</code></a>.
+	</p>
+	
+<ul class="syntaxes">
+
+<li><div class="syntaxe"><code>
+font-feature-settings: 'liga';
+</code></div>
+	<p>Mise en œuvre des ligatures courantes. Des suites de caractères sont remplacées par le glyphe unique
+		de la ligature.<br/>
+		Exemple : la suite des lettres <code>f</code> et <code>i</code>.
+		<br/>
+		Les ligatures courantes sont activées par défaut. Pour les désactiver utiliser la syntaxe<br/>
+		<code>font-feature-settings:'liga'off;</code>
+	</p>
+	<div class="exemples">
+		<div class="exemple" style="font-feature-settings:'liga'off" onclick="changeFeature(this,'liga')">
+			<div style="font-family:'Fira Sans';">Définition</div>
+			<div class="feature">'liga'off</div>
+		</div>
+		<div class="exemple" style="font-feature-settings:'liga'off" onclick="changeFeature(this,'liga')">
+			<div style="font-family:'Comic Jens';">le trèfle</div>
+			<div class="feature">'liga'off</div>
+		</div>
+		<div class="exemple" style="font-feature-settings:'liga'off" onclick="changeFeature(this,'liga')">
+			<div style="font-family:'Kleymissky';">affinité</div>
+			<div class="feature">'liga'off</div>
+		</div>
+	</div>
+</li>
+
+<li><div class="syntaxe"><code>
+font-feature-settings: 'dlig';
+</code></div>
+	<p>Mise en œuvre de ligatures supplémentaires (par rapport à <code>'liga'</code>) : 
+		d'autres successions de caractères peuvent être remplacées par un caractère unique.<br/>
+		Cette valeur n'est pas activée par défaut. C'est à peu près la seule différence avec <code>liga</code>.
+	</p>
+	<div class="exemples">
+		<div class="exemple" style="font-feature-settings:'dlig'off;" onclick="changeFeature(this,'dlig')">
+			<span style="font-family:'Warnock';">Contact spécial est pris</span>
+			<div class="feature">'dlig'off</div>
+		</div>
+		<div class="exemple" style="font-feature-settings:'dlig'off;" onclick="changeFeature(this,'dlig')">
+			<div style="font-family:'Comic Jens';">LOL lol WTF</div>
+			<div class="feature">'dlig'off</div>
+		</div>
+	</div>
+</li>
+
+<li><div class="syntaxe"><code>
+font-feature-settings: 'calt';
+</code></div>
+	<p>Autre possibilité de ligatures. Donne des résultats ou non, suivant la police.
+	</p>
+	<div class="exemples">
+		<div class="exemple" style="font-feature-settings:'calt'off;" onclick="changeFeature(this,'calt')">
+			<div style="font-family:'Kleymissky';">Arts et essais</div>
+			<div class="feature">'calt'off</div>
+		</div>
+	</div>
+</li>
+
+<li><div class="syntaxe"><code>
+font-feature-settings: 'hlig';
+</code></div>
+	<p>Mise en œuvre des ligatures historiques. Ces ligatures étaient employées par le passé.
+		Elles ont maintenant un caractère rétro qui peut être occasionnellement utile.
+	</p>
+	<div class="exemples">
+		<div class="exemple" style="font-feature-settings:'hlig'off;" onclick="changeFeature(this,'hlig')">
+			<div style="font-family:'Warnock'">
+				Finition
+			</div>
+			<div class="feature">'hlig'off</div>
+		</div>
+	</div>
+</li>
+
+<li><div class="syntaxe"><code>
+font-feature-settings: 'clig';
+</code></div>
+	<p>Encore d'autres ligatures.
+	</p>
+	<div class="exemples" style="font-family:'Warnock';">
+		<div class="exemple" style="font-feature-settings:'clig'off;" onclick="changeFeature(this,'clig')">
+			Exemple
+			<div class="feature">'clig'off</div>
+		</div>
+	</div>
+</li>
+<!--
+<li><div class="syntaxe"><code>
+font-feature-settings: 'rlig';
+</code></div>
+	<p>
+	</p>
+</li>
+-->
+</ul>
+
+
+<!-- ----------------------------------------------------------------------- -->	
+<h2 id="nombres">Gestion de l'affichage des nombres avec <code>font-feature-settings</code>.</h2>
+<!-- ----------------------------------------------------------------------- -->	
+	
+	<p>La propriété standardisée équivalente est <a href="font-variant-numeric.html" title="font-variant-numeric : Mode d'affichage des nombres."><code>font-variant-numeric</code></a>.
+	</p>
+
+<ul class="syntaxes">
+
+<li><div class="syntaxe"><code>
+font-feature-settings: 'lnum';
+font-feature-settings: 'onum';
+</code></div>
+	<p><code>lnum</code> force un alignement horizontal des nombres : tous les chiffres ont la même 
+		base et la même hauteur. Cette valeur est généralement activée par défaut.
+		<br/><br/>
+		<code>onum</code> n'aligne pas les chiffres et ceux-ci peuvent avoir des hauteurs différentes,
+		ce qui provoque un effet "old style".
+		<br/><br/>
+		Les valeurs <code>lnum</code> et <code>onum</code> sont bien sûr incompatibles.
+		<code>lnum</code> est activé par défaut, sauf dans certaines polices fantaisies.
+	</p>		
+	<div class="exemples">
+		<div class="exemple" style="font-feature-settings:'lnum';" onclick="changeFeature(this,'lnum')">
+			<div style="font-family:serif;">1234567890</div>
+			<div class="feature">'lnum'</div>
+		</div>
+		<div class="exemple" style="font-feature-settings:'onum';" onclick="changeFeature(this,'onum')">
+			<div style="font-family:serif;">1234567890</div>
+			<div class="feature">'onum'</div>
+		</div>
+	</div>
+</li>
+
+<li><div class="syntaxe"><code>
+font-feature-settings: 'tnum';
+font-feature-settings: 'pnum';
+</code></div>
+	<p><code>tnum</code> force une largeur de caractère identiques pour tous les chiffres.
+		Ce qui permet l'alignement vertical des nombres. Le <code>t</code> signifie tableau.
+		Cette valeur est généralement celle qui est choisie par défaut.
+		<br/><br/>
+		<code>pnum</code> force une largeur proportionnelle des chiffres. 
+		Cette fonctionnalité améliore l'esthétique mais	empêche l'alignement vertical des nombres.
+		Le <code>p</code> veut dire proportionnel.
+		<br/><br/>
+		Ces deux valeurs sont bien sûr incompatibles. Elles sont toutes deux sans effet sur une
+		police à espacements fixes.
+	</p>
+	<div class="exemples">
+		<div class="exemple" style="font-feature-settings:'tnum';" onclick="changeFeature(this,'tnum')">
+			<div style="font-family:serif;">1 211 151,10<br/>8 245 300,24</div>
+			<div class="feature">'tnum'</div>
+		</div>
+		<div class="exemple" style="font-feature-settings:'pnum';" onclick="changeFeature(this,'pnum')">
+			<div style="font-family:serif;">1 211 151,10<br/>8 245 300,24</div>
+			<div class="feature">'pnum'</div>
+		</div>
+	</div>
+</li>
+
+<li><div class="syntaxe"><code>
+font-feature-settings: 'frac';
+</code></div>
+	<p>Les suites de deux nombres séparés par une barre oblique ( <code>/</code> ) sont affichés comme 
+		une fraction.
+	</p>
+	<div class="exemples">
+		<div class="exemple" style="font-feature-settings:'frac'off;" onclick="changeFeature(this,'frac')">
+			<div style="font-family:serif;">1/2 &nbsp; 3/4 &nbsp; 1/100 &nbsp; 36/1000</div>
+			<div class="feature">'frac'off</div>
+		</div>
+	</div>
+</li>
+
+<li><div class="syntaxe"><code>
+font-feature-settings: 'ordn';
+</code></div>
+	<p>Certaines suites de caractères sont remplacées par le glyphe correspondant au nombre ordinal.
+		Par exemple <code>No</code> devient &numero;, <code>1st</code> devient 1<sup>st</sup>, etc.
+		Malheureusement les numéros ordinaux français <code>1<sup>er</sup></code>, <code>2<sup>ème</sup></code>,
+		etc. sont traités que par peu de polices.
+	</p>
+	<div class="exemples">
+		<div class="exemple" style="font-feature-settings:'ordn'off;" onclick="changeFeature(this,'ordn')">
+			<div style="font-family:'Comic Jens';">No no 1a 1st 2nd<br/>1er 2ème</div>
+			<div class="feature">'ordn'off</div>
+		</div>
+	</div>
+</li>
+
+<li><div class="syntaxe"><code>
+font-feature-settings: 'zero';
+</code></div>
+	<p>Le glyphe des zéros standards est remplacé par celui des zéros barrés.
+		Le but étant d'éviter la confusion avec la lettre O majuscule.
+	</p>
+	<div class="exemples">
+		<div class="exemple" style="font-feature-settings:'zero'off;" onclick="changeFeature(this,'zero')">
+			<div style="font-family:Warnock">&nbsp; 1 000 &nbsp;</div>
+			<div class="feature">'zero'off</div>
+		</div>
+	</div>
+</li>
+
+</ul>
+
+	
+<!-- ----------------------------------------------------------------------- -->	
+<h2 id="exposant-indice">Indices et exposants avec <code>font-feature-settings</code>.</h2>
+<!-- ----------------------------------------------------------------------- -->	
+	
+	<p>La propriété standardisée équivalente est <a href="font-variant-position.html" title="font-variant-position : Exposant ou indice"><code>font-variant-position</code></a>.
+	</p>
+	
+<ul class="syntaxes">
+	
+<li><div class="syntaxe"><code>
+font-feature-settings: 'subs';
+</code></div>
+	<p>Écriture des chiffres en indice. <br/>
+		Remarque : la balise HTML <kbd>sub</kbd> provoque également une mise en indice mais l'auteur doit
+		positionner les balises manuellement autour des chiffres, tandis que l'option <code>subs</code>
+		détecte automatiquement ce qui doit être placé en indice.
+	</p>
+	<div class="exemples">
+		<div class="exemple" style="font-feature-settings:'subs'off;" onclick="changeFeature(this,'subs')">
+			<div style="font-family:'Comic Jens';">H2O - CH4<br/>C12H22O11</div>
+			<div class="feature">'subs'off</div>
+		</div>
+	</div>
+</li>
+
+<li><div class="syntaxe"><code>
+font-feature-settings: 
+</code></div>
+	<p>Écriture des chiffres en exposant.
+		Même remarque : la balise HTML <kbd>sup</kbd> provoque également une mise en exposant mais l'auteur 
+		doit positionner les balises manuellement autour des chiffres.
+	</p>
+	<div class="exemples">
+		<div class="exemple" style="font-feature-settings:'sups'off;" onclick="changeFeature(this,'sups')">
+			<div style="font-family:'Comic Jens';">&pi;R2 - m3</div>
+			<div class="feature">'sups'off</div>
+		</div>
+	</div>
+</li>
+
+<li><div class="syntaxe"><code>
+font-feature-settings: 'dnom';
+font-feature-settings: 'numr';
+</code></div>
+	<p>Ces deux valeurs réduisent la taille des chiffres et les alignent par le bas pour <code>dnom</code>
+		(dénominateur) et par le haut pour <code>numr</code> (numérateur)
+		Le résultat ressemblera à celui de <code>subs</code> et <code>sups</code> sauf que les chiffres
+		restent alignés sur les lettres, sans passer en indice ou en exposant.
+	</p>
+	<div class="exemples">
+		<div class="exemple" style="font-feature-settings:'dnom'off;" onclick="changeFeature(this,'dnom')">
+			<div style="font-family:'Fira Sans';">h2O 200€</div>
+			<div class="feature">'dnom'off</div>
+		</div>
+		<div class="exemple" style="font-feature-settings:'numr'off;" onclick="changeFeature(this,'numr')">
+			<div style="font-family:'Fira Sans';">H2O 200€</div>
+			<div class="feature">'numr'off</div>
+		</div>
+	</div>
+</li>
+
+<li><div class="syntaxe"><code>
+font-feature-settings: 'sinf';
+</code></div>
+	<p>Remplace le glyphe des chiffres et des lettres minuscules par un glyphe plus petit et positionné plus bas.
+		Cette notation est adaptée à l'écriture de formules chimiques ou scientifiques.
+	</p>
+	<div class="exemples">
+		<div class="exemple" style="font-feature-settings:'sinf'off;" onclick="changeFeature(this,'sinf')">
+			<div style="font-family:'Fira Sans';">h2O NaCl</div>
+			<div class="feature">'sinf'off</div>
+		</div>
+	</div>
+</li>
+
+</ul>
+
+
+<!-- ----------------------------------------------------------------------- -->	
+<h2 id="substitutions">Autres substitutions de caractères avec <code>font-feature-settings</code>.</h2>
+<!-- ----------------------------------------------------------------------- -->	
+	
+	<p>La propriété standardisée équivalente est <a href="font-variant-alternates.html" title="font-variant-alternates : Substitution de caractères."><code>font-variant-alternates</code></a>.
+	</p>
+	
+
+<ul class="syntaxes">
+	
+<li><div class="syntaxe"><code>
+font-feature-settings: 'aalt';
+</code></div>
+	<p>Cette valeur est surtout utile pour tester les substitutions possibles avec la police choisie.
+		On peut explorer toutes les variantes en faisant évoluer le numéro après la valeur :<br/>			
+		<code>
+		font-feature-settings:'aalt'1;
+		font-feature-settings:'aalt'2;
+		font-feature-settings:'aalt'3;
+		Etc.
+		</code><br/>
+		Dans notre exemple nous n'avons fait figurer que les lettres qui sont le plus remarquables, mais
+		ce genre de test se fait sur l'alphabet complet
+	</p>
+	<div class="exemples" style="font-size:3rem;">
+		<div class="exemple" style="font-feature-settings:'aalt'2;" onclick="changeFeature(this,'aalt',2)">
+			<div style="font-family:'Kleymissky';">s d e h l m r s t</div>
+			<div class="feature">'aalt'2</div>
+		</div>
+		<div class="exemple" style="font-feature-settings:'aalt'3;" onclick="changeFeature(this,'aalt',3)">
+			<div style="font-family:'Kleymissky';">s d e h l m r s t</div>
+			<div class="feature">'aalt'3</div>
+		</div>
+	</div>
+</li>
+	
+<li><div class="syntaxe"><code>
+font-feature-settings: 'hist';
+</code></div>
+	<p>Cette valeur remplace les formes habituelles des caractères par une forme ayant un aspect plus
+		ancien (historique).
+	</p>
+	<div class="exemples" style="font-family:'serif'; font-size:3rem;">
+		<div class="exemple" style="font-feature-settings:'hist'off;" onclick="changeFeature(this,'hist')">
+			<div style="font-family:serif;">A J Q s a b c d f</div>
+			<div class="feature">'hist'off</div>
+		</div>
+	</div>
+</li>
+
+<li><div class="syntaxe"><code>
+font-feature-settings: 'cswh';
+</code></div>
+	<p>Remplace les formes habituelles des caractères par une forme plus ornée, en tenant compte
+		des lettres avant ou après (ou de l'absence de lettre).	
+	</p>
+	<div class="exemples">
+		<div class="exemple" style="font-feature-settings:'cswh'off;" onclick="changeFeature(this,'cswh')">
+			<div style="font-family:'Countryside';">La feuille morte</div>
+			<div class="feature">'cswh'off</div>
+		</div>
+	</div>
+</li>	
+
+<li><div class="syntaxe"><code>
+font-feature-settings: 'swsh;
+</code></div>
+	<p>Transforme les initiales des mots en caractères ornés.<br/>
+		Remarque : certaines polices OTF comportent plusieurs glyphes ornés, on peut alors préciser 
+		le numéro du glyphe à utiliser. Exemple : <code>font-feature-settings: 'swsh' 2</code>.
+	</p>
+	<div class="exemples">
+		<div class="exemple" style="font-feature-settings:'swsh'off;" onclick="changeFeature(this,'swsh')">
+			<div style="font-family:'Countryside';">Un beau titre</div>
+			<div class="feature">'swsh'off</div>
+		</div>
+	</div>
+</li>
+
+<li><div class="syntaxe"><code>
+font-feature-settings: 'titl';
+</code></div>
+	<p>Remplace les glyphes habituels par des glyphes plus adaptés à l'écriture de titres. 
+		Il s'agit en général de lettres capitales avec des attributs adaptés aux grandes tailles.
+	</p>
+	<div class="exemples">
+		<div class="exemple" style="font-feature-settings:'titl'off;" onclick="changeFeature(this,'titl')">
+			<div style="font-family:'Countryside';">&nbsp; Titre &nbsp;</div>
+			<div class="feature">'titl'off</div>
+		</div>
+	</div>
+</li>
+
+<li><div class="syntaxe"><code>
+font-feature-settings: 'salt';
+</code></div>
+	<p>Remplace certains glyphes par une variante plus stylistique.
+		Remarque : dans certaines polices il existe plusieurs variantes stylistiques : préciser le numéro 
+		de la variante à utiliser.
+		<br/>
+		Exemple : <code>font-feature-settings: 'salt' 2;</code>.
+	</p>
+	<div class="exemples">
+		<div class="exemple" style="font-feature-settings:'salt'off;" onclick="changeFeature(this,'salt')">
+			<div style="font-family:'Countryside';">Démonstration</div>
+			<div class="feature">'salt'off</div>
+		</div>
+	</div>
+</li>
+
+<li><div class="syntaxe"><code>
+font-feature-settings: 'ss01';
+</code></div>
+	<p>Variante stylistique.
+	</p>
+	<div class="exemples">
+		<div class="exemple" style="font-feature-settings:'ss01'off;" onclick="changeFeature(this,'ss01')">
+			<div style="font-family:cursive;">EXEMPLE</div>
+			<div class="feature">'ss01'off</div>
+		</div>
+	</div>
+</li>
+
+<li><div class="syntaxe"><code>
+font-feature-settings: 'ornm';
+</code></div>
+	<p>Remplace les formes habituelles de certains caractères minuscules par un pictogramme, un fleuron, 
+		une frise, etc. La caractère puce &bull; ( <code>&amp;bull;</code> ) a également un pictogramme 
+		qui lui correspond.
+	</p>
+	<div class="exemples" style="font-family:Warnock;">
+		<div class="exemple" style="font-feature-settings:'ornm'off;" onclick="changeFeature(this,'ornm')">
+			<div style="font-family:'Warnock';">&bull; abcdefghijklmnopqrstuvwxyz</div>
+			<div class="feature">'ornm'off</div>
+		</div>
+	</div>
+</li>
+
+<li><div class="syntaxe"><code>
+font-feature-settings: 'locl';
+</code></div>
+	<p>Remplace les glyphes standards de certains caractères par le glyphe spécifique à un pays
+		ou une langue.
+	</p>
+	<div class="exemples" style="font-family:Warnock;">
+		<div class="exemple" style="font-feature-settings:'locl'off;" onclick="changeFeature(this,'locl')">
+			&nbsp; à ö ç &nbsp;
+			<div class="feature">'locl'off</div>
+		</div>
+	</div>
+</li>
+
+</ul>
+
+
+<!-- ----------------------------------------------------------------------- -->	
+<h2 id="east-asian">Gestion des alphabets spéciaux avec <code>font-feature-settings</code>.</h2>
+<!-- ----------------------------------------------------------------------- -->	
+
+	<p>La propriété standardisée équivalente est <a href="font-variant-east-asian.html" title="font-variant-east-asian : Typographie spécifique aux caractères CJK."><code>font-variant-east-asian</code></a>.
+	</p>
+	
+<ul class="syntaxes">
+
+<li><div class="syntaxe"><code>
+font-feature-settings: 'palt';
+font-feature-settings: 'pkna';
+font-feature-settings: 'pwid';
+font-feature-settings: 'fwid';
+font-feature-settings: 'hwid';
+font-feature-settings: 'halt';
+font-feature-settings: 'twid';
+font-feature-settings: 'qwid';
+font-feature-settings: 'jp78';
+font-feature-settings: 'jp83';
+font-feature-settings: 'jp90';
+font-feature-settings: 'jp04';
+font-feature-settings: 'trad';
+font-feature-settings: 'ruby';
+font-feature-settings: 'hkna';
+font-feature-settings: 'nlck';
+font-feature-settings: 'nalt';
+font-feature-settings: 'ccmp';
+</code></div>
+	<p>Si vous souhaitez une description plus précise de chacune de ces valeurs, vous pouvez vous reporter, entre autres,
+		à la page sur le site de la société Adobe : 
+		<a href="https://helpx.adobe.com/fr/fonts/using/open-type-syntax.html" title="Syntaxe OpenType" target="_blank">Syntaxe des fonctionnalités OpenType en CSS</a>.
+	</p>
+</li>
+
+</ul>
+
+
+<!-- ----------------------------------------------------------------------- -->	
+<h2 id="vertical">Gestion de l'écriture verticale avec <code>font-feature-settings</code>.</h2>
+<!-- ----------------------------------------------------------------------- -->
+	
+	<p>Les valeurs suivantes pour <code>font-feature-settings</code> ne sont prise en compte que lorsque le sens d'écriture
+		est vertical.
+		Le sens d'écriture se définit avec la propriété <a href="writing-mode.html" title="writing-mode : Sens et direction d'écriture (horizontale ou verticale)."><code>writing-mode</code></a>.
+	</p>
+	
+<ul class="syntaxes">
+	
+<li><div class="syntaxe"><code>
+font-feature-settings: 'vkrn';
+</code></div>
+	<p>Ajuste le crénage vertical.
+	</p>
+</li>
+
+<li><div class="syntaxe"><code>
+font-feature-settings: 'vert';
+</code></div>
+	<p>Remplace certains glyphes par d'autres, plus adaptés à l'écriture verticale.
+	</p>
+</li>
+	
+<li><div class="syntaxe"><code>
+font-feature-settings: 'vpal';
+font-feature-settings: 'vhal';
+</code></div>
+	<p>Ces deux valeurs réajustent, avec des logiques différentes, l'espacement des caractères dans le cas 
+		d'une écriture verticale.
+	</p>
+</li>
+
+<li><div class="syntaxe"><code>
+font-feature-settings: 'vkna';
+</code></div>
+	<p>Remplace les caractères kana standards par des glyphes plus adaptés à l'écriture verticale.
+	</p>
+</li>
+
+</ul>
+
+
+<!-- ----------------------------------------------------------------------- -->	
+<h2 id="divers">Autres effets stylistiques avec <code>font-feature-settings</code>.</h2>
+<!-- ----------------------------------------------------------------------- -->
+	
+<ul class="syntaxes">
+	
+<li><div class="syntaxe"><code>
+font-feature-settings: 'ital';
+</code></div>
+	<p>Remplace les caractères par leur glyphe en italique.
+	</p>
+	<div class="exemples" style="font-family:Warnock;">
+		<div class="exemple" style="font-feature-settings:'ital'off;" onclick="changeFeature(this,'ital')">
+			abcdefg
+			<div class="feature">'ital'off</div>
+		</div>
+	</div>
+</li>
+
+<li><div class="syntaxe"><code>
+font-feature-settings: 'init';
+font-feature-settings: 'medi';
+font-feature-settings: 'isol';
+font-feature-settings: 'fina';
+font-feature-settings: 'ss02';
+font-feature-settings: 'mark';
+font-feature-settings: 'mkmk';
+</code></div>
+	<p>Autres effets typographiques.
+	</p>
+</li>
+		
+</ul>
+</section>
+
+<section id="compatibility"><h2>Prise en charge par les navigateurs (compatibilité).</h2>
+	<p>La propriété <code>font-feature-settings</code> en elle même est relativement bien reconnue par les navigateurs. 
+		Mais il faut garder à l'esprit que la multitude de possibilités auxquelles elle donne accès sont disponibles
+		ou pas en fonction de la police de caractères choisie.
+	</p>		
+	<p class="caniuse-link" onclick="showCanIuse('font-feature')">
+Afficher le tableau de compatibilité (informations fournies par canIuse.com).
+</p>
+<div id="font-feature" class="caniuse-result">
+	<input type="checkbox" id="font-feature-past" value="past_1" onclick="setCanIuse('font-feature')"/> Afficher les versions antérieures &nbsp;
+	<input type="checkbox" id="font-feature-next" value="past_1" onclick="setCanIuse('font-feature')"/> Afficher la version à venir &nbsp;
+	<p id="font-feature-embed" class="ciu_embed" data-feature="font-feature" data-periods="current" data-accessible-colours="false"> 
+	</p>
+</div>
+</section>
+				
+				<section id="voir-aussi"><h2>Voir aussi...</h2><h3>Polices et caractères - Propriétés.</h3><ul><li><a href="font.html" title="font : Police de caractères."><code>font</code></a> : Raccourci pour définir la plupart des propriétés concernant les polices de caractères.</li><li><a href="font-display.html" title="font-display : Consigne concernant le chargement des polices."><code>font-display</code></a> : Détermine le comportement du navigateur face aux polices de caractères longues à charger.</li><li><a href="font-family.html" title="font-family : Police de caractères."><code>font-family</code></a> : Définit le nom de la police de caractères.</li><li><a href="font-kerning.html" title="font-kerning : Crénage des caractères."><code>font-kerning</code></a> : Ajustement du crénage entre caractères.</li><li><a href="font-size.html" title="font-size : Taille des caractères."><code>font-size</code></a> : Ajuste la taille des caractères.</li><li><a href="font-size-adjust.html" title="font-size-adjust : Coefficient d'aspect de la police."><code>font-size-adjust</code></a> : Définition du coefficient d'aspect de la police.</li><li><a href="font-stretch.html" title="font-stretch : Étirement des caractères."><code>font-stretch</code></a> : Modifie l'étirement ou la compression des caractères.</li><li><a href="font-style.html" title="font-style : Italique."><code>font-style</code></a> : Sélectionne les styles italique ou oblique de la police de caractères.</li><li><a href="font-synthesis.html" title="font-synthesis : Simulation des styles manquants."><code>font-synthesis</code></a> : Autorise ou non le calcul des styles manquants dans la police de caractères.</li><li><a href="font-variant.html" title="font-variant : Attributs typographiques évolués."><code>font-variant</code></a> : Raccourci permettant de définir les attributs typographiques évolués : ligatures, substitution de caractères, etc.</li><li><a href="font-variant-alternates.html" title="font-variant-alternates : Substitution de caractères."><code>font-variant-alternates</code></a> : Met en uvre la substitution de caractères (polices OTF, WOFF).</li><li><a href="font-variant-caps.html" title="font-variant-caps : Capitalisation des caractères."><code>font-variant-caps</code></a> : Applique une capitalisation des caractères.</li><li><a href="font-variant-east-asian.html" title="font-variant-east-asian : Typographie spécifique aux caractères CJK."><code>font-variant-east-asian</code></a> : Typographie spécifique aux caractères chinois ou japonais.</li><li><a href="font-variant-ligatures.html" title="font-variant-ligatures : Ligature des caractères."><code>font-variant-ligatures</code></a> : Active ou désactive la ligature des caractères.</li><li><a href="font-variant-numeric.html" title="font-variant-numeric : Mode d'affichage des nombres."><code>font-variant-numeric</code></a> : Met en uvre les modes d'affichage des nombres évolués : fractions, numéros, etc.</li><li><a href="font-weight.html" title="font-weight : Graisse des caractères."><code>font-weight</code></a> : Sélectionne une graisse pour les caractères.</li><li><a href="text-decoration.html" title="text-decoration : Soulignement ou rayure du texte."><code>text-decoration</code></a> : Choisit le soulignement, le surlignement ou la rayure du texte.</li><li><a href="text-decoration-color.html" title="text-decoration-color : Couleur de la décoration."><code>text-decoration-color</code></a> : Définit la couleur du trait de décoration.</li><li><a href="text-decoration-line.html" title="text-decoration-line : Type de décoration : souligné, barré, etc."><code>text-decoration-line</code></a> : Type de décoration : souligné, barré, etc.</li><li><a href="text-decoration-style.html" title="text-decoration-style : Type de trait de décoration."><code>text-decoration-style</code></a> : Type de trait pour la décoration : plein, pointillé, etc.</li><li><a href="text-shadow.html" title="text-shadow : Ombrage du texte."><code>text-shadow</code></a> : Ombrage du texte.</li><li><a href="text-transform.html" title="text-transform : Casse du texte."><code>text-transform</code></a> : Casse du texte (minuscules, majuscules...).</li></ul></section>
+			</main>
+			<p>&nbsp;</p><div class="adsense-in-article">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-6434138622132038"
+     data-ad-slot="7328470077"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+		</div>
+	</div>
+		<footer id="footer">
+		<a href="../v2-contact.html">Contact</a> &nbsp; &bull; &nbsp; 
+		<a href="../v2-copyright.html">Copyright</a> &nbsp; &bull; &nbsp; 
+		<a href="../v2-privacy.html">Vie privée</a> &nbsp; &bull; &nbsp; 
+<!--		<a href="http://stylescss.free.fr/v2-lexique.php">Lexique</a> &bull; -->
+		Lexique
+	</footer>
+	<div id="privacy" title="Protection de la vie privée">
+		<p class="center">
+		<input type="button" value="Accepter les cookies" onclick="allowCookies()"/>
+		</p>
+	</div>
+</body>
+<!-- Mirrored from stylescss.free.fr/v2-properties/font-feature-settings.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Apr 2020 15:05:05 GMT -->
+</html>

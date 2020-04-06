@@ -1,0 +1,949 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<!-- Mirrored from stylescss.free.fr/v2-tools/entities.php?search=grec by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Apr 2020 15:06:50 GMT -->
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="caractères,codes,utf,unicode,grec">
+	<meta name="description" content="Outil pour trouver les codes des caractères spéciaux unicode (UTF) à partir de mots-clé.">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta name="robots" content="index,follow" />
+
+	<script src="../v2-js/jquery/jquery-3.3.1.min.js"></script>
+	<script src="../v2-js/jquery-ui/jquery-ui.min.js"></script>
+	<script src="../v2-js/general8e0e.js?v=8"></script>
+	<script src="../v2-js/caniuse3860.js?v=1"></script>
+
+	<link rel="shortcut icon" href="../v2-img/icone5e1f.png?v=2" />	
+	<link rel="stylesheet" href="../v2-js/jquery-ui/jquery-ui.min.css" type="text/css"/>
+	<link rel="stylesheet" href="../v2-css/jquery-ui-alp3860.css?v=1" type="text/css"/>
+	<link rel="stylesheet" href="../v2-css/general8fa7.css?v=18" type="text/css"/>
+	<link rel="stylesheet" href="../v2-css/print3860.css?v=1" media="print" type="text/css"/>
+	<link rel="canonical" href="entitiesf8bd.html?search=grec" />
+	<meta name="google-site-verification" content="reqp0hShXC1ODVxZiPpy4b_7T6c86o39Tz4tT92N2uw" />
+
+	<meta property="og:url" content="http://stylescss.free.fr/v2-tools/entities.php?search=grec" />
+	<meta property="og:title" content="Caractères unicode (UTF) pour "grec"."/>
+	<meta property="og:image" content="http://stylescss.free.fr/v2-img/og-image.png"/>
+	<meta property="og:image:width" content="1200"/>
+	<meta property="og:image:height" content="630"/>
+	<meta property="og:description" content="Outil pour trouver les codes des caractères spéciaux unicode (UTF) à partir de mots-clé."/>
+	<meta property="og:type" content="article"/>
+	<meta property="og:locale" content="fr_FR"/>
+	<meta property="og:site_name" content="Tutoriels CSS"/>
+	<meta property="article:author" content="StylesCSS" />
+	<script>
+function showChar(id){
+	$('#'+id).dialog({
+		'modal': false,
+		'draggable': true,
+		'resizable': true,
+		'classes': 'ui-dialog'			
+	});
+	//$('#'+id + ' .char').fitText(0.5);
+}
+</script>
+<style>
+	#entities {display:flex; flex-wrap:wrap; align-items:stretch;}
+	#entities div {text-align:center; border:solid 1px silver; padding:5px; font-family:monospace;}
+	.charEnt {font-size:200%;line-height:1em;  margin:0px;}
+	.charEnt:hover {font-size:600%; margin:5px 0px}
+	.codeEnt {color:orange; margin:0px;}
+	.hexaEnt {color:blue; margin:0px;}
+	.entiEnt {color:green; margin:0px;}
+	.character {display:none; text-align:center; font-size:80%;}
+	.char {font-size:10vw; margin:0px; padding:0px;}
+	.ui-dialog .ui-dialog-titlebar-close {display:block;}
+</style>
+			<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-36064604-1']);
+		_gaq.push(['_trackPageview']);
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+	
+	<title>Caractères unicode (UTF) pour "grec".</title>
+</head><body id="page-top">
+	<nav id="hamburger">	<a href="../tdm.html" title="Menu">
+	<img src="../v2-img/hamburger.png" alt="Menu" />
+	</a></nav>
+	<div id="page">		
+		<nav id="tdm" class="tdm-screen">	<h2 onclick="tdmToggle('tdm-index')">Index</h2>
+		<div id="tdm-index" class="tdm-toggle">
+		<div class="tdm-item"><a href="../index-2.html" title="Accueil">Page d'accueil</a></div>
+		<div class="tdm-item"><a href="../index-2.html#index-families" title="Index thématique">Index thématique</a></div>
+	</div>
+	
+	<h2>Rechercher sur le site.</h2>
+	<form id="frm-search" name="frm-search" role="search" method="GET" action="http://stylescss.free.fr/v2-search.php">
+	<input id="search" type="text" name="search" value="" />
+	<input id="submit" type="submit" value="Chercher" onclick=""/>
+</form>
+	
+	<h2>Participer.</h2>
+	<input id="btn-remarque" type="button" value="Signaler une erreur" onclick="$('#frm-remarque').show(500)"/>
+	
+	<h2 onclick="tdmToggle('tdm-tutoriels')">Tutoriels sur CSS</h2>
+		<div id="tdm-tutoriels" class="tdm-toggle">
+		<div class="tdm-item"><a href="../v2-tutoriels/intro-css.html" title="Tutoriel CSS : introduction aux CSS">Introduction aux CSS</a></div>
+		<div class="tdm-item"><a href="../v2-tutoriels/html-css.html" title="Tutoriel CSS : association de HTML et de CSS">Associer HTML et CSS</a></div>
+		<div class="tdm-item"><a href="../v2-tutoriels/syntaxe-css.html" title="Tutoriel CSS : syntaxe CSS">Syntaxe de base des CSS</a></div>
+		<div class="tdm-item"><a href="../v2-tutoriels/box-model.html" title="Tutoriel CSS : block, inline, box-model">Box model et autres choses</a></div>
+		<div class="tdm-item"></div>
+		<div class="tdm-item"><a href="../v2-tutoriels/priorities.html" title="Tutoriel CSS : les priorités CSS">Les règles de priorité</a></div>
+		<div class="tdm-item">Les <a href="../v2-tutoriels/flex-box.html" title="Tutoriel CSS : les flex-box">flex-box</a></div>
+		<div class="tdm-item">Les <a href="../v2-tutoriels/grid.html" title="Tutoriel CSS : les grilles">grilles CSS</a></div>
+		<div class="tdm-item">Les <a href="../v2-properties/transform.html" title="Tutoriel CSS : les transformations géométriques">transformations géométriques</a></div>
+		<div class="tdm-item">Les <a href="../v2-properties/animation.html" title="Tutoriel CSS : les animations">animations en CSS</a></div>
+		<div class="tdm-item"><a href="../v2-tutoriels/responsive.html" title="Tutoriel CSS : mises en page responsives">Mises en page responsive</a></div>
+	</div>
+	
+	<h2 onclick="tdmToggle('tdm-tools')">Outils CSS</h2>
+		<div id="tdm-tools" class="tdm-toggle">
+		<div class="tdm-item"><a href="colors-synth.html" title="Outils pour synthétiser les couleurs">Synthétiseur de couleurs</a></div>
+		<div class="tdm-item"><a href="entities.html" title="rechercher des codes de caractères">Outil de recherche de caractères</a></div>
+		<div class="tdm-item"><a href="external-tools.html" title="Outils proposés par d'autres sites">Outils sur d'autres sites</a></div>
+	</div>
+
+	<!-- <h2>Nouveauté :</h2>
+<div id="flash">
+	Un nouvel outil est en ligne. 
+	Il permet de trouver les caractères spéciaux à partir de mots-clé.
+	<br/><br/>
+	A ajouter dans vos favoris : 
+	<a href="http://stylescss.free.fr/v2-tools/entities.php">Recherche de caractères</a>.
+</div> -->
+	
+	<h2 onclick="tdmToggle('tdm-tricks')">Astuces en CSS</h2>
+		<div id="tdm-tricks" class="tdm-toggle">
+		<div class="tdm-item"><a href="../v2-tricks/cube.html" title="Un cube de photos tournant, en CSS">Un cube photos en CSS pur</a></div>
+		<div class="tdm-item"><a href="../v2-tricks/fixed-headers.html" title="Un tableau avec en-têtes fixes">Un tableau avec défilement</a></div>
+		<div class="tdm-item"><a href="../v2-tricks/geometrics.html" title="Formes géométriques en CSS">Des formes géométriques</a></div>
+		<div class="tdm-item"><a href="../v2-tricks/lettrine.html" title="Des lettrines en CSS">Des lettrines en CSS</a></div>
+		<div class="tdm-item"><a href="../v2-tricks/responsive-square.html" title="Un élément carré et responsif">Carré et responsive</a></div>
+		<div class="tdm-item"><a href="../v2-tricks/round-images.html" title="Des images rondes en CSS">Des images rondes en CSS</a></div>
+		<div class="tdm-item"><a href="../v2-tricks/text-shape.html" title="Afficher du texte dans une forme">Du texte dans une forme</a></div>
+		<div class="tdm-item"><a href="../v2-tricks/tags.html" title="Afficher du code HTML CSS">Afficher de l'HTML avec CSS</a></div>
+		<div class="tdm-item"><a href="../v2-tricks/tricks.html" title="Astuces en CSS">D'autres astuces avec CSS</a></div>
+	</div>
+
+	<h2 onclick="tdmToggle('tdm-functions')">Fonctions</h2>
+	<div id="tdm-functions" class="tdm-toggle"><a href="../v2-functions/attr.html" title="attr()"><div class="tdm-item experimental">attr()</div></a><a href="../v2-functions/blur.html" title="blur()"><div class="tdm-item standardized">blur()</div></a><a href="../v2-functions/brightness.html" title="brightness()"><div class="tdm-item standardized">brightness()</div></a><a href="../v2-functions/calc.html" title="calc()"><div class="tdm-item standardized">calc()</div></a><a href="../v2-functions/circle.html" title="circle()"><div class="tdm-item standardized">circle()</div></a><a href="../v2-functions/clamp.html" title="clamp()"><div class="tdm-item standardized">clamp()</div></a><a href="../v2-functions/conic-gradient.html" title="conic-gradient()"><div class="tdm-item standardized">conic-gradient()</div></a><a href="../v2-functions/contrast.html" title="contrast()"><div class="tdm-item standardized">contrast()</div></a><a href="../v2-functions/counter.html" title="counter()"><div class="tdm-item standardized">counter()</div></a><a href="../v2-functions/counters.html" title="counters()"><div class="tdm-item standardized">counters()</div></a><a href="../v2-functions/cross-fade.html" title="cross-fade()"><div class="tdm-item experimental">cross-fade()</div></a><a href="../v2-functions/cubic-bezier.html" title="cubic-bezier()"><div class="tdm-item standardized">cubic-bezier()</div></a><a href="../v2-functions/drop-shadow.html" title="drop-shadow()"><div class="tdm-item standardized">drop-shadow()</div></a><a href="../v2-functions/element.html" title="element()"><div class="tdm-item standardized">element()</div></a><a href="../v2-functions/ellipse.html" title="ellipse()"><div class="tdm-item standardized">ellipse()</div></a><a href="../v2-functions/fit-content.html" title="fit-content()"><div class="tdm-item standardized">fit-content()</div></a><a href="../v2-functions/grayscale.html" title="grayscale()"><div class="tdm-item standardized">grayscale()</div></a><a href="../v2-functions/hsl.html" title="hsl()"><div class="tdm-item standardized">hsl()</div></a><a href="../v2-functions/hsl.html" title="hsla()"><div class="tdm-item standardized">hsla()</div></a><a href="../v2-functions/hue-rotate.html" title="hue-rotate()"><div class="tdm-item standardized">hue-rotate()</div></a><a href="../v2-functions/hwb.html" title="hwb()"><div class="tdm-item standardized">hwb()</div></a><a href="../v2-functions/image.html" title="image()"><div class="tdm-item experimental">image()</div></a><a href="../v2-functions/inset.html" title="inset()"><div class="tdm-item standardized">inset()</div></a><a href="../v2-functions/invert.html" title="invert()"><div class="tdm-item standardized">invert()</div></a><a href="../v2-functions/linear-gradient.html" title="linear-gradient()"><div class="tdm-item standardized">linear-gradient()</div></a><a href="../v2-functions/matrix.html" title="matrix()"><div class="tdm-item standardized">matrix()</div></a><a href="../v2-functions/matrix3d.html" title="matrix3d()"><div class="tdm-item standardized">matrix3d()</div></a><a href="../v2-functions/min-max.html" title="max()"><div class="tdm-item standardized">max()</div></a><a href="../v2-functions/min-max.html" title="min()"><div class="tdm-item standardized">min()</div></a><a href="../v2-functions/minmax.html" title="minmax()"><div class="tdm-item standardized">minmax()</div></a><a href="../v2-functions/opacity.html" title="opacity()"><div class="tdm-item standardized">opacity()</div></a><a href="../v2-functions/perspective.html" title="perspective()"><div class="tdm-item standardized">perspective()</div></a><a href="../v2-functions/polygon.html" title="polygon()"><div class="tdm-item standardized">polygon()</div></a><a href="../v2-functions/radial-gradient.html" title="radial-gradient()"><div class="tdm-item standardized">radial-gradient()</div></a><a href="../v2-functions/rect.html" title="rect()"><div class="tdm-item deprecated">rect()</div></a><a href="../v2-functions/repeat.html" title="repeat()"><div class="tdm-item standardized">repeat()</div></a><a href="../v2-functions/repeating-conic-gradient.html" title="repeating-conic-gradient()"><div class="tdm-item experimental">repeating-conic-gradient()</div></a><a href="../v2-functions/repeating-linear-gradient.html" title="repeating-linear-gradient()"><div class="tdm-item standardized">repeating-linear-gradient()</div></a><a href="../v2-functions/repeating-radial-gradient.html" title="repeating-radial-gradient()"><div class="tdm-item standardized">repeating-radial-gradient()</div></a><a href="../v2-functions/rgb.html" title="rgb()"><div class="tdm-item standardized">rgb()</div></a><a href="../v2-functions/rgb.html" title="rgba()"><div class="tdm-item standardized">rgba()</div></a><a href="../v2-functions/rotate.html" title="rotate()"><div class="tdm-item standardized">rotate()</div></a><a href="../v2-functions/rotate3d.html" title="rotate3d()"><div class="tdm-item standardized">rotate3d()</div></a><a href="../v2-functions/rotate3d.html" title="rotateX()"><div class="tdm-item standardized">rotateX()</div></a><a href="../v2-functions/rotate3d.html" title="rotateY()"><div class="tdm-item standardized">rotateY()</div></a><a href="../v2-functions/rotate3d.html" title="rotateZ()"><div class="tdm-item standardized">rotateZ()</div></a><a href="../v2-functions/saturate.html" title="saturate()"><div class="tdm-item standardized">saturate()</div></a><a href="../v2-functions/scale.html" title="scale()"><div class="tdm-item standardized">scale()</div></a><a href="../v2-functions/scale3d.html" title="scale3d()"><div class="tdm-item standardized">scale3d()</div></a><a href="../v2-functions/scale3d.html" title="scaleX()"><div class="tdm-item standardized">scaleX()</div></a><a href="../v2-functions/scale3d.html" title="scaleY()"><div class="tdm-item standardized">scaleY()</div></a><a href="../v2-functions/scale3d.html" title="scaleZ()"><div class="tdm-item standardized">scaleZ()</div></a><a href="../v2-functions/sepia.html" title="sepia()"><div class="tdm-item standardized">sepia()</div></a><a href="../v2-functions/skew.html" title="skew()"><div class="tdm-item standardized">skew()</div></a><a href="../v2-functions/skew.html" title="skewX()"><div class="tdm-item standardized">skewX()</div></a><a href="../v2-functions/skew.html" title="skewY()"><div class="tdm-item standardized">skewY()</div></a><a href="../v2-functions/steps.html" title="steps()"><div class="tdm-item standardized">steps()</div></a><a href="../v2-functions/symbols.html" title="symbols()"><div class="tdm-item standardized">symbols()</div></a><a href="../v2-functions/translate.html" title="translate()"><div class="tdm-item standardized">translate()</div></a><a href="../v2-functions/translate3d.html" title="translate3d()"><div class="tdm-item standardized">translate3d()</div></a><a href="../v2-functions/translate.html" title="translateX()"><div class="tdm-item standardized">translateX()</div></a><a href="../v2-functions/translate.html" title="translateY"><div class="tdm-item standardized">translateY</div></a><a href="../v2-functions/translate3d.html" title="translateZ()"><div class="tdm-item standardized">translateZ()</div></a><a href="../v2-functions/url.html" title="url()"><div class="tdm-item standardized">url()</div></a><a href="../v2-functions/var.html" title="var()"><div class="tdm-item standardized">var()</div></a></div>
+	
+	<h2 onclick="tdmToggle('tdm-references')">Références CSS</h2>
+		<div id="tdm-references" class="tdm-toggle">
+		<div class="tdm-item"><a href="../v2-selectors/selectors.html" title="selectors : Liste des sélecteurs CSS, et leur description."><code>selectors</code></a></div>
+		<div class="tdm-item"><a href="../v2-selectors/pseudo-elements.html" title="pseudo-elements : Liste des pseudo-éléments."><code>pseudo-elements</code></a></div>
+		<div class="tdm-item"><a href="../v2-selectors/pseudo-class.html" title="pseudo-class : Liste des pseudo-classes."><code>pseudo-class</code></a></div>
+		<div class="tdm-item"><a href="../v2-references/units.html" title="Unités CSS">unités CSS</a></div>
+		<div class="tdm-item"><a href="../v2-tutoriels/colors.html" title="Les couleurs CSS">couleurs CSS</a></div>
+		<div class="tdm-item"><a href="../v2-tutoriels/entities.html" title="Les entités CSS">Entités</a></div>
+	</div>
+	
+	<h2 onclick="tdmToggle('tdm-properties')">Propriétés CSS</h2>
+	<div id="tdm-lettres"><div class="tdm-lettre"><a href="#tdm-AA" title="@" onclick="tdmToggle('tdm-AA')">@</a></div><div class="tdm-lettre"><a href="#tdm-A" title="A" onclick="tdmToggle('tdm-A')">A</a></div><div class="tdm-lettre"><a href="#tdm-B" title="B" onclick="tdmToggle('tdm-B')">B</a></div><div class="tdm-lettre"><a href="#tdm-C" title="C" onclick="tdmToggle('tdm-C')">C</a></div><div class="tdm-lettre"><a href="#tdm-D" title="D" onclick="tdmToggle('tdm-D')">D</a></div><div class="tdm-lettre"><a href="#tdm-E" title="E" onclick="tdmToggle('tdm-E')">E</a></div><div class="tdm-lettre"><a href="#tdm-F" title="F" onclick="tdmToggle('tdm-F')">F</a></div><div class="tdm-lettre"><a href="#tdm-G" title="G" onclick="tdmToggle('tdm-G')">G</a></div><div class="tdm-lettre"><a href="#tdm-H" title="H" onclick="tdmToggle('tdm-H')">H</a></div><div class="tdm-lettre"><a href="#tdm-I" title="I" onclick="tdmToggle('tdm-I')">I</a></div><div class="tdm-lettre"><a href="#tdm-J" title="J" onclick="tdmToggle('tdm-J')">J</a></div><div class="tdm-lettre"><a href="#tdm-L" title="L" onclick="tdmToggle('tdm-L')">L</a></div><div class="tdm-lettre"><a href="#tdm-M" title="M" onclick="tdmToggle('tdm-M')">M</a></div><div class="tdm-lettre"><a href="#tdm-O" title="O" onclick="tdmToggle('tdm-O')">O</a></div><div class="tdm-lettre"><a href="#tdm-P" title="P" onclick="tdmToggle('tdm-P')">P</a></div><div class="tdm-lettre"><a href="#tdm-Q" title="Q" onclick="tdmToggle('tdm-Q')">Q</a></div><div class="tdm-lettre"><a href="#tdm-R" title="R" onclick="tdmToggle('tdm-R')">R</a></div><div class="tdm-lettre"><a href="#tdm-S" title="S" onclick="tdmToggle('tdm-S')">S</a></div><div class="tdm-lettre"><a href="#tdm-T" title="T" onclick="tdmToggle('tdm-T')">T</a></div><div class="tdm-lettre"><a href="#tdm-U" title="U" onclick="tdmToggle('tdm-U')">U</a></div><div class="tdm-lettre"><a href="#tdm-V" title="V" onclick="tdmToggle('tdm-V')">V</a></div><div class="tdm-lettre"><a href="#tdm-W" title="W" onclick="tdmToggle('tdm-W')">W</a></div><div class="tdm-lettre"><a href="#tdm-Z" title="Z" onclick="tdmToggle('tdm-Z')">Z</a></div></div><div style="margin-top:20px;"><input id="cbDeprecated" type="checkbox" onclick="showDeprecated(this.checked)"> <label for="cbDeprecated">Montrer les obsolètes</label><br/><input id="cbExperimental" type="checkbox" onclick="showExperimental(this.checked)"> <label for="cbExperimental">Montrer les nouveautés</label></div><div id="tdm-AA" class="tdm-alpha tdm-toggle"><h3><span>@</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/%40apply.html" title="@apply"><div class="tdm-item standardized">@apply</div></a><a href="../v2-properties/%40charset.html" title="@charset"><div class="tdm-item standardized">@charset</div></a><a href="../v2-properties/%40counter-style.html" title="@counter-style"><div class="tdm-item standardized">@counter-style</div></a><a href="../v2-properties/%40font-face.html" title="@font-face"><div class="tdm-item standardized">@font-face</div></a><a href="../v2-properties/%40font-feature-values.html" title="@font-feature-values"><div class="tdm-item experimental">@font-feature-values</div></a><a href="../v2-properties/%40import.html" title="@import"><div class="tdm-item standardized">@import</div></a><a href="../v2-properties/%40keyframes.html" title="@keyframes"><div class="tdm-item standardized">@keyframes</div></a><a href="../v2-properties/%40media.html" title="@media"><div class="tdm-item standardized">@media</div></a><a href="../v2-properties/%40page.html" title="@page"><div class="tdm-item standardized">@page</div></a><a href="../v2-properties/%40supports.html" title="@supports"><div class="tdm-item standardized">@supports</div></a></div><div id="tdm-A" class="tdm-alpha tdm-toggle"><h3><span>A</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/align-content.html" title="align-content"><div class="tdm-item standardized">align-content</div></a><a href="../v2-properties/align-items.html" title="align-items"><div class="tdm-item standardized">align-items</div></a><a href="../v2-properties/align-self.html" title="align-self"><div class="tdm-item standardized">align-self</div></a><a href="../v2-properties/all.html" title="all"><div class="tdm-item standardized">all</div></a><a href="../v2-properties/animation.html" title="animation"><div class="tdm-item standardized">animation</div></a><a href="../v2-properties/animation-delay.html" title="animation-delay"><div class="tdm-item standardized">animation-delay</div></a><a href="../v2-properties/animation-direction.html" title="animation-direction"><div class="tdm-item standardized">animation-direction</div></a><a href="../v2-properties/animation-duration.html" title="animation-duration"><div class="tdm-item standardized">animation-duration</div></a><a href="../v2-properties/animation-fill-mode.html" title="animation-fill-mode"><div class="tdm-item standardized">animation-fill-mode</div></a><a href="../v2-properties/animation-iteration-count.html" title="animation-iteration-count"><div class="tdm-item standardized">animation-iteration-count</div></a><a href="../v2-properties/animation-name.html" title="animation-name"><div class="tdm-item standardized">animation-name</div></a><a href="../v2-properties/animation-play-state.html" title="animation-play-state"><div class="tdm-item standardized">animation-play-state</div></a><a href="../v2-properties/animation-timing-function.html" title="animation-timing-function"><div class="tdm-item standardized">animation-timing-function</div></a><a href="../v2-properties/appearance.html" title="appearance"><div class="tdm-item experimental">appearance</div></a><a href="../v2-properties/azimuth.html" title="azimuth"><div class="tdm-item deprecated">azimuth</div></a></div><div id="tdm-B" class="tdm-alpha tdm-toggle"><h3><span>B</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/backdrop-filter.html" title="backdrop-filter"><div class="tdm-item standardized">backdrop-filter</div></a><a href="../v2-properties/backface-visibility.html" title="backface-visibility"><div class="tdm-item standardized">backface-visibility</div></a><a href="../v2-properties/background.html" title="background"><div class="tdm-item standardized">background</div></a><a href="../v2-properties/background-attachment.html" title="background-attachment"><div class="tdm-item standardized">background-attachment</div></a><a href="../v2-properties/background-blend-mode.html" title="background-blend-mode"><div class="tdm-item standardized">background-blend-mode</div></a><a href="../v2-properties/background-clip.html" title="background-clip"><div class="tdm-item standardized">background-clip</div></a><a href="../v2-properties/background-color.html" title="background-color"><div class="tdm-item standardized">background-color</div></a><a href="../v2-properties/background-image.html" title="background-image"><div class="tdm-item standardized">background-image</div></a><a href="../v2-properties/background-origin.html" title="background-origin"><div class="tdm-item standardized">background-origin</div></a><a href="../v2-properties/background-position.html" title="background-position"><div class="tdm-item standardized">background-position</div></a><a href="../v2-properties/background-repeat.html" title="background-repeat"><div class="tdm-item standardized">background-repeat</div></a><a href="../v2-properties/background-size.html" title="background-size"><div class="tdm-item standardized">background-size</div></a><a href="../v2-properties/bleed.html" title="bleed"><div class="tdm-item standardized">bleed</div></a><a href="../v2-properties/border.html" title="border"><div class="tdm-item standardized">border</div></a><a href="../v2-properties/border-xxx-radius.html" title="border-bottom-left-radius"><div class="tdm-item standardized">border-bottom-left-radius</div></a><a href="../v2-properties/border-xxx-radius.html" title="border-bottom-right-radius"><div class="tdm-item standardized">border-bottom-right-radius</div></a><a href="../v2-properties/border-collapse.html" title="border-collapse"><div class="tdm-item standardized">border-collapse</div></a><a href="../v2-properties/border-color.html" title="border-color"><div class="tdm-item standardized">border-color</div></a><a href="../v2-properties/border-image.html" title="border-image"><div class="tdm-item standardized">border-image</div></a><a href="../v2-properties/border-image-outset.html" title="border-image-outset"><div class="tdm-item standardized">border-image-outset</div></a><a href="../v2-properties/border-image-repeat.html" title="border-image-repeat"><div class="tdm-item standardized">border-image-repeat</div></a><a href="../v2-properties/border-image-slice.html" title="border-image-slice"><div class="tdm-item standardized">border-image-slice</div></a><a href="../v2-properties/border-image-source.html" title="border-image-source"><div class="tdm-item standardized">border-image-source</div></a><a href="../v2-properties/border-image-width.html" title="border-image-width"><div class="tdm-item standardized">border-image-width</div></a><a href="../v2-properties/border-radius.html" title="border-radius"><div class="tdm-item standardized">border-radius</div></a><a href="../v2-properties/border-spacing.html" title="border-spacing"><div class="tdm-item standardized">border-spacing</div></a><a href="../v2-properties/border-style.html" title="border-style"><div class="tdm-item standardized">border-style</div></a><a href="../v2-properties/border-xxx-radius.html" title="border-top-left-radius"><div class="tdm-item standardized">border-top-left-radius</div></a><a href="../v2-properties/border-xxx-radius.html" title="border-top-right-radius"><div class="tdm-item standardized">border-top-right-radius</div></a><a href="../v2-properties/border-width.html" title="border-width"><div class="tdm-item standardized">border-width</div></a><a href="../v2-properties/top-right-bottom-left.html" title="bottom"><div class="tdm-item standardized">bottom</div></a><a href="../v2-properties/box-decoration-break.html" title="box-decoration-break"><div class="tdm-item standardized">box-decoration-break</div></a><a href="../v2-properties/box-shadow.html" title="box-shadow"><div class="tdm-item standardized">box-shadow</div></a><a href="../v2-properties/box-sizing.html" title="box-sizing"><div class="tdm-item standardized">box-sizing</div></a><a href="../v2-properties/break-before-after.html" title="break-after"><div class="tdm-item standardized">break-after</div></a><a href="../v2-properties/break-before-after.html" title="break-before"><div class="tdm-item standardized">break-before</div></a><a href="../v2-properties/break-inside.html" title="break-inside"><div class="tdm-item standardized">break-inside</div></a></div><div id="tdm-C" class="tdm-alpha tdm-toggle"><h3><span>C</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/caption-side.html" title="caption-side"><div class="tdm-item standardized">caption-side</div></a><a href="../v2-properties/caret-color.html" title="caret-color"><div class="tdm-item standardized">caret-color</div></a><a href="../v2-properties/clear.html" title="clear"><div class="tdm-item standardized">clear</div></a><a href="../v2-properties/clip.html" title="clip"><div class="tdm-item deprecated">clip</div></a><a href="../v2-properties/clip-path.html" title="clip-path"><div class="tdm-item standardized">clip-path</div></a><a href="../v2-properties/color.html" title="color"><div class="tdm-item standardized">color</div></a><a href="../v2-properties/color-adjust.html" title="color-adjust"><div class="tdm-item standardized">color-adjust</div></a><a href="../v2-properties/column-count.html" title="column-count"><div class="tdm-item standardized">column-count</div></a><a href="../v2-properties/column-fill.html" title="column-fill"><div class="tdm-item standardized">column-fill</div></a><a href="../v2-properties/column-gap.html" title="column-gap"><div class="tdm-item standardized">column-gap</div></a><a href="../v2-properties/column-rule.html" title="column-rule"><div class="tdm-item standardized">column-rule</div></a><a href="../v2-properties/column-rule-color.html" title="column-rule-color"><div class="tdm-item standardized">column-rule-color</div></a><a href="../v2-properties/column-rule-style.html" title="column-rule-style"><div class="tdm-item standardized">column-rule-style</div></a><a href="../v2-properties/column-rule-width.html" title="column-rule-width"><div class="tdm-item standardized">column-rule-width</div></a><a href="../v2-properties/column-span.html" title="column-span"><div class="tdm-item standardized">column-span</div></a><a href="../v2-properties/column-width.html" title="column-width"><div class="tdm-item standardized">column-width</div></a><a href="../v2-properties/columns.html" title="columns"><div class="tdm-item standardized">columns</div></a><a href="../v2-properties/content.html" title="content"><div class="tdm-item standardized">content</div></a><a href="../v2-properties/counter-reset-increment.html" title="counter-increment"><div class="tdm-item standardized">counter-increment</div></a><a href="../v2-properties/counter-reset-increment.html" title="counter-reset"><div class="tdm-item standardized">counter-reset</div></a><a href="../v2-properties/cue.html" title="cue"><div class="tdm-item deprecated">cue</div></a><a href="../v2-properties/cue.html" title="cue-after"><div class="tdm-item deprecated">cue-after</div></a><a href="../v2-properties/cue.html" title="cue-before"><div class="tdm-item deprecated">cue-before</div></a><a href="../v2-properties/cursor.html" title="cursor"><div class="tdm-item standardized">cursor</div></a></div><div id="tdm-D" class="tdm-alpha tdm-toggle"><h3><span>D</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/direction.html" title="direction"><div class="tdm-item standardized">direction</div></a><a href="../v2-properties/display.html" title="display"><div class="tdm-item standardized">display</div></a></div><div id="tdm-E" class="tdm-alpha tdm-toggle"><h3><span>E</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/elevation.html" title="elevation"><div class="tdm-item deprecated">elevation</div></a><a href="../v2-properties/empty-cells.html" title="empty-cells"><div class="tdm-item standardized">empty-cells</div></a></div><div id="tdm-F" class="tdm-alpha tdm-toggle"><h3><span>F</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/filter.html" title="filter"><div class="tdm-item standardized">filter</div></a><a href="../v2-properties/flex.html" title="flex"><div class="tdm-item standardized">flex</div></a><a href="../v2-properties/flex-basis.html" title="flex-basis"><div class="tdm-item standardized">flex-basis</div></a><a href="../v2-properties/flex-direction.html" title="flex-direction"><div class="tdm-item standardized">flex-direction</div></a><a href="../v2-properties/flex-flow.html" title="flex-flow"><div class="tdm-item standardized">flex-flow</div></a><a href="../v2-properties/flex-grow.html" title="flex-grow"><div class="tdm-item standardized">flex-grow</div></a><a href="../v2-properties/flex-shrink.html" title="flex-shrink"><div class="tdm-item standardized">flex-shrink</div></a><a href="../v2-properties/flex-wrap.html" title="flex-wrap"><div class="tdm-item standardized">flex-wrap</div></a><a href="../v2-properties/float.html" title="float"><div class="tdm-item standardized">float</div></a><a href="../v2-properties/font.html" title="font"><div class="tdm-item standardized">font</div></a><a href="../v2-properties/font-display.html" title="font-display"><div class="tdm-item experimental">font-display</div></a><a href="../v2-properties/font-family.html" title="font-family"><div class="tdm-item standardized">font-family</div></a><a href="../v2-properties/font-feature-settings.html" title="font-feature-settings"><div class="tdm-item experimental">font-feature-settings</div></a><a href="../v2-properties/font-kerning.html" title="font-kerning"><div class="tdm-item standardized">font-kerning</div></a><a href="../v2-properties/font-optical-sizing.html" title="font-optical-sizing"><div class="tdm-item experimental">font-optical-sizing</div></a><a href="../v2-properties/font-size.html" title="font-size"><div class="tdm-item standardized">font-size</div></a><a href="../v2-properties/font-size-adjust.html" title="font-size-adjust"><div class="tdm-item standardized">font-size-adjust</div></a><a href="../v2-properties/font-stretch.html" title="font-stretch"><div class="tdm-item standardized">font-stretch</div></a><a href="../v2-properties/font-style.html" title="font-style"><div class="tdm-item standardized">font-style</div></a><a href="../v2-properties/font-synthesis.html" title="font-synthesis"><div class="tdm-item standardized">font-synthesis</div></a><a href="../v2-properties/font-variant.html" title="font-variant"><div class="tdm-item standardized">font-variant</div></a><a href="../v2-properties/font-variant-alternates.html" title="font-variant-alternates"><div class="tdm-item standardized">font-variant-alternates</div></a><a href="../v2-properties/font-variant-caps.html" title="font-variant-caps"><div class="tdm-item standardized">font-variant-caps</div></a><a href="../v2-properties/font-variant-east-asian.html" title="font-variant-east-asian"><div class="tdm-item standardized">font-variant-east-asian</div></a><a href="../v2-properties/font-variant-ligatures.html" title="font-variant-ligatures"><div class="tdm-item standardized">font-variant-ligatures</div></a><a href="../v2-properties/font-variant-numeric.html" title="font-variant-numeric"><div class="tdm-item standardized">font-variant-numeric</div></a><a href="../v2-properties/font-variant-position.html" title="font-variant-position"><div class="tdm-item standardized">font-variant-position</div></a><a href="../v2-properties/font-weight.html" title="font-weight"><div class="tdm-item standardized">font-weight</div></a></div><div id="tdm-G" class="tdm-alpha tdm-toggle"><h3><span>G</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/grid.html" title="grid"><div class="tdm-item standardized">grid</div></a><a href="../v2-properties/grid-area.html" title="grid-area"><div class="tdm-item standardized">grid-area</div></a><a href="../v2-properties/grid-auto-columns.html" title="grid-auto-columns"><div class="tdm-item standardized">grid-auto-columns</div></a><a href="../v2-properties/grid-auto-flow.html" title="grid-auto-flow"><div class="tdm-item standardized">grid-auto-flow</div></a><a href="../v2-properties/grid-auto-rows.html" title="grid-auto-rows"><div class="tdm-item standardized">grid-auto-rows</div></a><a href="../v2-properties/grid-row-column.html" title="grid-column"><div class="tdm-item standardized">grid-column</div></a><a href="../v2-properties/grid-row-column.html" title="grid-column-end"><div class="tdm-item standardized">grid-column-end</div></a><a href="../v2-properties/grid-gap.html" title="grid-column-gap"><div class="tdm-item standardized">grid-column-gap</div></a><a href="../v2-properties/grid-row-column.html" title="grid-column-start"><div class="tdm-item standardized">grid-column-start</div></a><a href="../v2-properties/grid-gap.html" title="grid-gap"><div class="tdm-item standardized">grid-gap</div></a><a href="../v2-properties/grid-row-column.html" title="grid-row"><div class="tdm-item standardized">grid-row</div></a><a href="../v2-properties/grid-row-column.html" title="grid-row-end"><div class="tdm-item standardized">grid-row-end</div></a><a href="../v2-properties/grid-gap.html" title="grid-row-gap"><div class="tdm-item standardized">grid-row-gap</div></a><a href="../v2-properties/grid-row-column.html" title="grid-row-start"><div class="tdm-item standardized">grid-row-start</div></a><a href="../v2-properties/grid-template.html" title="grid-template"><div class="tdm-item standardized">grid-template</div></a><a href="../v2-properties/grid-template-areas.html" title="grid-template-areas"><div class="tdm-item standardized">grid-template-areas</div></a><a href="../v2-properties/grid-template-columns.html" title="grid-template-columns"><div class="tdm-item standardized">grid-template-columns</div></a><a href="../v2-properties/grid-template-rows.html" title="grid-template-rows"><div class="tdm-item standardized">grid-template-rows</div></a></div><div id="tdm-H" class="tdm-alpha tdm-toggle"><h3><span>H</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/hanging-punctuation.html" title="hanging-punctuation"><div class="tdm-item experimental">hanging-punctuation</div></a><a href="../v2-properties/height-width.html" title="height"><div class="tdm-item standardized">height</div></a><a href="../v2-properties/hyphens.html" title="hyphens"><div class="tdm-item standardized">hyphens</div></a></div><div id="tdm-I" class="tdm-alpha tdm-toggle"><h3><span>I</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/image-rendering.html" title="image-rendering"><div class="tdm-item standardized">image-rendering</div></a><a href="../v2-properties/ime-mode.html" title="ime-mode"><div class="tdm-item deprecated">ime-mode</div></a><a href="../v2-properties/isolation.html" title="isolation"><div class="tdm-item standardized">isolation</div></a></div><div id="tdm-J" class="tdm-alpha tdm-toggle"><h3><span>J</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/justify-content.html" title="justify-content"><div class="tdm-item standardized">justify-content</div></a><a href="../v2-properties/justify-items.html" title="justify-items"><div class="tdm-item standardized">justify-items</div></a><a href="../v2-properties/justify-self.html" title="justify-self"><div class="tdm-item standardized">justify-self</div></a></div><div id="tdm-L" class="tdm-alpha tdm-toggle"><h3><span>L</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/top-right-bottom-left.html" title="left"><div class="tdm-item standardized">left</div></a><a href="../v2-properties/letter-spacing.html" title="letter-spacing"><div class="tdm-item standardized">letter-spacing</div></a><a href="../v2-properties/line-break.html" title="line-break"><div class="tdm-item standardized">line-break</div></a><a href="../v2-properties/line-height.html" title="line-height"><div class="tdm-item standardized">line-height</div></a><a href="../v2-properties/list-style.html" title="list-style"><div class="tdm-item standardized">list-style</div></a><a href="../v2-properties/list-style-image.html" title="list-style-image"><div class="tdm-item standardized">list-style-image</div></a><a href="../v2-properties/list-style-position.html" title="list-style-position"><div class="tdm-item standardized">list-style-position</div></a><a href="../v2-properties/list-style-type.html" title="list-style-type"><div class="tdm-item standardized">list-style-type</div></a></div><div id="tdm-M" class="tdm-alpha tdm-toggle"><h3><span>M</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/margin.html" title="margin"><div class="tdm-item standardized">margin</div></a><a href="../v2-properties/margin.html" title="margin-block-end"><div class="tdm-item standardized">margin-block-end</div></a><a href="../v2-properties/margin.html" title="margin-block-start"><div class="tdm-item standardized">margin-block-start</div></a><a href="../v2-properties/margin.html" title="margin-bottom"><div class="tdm-item standardized">margin-bottom</div></a><a href="../v2-properties/margin.html" title="margin-inline-end"><div class="tdm-item standardized">margin-inline-end</div></a><a href="../v2-properties/margin.html" title="margin-inline-start"><div class="tdm-item standardized">margin-inline-start</div></a><a href="../v2-properties/margin.html" title="margin-left"><div class="tdm-item standardized">margin-left</div></a><a href="../v2-properties/margin.html" title="margin-right"><div class="tdm-item standardized">margin-right</div></a><a href="../v2-properties/margin.html" title="margin-top"><div class="tdm-item standardized">margin-top</div></a><a href="../v2-properties/margin-trim.html" title="margin-trim"><div class="tdm-item experimental">margin-trim</div></a><a href="../v2-properties/marker-offset.html" title="marker-offset"><div class="tdm-item deprecated">marker-offset</div></a><a href="../v2-properties/marks.html" title="marks"><div class="tdm-item deprecated">marks</div></a><a href="../v2-properties/mask.html" title="mask"><div class="tdm-item experimental">mask</div></a><a href="../v2-properties/mask-border.html" title="mask-border"><div class="tdm-item experimental">mask-border</div></a><a href="../v2-properties/mask-clip.html" title="mask-clip"><div class="tdm-item experimental">mask-clip</div></a><a href="../v2-properties/mask-image.html" title="mask-image"><div class="tdm-item experimental">mask-image</div></a><a href="../v2-properties/mask-mode.html" title="mask-mode"><div class="tdm-item experimental">mask-mode</div></a><a href="../v2-properties/mask-origin.html" title="mask-origin"><div class="tdm-item experimental">mask-origin</div></a><a href="../v2-properties/mask-position.html" title="mask-position"><div class="tdm-item experimental">mask-position</div></a><a href="../v2-properties/mask-repeat.html" title="mask-repeat"><div class="tdm-item experimental">mask-repeat</div></a><a href="../v2-properties/mask-size.html" title="mask-size"><div class="tdm-item experimental">mask-size</div></a><a href="../v2-properties/min-max.html" title="max-height"><div class="tdm-item standardized">max-height</div></a><a href="../v2-properties/min-max.html" title="max-width"><div class="tdm-item standardized">max-width</div></a><a href="../v2-properties/min-max.html" title="min-height"><div class="tdm-item standardized">min-height</div></a><a href="../v2-properties/min-max.html" title="min-width"><div class="tdm-item standardized">min-width</div></a><a href="../v2-properties/mix-blend-mode.html" title="mix-blend-mode"><div class="tdm-item standardized">mix-blend-mode</div></a><a href="../v2-properties/moz-border.html" title="moz-border-colors"><div class="tdm-item deprecated">moz-border-colors</div></a></div><div id="tdm-O" class="tdm-alpha tdm-toggle"><h3><span>O</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/object-fit.html" title="object-fit"><div class="tdm-item standardized">object-fit</div></a><a href="../v2-properties/object-position.html" title="object-position"><div class="tdm-item standardized">object-position</div></a><a href="../v2-properties/opacity.html" title="opacity"><div class="tdm-item standardized">opacity</div></a><a href="../v2-properties/order.html" title="order"><div class="tdm-item standardized">order</div></a><a href="../v2-properties/orphans-widows.html" title="orphans"><div class="tdm-item standardized">orphans</div></a><a href="../v2-properties/outline.html" title="outline"><div class="tdm-item standardized">outline</div></a><a href="../v2-properties/outline-color.html" title="outline-color"><div class="tdm-item standardized">outline-color</div></a><a href="../v2-properties/outline-offset.html" title="outline-offset"><div class="tdm-item standardized">outline-offset</div></a><a href="../v2-properties/outline-style.html" title="outline-style"><div class="tdm-item standardized">outline-style</div></a><a href="../v2-properties/outline-width.html" title="outline-width"><div class="tdm-item standardized">outline-width</div></a><a href="../v2-properties/overflow.html" title="overflow"><div class="tdm-item standardized">overflow</div></a><a href="../v2-properties/word-break-wrap.html" title="overflow-wrap"><div class="tdm-item standardized">overflow-wrap</div></a><a href="../v2-properties/overflow.html" title="overflow-x"><div class="tdm-item standardized">overflow-x</div></a><a href="../v2-properties/overflow.html" title="overflow-y"><div class="tdm-item standardized">overflow-y</div></a></div><div id="tdm-P" class="tdm-alpha tdm-toggle"><h3><span>P</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/padding.html" title="padding"><div class="tdm-item standardized">padding</div></a><a href="../v2-properties/padding.html" title="padding-block-end"><div class="tdm-item standardized">padding-block-end</div></a><a href="../v2-properties/padding-2.html" title="padding-block-start"><div class="tdm-item standardized">padding-block-start</div></a><a href="../v2-properties/padding.html" title="padding-bottom"><div class="tdm-item standardized">padding-bottom</div></a><a href="../v2-properties/padding.html" title="padding-inline-end"><div class="tdm-item standardized">padding-inline-end</div></a><a href="../v2-properties/padding.html" title="padding-inline-start"><div class="tdm-item standardized">padding-inline-start</div></a><a href="../v2-properties/padding.html" title="padding-left"><div class="tdm-item standardized">padding-left</div></a><a href="../v2-properties/padding.html" title="padding-right"><div class="tdm-item standardized">padding-right</div></a><a href="../v2-properties/padding.html" title="padding-top"><div class="tdm-item standardized">padding-top</div></a><a href="../v2-properties/page-break.html" title="page-break-after"><div class="tdm-item deprecated">page-break-after</div></a><a href="../v2-properties/page-break.html" title="page-break-before"><div class="tdm-item deprecated">page-break-before</div></a><a href="../v2-properties/page-break.html" title="page-break-inside"><div class="tdm-item deprecated">page-break-inside</div></a><a href="../v2-properties/pause.html" title="pause"><div class="tdm-item deprecated">pause</div></a><a href="../v2-properties/perspective.html" title="perspective"><div class="tdm-item standardized">perspective</div></a><a href="../v2-properties/perspective-origin.html" title="perspective-origin"><div class="tdm-item standardized">perspective-origin</div></a><a href="../v2-properties/pitch.html" title="pitch"><div class="tdm-item deprecated">pitch</div></a><a href="../v2-properties/pitch-range.html" title="pitch-range"><div class="tdm-item deprecated">pitch-range</div></a><a href="../v2-properties/play-during.html" title="play-during"><div class="tdm-item deprecated">play-during</div></a><a href="../v2-properties/pointer-events.html" title="pointer-events"><div class="tdm-item standardized">pointer-events</div></a><a href="../v2-properties/position.html" title="position"><div class="tdm-item standardized">position</div></a></div><div id="tdm-Q" class="tdm-alpha tdm-toggle"><h3><span>Q</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/quotes.html" title="quotes"><div class="tdm-item standardized">quotes</div></a></div><div id="tdm-R" class="tdm-alpha tdm-toggle"><h3><span>R</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/resize.html" title="resize"><div class="tdm-item standardized">resize</div></a><a href="../v2-properties/richness.html" title="richness"><div class="tdm-item deprecated">richness</div></a><a href="../v2-properties/top-right-bottom-left.html" title="right"><div class="tdm-item standardized">right</div></a></div><div id="tdm-S" class="tdm-alpha tdm-toggle"><h3><span>S</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/scroll-behavior.html" title="scroll-behavior"><div class="tdm-item standardized">scroll-behavior</div></a><a href="../v2-properties/scrollbar.html" title="scrollbar-3dlight-color"><div class="tdm-item deprecated">scrollbar-3dlight-color</div></a><a href="../v2-properties/scrollbar.html" title="scrollbar-arrow-color"><div class="tdm-item deprecated">scrollbar-arrow-color</div></a><a href="../v2-properties/scrollbar.html" title="scrollbar-base-color"><div class="tdm-item deprecated">scrollbar-base-color</div></a><a href="../v2-properties/scrollbar.html" title="scrollbar-darkshadow-colo"><div class="tdm-item deprecated">scrollbar-darkshadow-colo</div></a><a href="../v2-properties/scrollbar.html" title="scrollbar-face-color"><div class="tdm-item deprecated">scrollbar-face-color</div></a><a href="../v2-properties/scrollbar.html" title="scrollbar-highlight-color"><div class="tdm-item deprecated">scrollbar-highlight-color</div></a><a href="../v2-properties/scrollbar.html" title="scrollbar-shadow-color"><div class="tdm-item deprecated">scrollbar-shadow-color</div></a><a href="../v2-properties/scrollbar.html" title="scrollbar-track-color"><div class="tdm-item deprecated">scrollbar-track-color</div></a><a href="../v2-properties/shape-outside.html" title="shape-outside"><div class="tdm-item standardized">shape-outside</div></a><a href="../v2-properties/size.html" title="size"><div class="tdm-item standardized">size</div></a><a href="../v2-properties/speak.html" title="speak"><div class="tdm-item deprecated">speak</div></a><a href="../v2-properties/speak2.html" title="speak-header"><div class="tdm-item deprecated">speak-header</div></a><a href="../v2-properties/speak2.html" title="speak-numeral"><div class="tdm-item deprecated">speak-numeral</div></a><a href="../v2-properties/speak2.html" title="speak-punctuation"><div class="tdm-item deprecated">speak-punctuation</div></a><a href="../v2-properties/speech-rate.html" title="speech-rate"><div class="tdm-item deprecated">speech-rate</div></a><a href="../v2-properties/stress.html" title="stress"><div class="tdm-item deprecated">stress</div></a></div><div id="tdm-T" class="tdm-alpha tdm-toggle"><h3><span>T</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/tab-size.html" title="tab-size"><div class="tdm-item standardized">tab-size</div></a><a href="../v2-properties/table-layout.html" title="table-layout"><div class="tdm-item standardized">table-layout</div></a><a href="../v2-properties/text-align.html" title="text-align"><div class="tdm-item standardized">text-align</div></a><a href="../v2-properties/text-align-last.html" title="text-align-last"><div class="tdm-item standardized">text-align-last</div></a><a href="../v2-properties/text-decoration.html" title="text-decoration"><div class="tdm-item standardized">text-decoration</div></a><a href="../v2-properties/text-decoration-color.html" title="text-decoration-color"><div class="tdm-item standardized">text-decoration-color</div></a><a href="../v2-properties/text-decoration-line.html" title="text-decoration-line"><div class="tdm-item standardized">text-decoration-line</div></a><a href="../v2-properties/text-decoration-style.html" title="text-decoration-style"><div class="tdm-item standardized">text-decoration-style</div></a><a href="../v2-properties/text-emphasis.html" title="text-emphasis"><div class="tdm-item standardized">text-emphasis</div></a><a href="../v2-properties/text-emphasis-color.html" title="text-emphasis-color"><div class="tdm-item standardized">text-emphasis-color</div></a><a href="../v2-properties/text-emphasis-position.html" title="text-emphasis-position"><div class="tdm-item standardized">text-emphasis-position</div></a><a href="../v2-properties/text-emphasis-style.html" title="text-emphasis-style"><div class="tdm-item standardized">text-emphasis-style</div></a><a href="../v2-properties/text-indent.html" title="text-indent"><div class="tdm-item standardized">text-indent</div></a><a href="../v2-properties/text-justify.html" title="text-justify"><div class="tdm-item standardized">text-justify</div></a><a href="../v2-properties/text-overflow.html" title="text-overflow"><div class="tdm-item standardized">text-overflow</div></a><a href="../v2-properties/text-rendering.html" title="text-rendering"><div class="tdm-item standardized">text-rendering</div></a><a href="../v2-properties/text-shadow.html" title="text-shadow"><div class="tdm-item standardized">text-shadow</div></a><a href="../v2-properties/text-transform.html" title="text-transform"><div class="tdm-item standardized">text-transform</div></a><a href="../v2-properties/top-right-bottom-left.html" title="top"><div class="tdm-item standardized">top</div></a><a href="../v2-properties/touch-action.html" title="touch-action"><div class="tdm-item standardized">touch-action</div></a><a href="../v2-properties/transform.html" title="transform"><div class="tdm-item standardized">transform</div></a><a href="../v2-properties/transform-origin.html" title="transform-origin"><div class="tdm-item standardized">transform-origin</div></a><a href="../v2-properties/transform-style.html" title="transform-style"><div class="tdm-item standardized">transform-style</div></a><a href="../v2-properties/transition.html" title="transition"><div class="tdm-item standardized">transition</div></a><a href="../v2-properties/transition-delay.html" title="transition-delay"><div class="tdm-item standardized">transition-delay</div></a><a href="../v2-properties/transition-duration.html" title="transition-duration"><div class="tdm-item standardized">transition-duration</div></a><a href="../v2-properties/transition-property.html" title="transition-property"><div class="tdm-item standardized">transition-property</div></a><a href="../v2-properties/transition-timing-function.html" title="transition-timing-function"><div class="tdm-item standardized">transition-timing-function</div></a></div><div id="tdm-U" class="tdm-alpha tdm-toggle"><h3><span>U</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/unicode-bidi.html" title="unicode-bidi"><div class="tdm-item standardized">unicode-bidi</div></a><a href="../v2-properties/user-select.html" title="user-select"><div class="tdm-item standardized">user-select</div></a></div><div id="tdm-V" class="tdm-alpha tdm-toggle"><h3><span>V</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/vertical-align.html" title="vertical-align"><div class="tdm-item standardized">vertical-align</div></a><a href="../v2-properties/visibility.html" title="visibility"><div class="tdm-item standardized">visibility</div></a><a href="../v2-properties/voice-family.html" title="voice-family"><div class="tdm-item deprecated">voice-family</div></a><a href="../v2-properties/volume.html" title="volume"><div class="tdm-item deprecated">volume</div></a></div><div id="tdm-W" class="tdm-alpha tdm-toggle"><h3><span>W</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/white-space.html" title="white-space"><div class="tdm-item standardized">white-space</div></a><a href="../v2-properties/orphans-widows.html" title="widows"><div class="tdm-item standardized">widows</div></a><a href="../v2-properties/height-width.html" title="width"><div class="tdm-item standardized">width</div></a><a href="../v2-properties/will-change.html" title="will-change"><div class="tdm-item standardized">will-change</div></a><a href="../v2-properties/word-break-wrap.html" title="word-break"><div class="tdm-item standardized">word-break</div></a><a href="../v2-properties/word-spacing.html" title="word-spacing"><div class="tdm-item standardized">word-spacing</div></a><a href="../v2-properties/word-break-wrap.html" title="word-wrap"><div class="tdm-item standardized">word-wrap</div></a><a href="../v2-properties/writing-mode.html" title="writing-mode"><div class="tdm-item standardized">writing-mode</div></a></div><div id="tdm-Z" class="tdm-alpha tdm-toggle"><h3><span>Z</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/z-index.html" title="z-index"><div class="tdm-item standardized">z-index</div></a></div>
+</nav>
+		<div id="contenu">
+			<div class="adsense-in-article">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-6434138622132038"
+     data-ad-slot="7328470077"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+			<form id="frm-remarque" method="post" action="http://stylescss.free.fr/v2-lib/remarque-post.php">
+	<input id="rem-number" name="rem-number" type="hidden" value="3"/>
+	<input id="rem-url" name="rem-url" type="hidden" value="/v2-tools/entities.php?search=grec"/>
+	<h3>Une remarque ? Une suggestion ?...</h3>
+	<div>
+		Merci de participer à l'amélioration de ce site.
+		Prenez le temps de rédiger votre remarque le plus précisément possible :<br/>
+		<textarea id="rem-description" name="rem-description" ></textarea>
+	</div>
+	<div>
+		<label for="rem-antispam">Question anti-spam :<br/>Combien un mille-pattes a-t-il de pattes (en chiffres) ?</label><br/>
+		<input id="rem-antispam" name="rem-antispam" type="text" />
+	</div>
+	<div id="rem-buttons">
+		<input type="button" value="Annuler" onclick="$('#frm-remarque').hide()"/>
+		<input type="button" value="Envoyer" onclick="postRemarque()"/>
+	</div>
+	<div id="rem-ar"></div>
+</form>
+			<main>
+				<h1>Caractères unicode (UTF) pour "grec".</h1>
+					<h2>Recherche d'entités et de caractères.</h2>
+	<p>Tapez un mot pour décrire votre recherche, plutôt en français, 
+		mais l'anglais devrait être reconnu.<br/>
+		Exemple : 'musique', 'puces', etc.
+	</p>
+	<form name="frm-search" method="GET" action="#result">
+		<p>Mot(s) cherché(s) :
+			<input type="text" name="search" value="grec" />
+			<input type="submit" value="Chercher" />
+		</p>
+	</form>
+	
+	<p>Dans les résultats, le caractère lui-même est affiché dans sa couleur originale
+		avec un effet de zoom au survol de la souris.
+		<br/>
+		<span style="color:orange">Son code décimal est affiché en orange.</span>
+		<br/>
+		<span style="color:blue">Son code hexadécimal est affiché en bleu.</span>
+		<br/>
+		<span style="color:green">Enfin, le nom de l'entité, s'il en existe une,
+			est affiché en vert.</span>
+	</p>
+	
+	<h2 id="result">Résultat de votre recherche sur "grec".</h2>
+	<div id="entities">
+		<div><a title="Alpha">
+	<p class="charEnt">&Alpha;</p>
+	<p class="codeEnt">913</p>
+	<p class="hexaEnt">0391</p>
+	<p class="entiEnt">&amp;Alpha;</p>
+</a></div><div><a title="Beta">
+	<p class="charEnt">&Beta;</p>
+	<p class="codeEnt">914</p>
+	<p class="hexaEnt">0392</p>
+	<p class="entiEnt">&amp;Beta;</p>
+</a></div><div><a title="Gamma">
+	<p class="charEnt">&Gamma;</p>
+	<p class="codeEnt">915</p>
+	<p class="hexaEnt">0393</p>
+	<p class="entiEnt">&amp;Gamma;</p>
+</a></div><div><a title="Delta">
+	<p class="charEnt">&Delta;</p>
+	<p class="codeEnt">916</p>
+	<p class="hexaEnt">0394</p>
+	<p class="entiEnt">&amp;Delta;</p>
+</a></div><div><a title="Epsilon">
+	<p class="charEnt">&Epsilon;</p>
+	<p class="codeEnt">917</p>
+	<p class="hexaEnt">0395</p>
+	<p class="entiEnt">&amp;Epsilon;</p>
+</a></div><div><a title="Zeta">
+	<p class="charEnt">&Zeta;</p>
+	<p class="codeEnt">918</p>
+	<p class="hexaEnt">0396</p>
+	<p class="entiEnt">&amp;Zeta;</p>
+</a></div><div><a title="Eta">
+	<p class="charEnt">&Eta;</p>
+	<p class="codeEnt">919</p>
+	<p class="hexaEnt">0397</p>
+	<p class="entiEnt">&amp;Eta;</p>
+</a></div><div><a title="Theta">
+	<p class="charEnt">&Theta;</p>
+	<p class="codeEnt">920</p>
+	<p class="hexaEnt">0398</p>
+	<p class="entiEnt">&amp;Theta;</p>
+</a></div><div><a title="Iota">
+	<p class="charEnt">&Iota;</p>
+	<p class="codeEnt">921</p>
+	<p class="hexaEnt">0399</p>
+	<p class="entiEnt">&amp;Iota;</p>
+</a></div><div><a title="Kappa">
+	<p class="charEnt">&Kappa;</p>
+	<p class="codeEnt">922</p>
+	<p class="hexaEnt">039a</p>
+	<p class="entiEnt">&amp;Kappa;</p>
+</a></div><div><a title="Lambda">
+	<p class="charEnt">&Lambda;</p>
+	<p class="codeEnt">923</p>
+	<p class="hexaEnt">039b</p>
+	<p class="entiEnt">&amp;Lambda;</p>
+</a></div><div><a title="Mu">
+	<p class="charEnt">&Mu;</p>
+	<p class="codeEnt">924</p>
+	<p class="hexaEnt">039c</p>
+	<p class="entiEnt">&amp;Mu;</p>
+</a></div><div><a title="Nu">
+	<p class="charEnt">&Nu;</p>
+	<p class="codeEnt">925</p>
+	<p class="hexaEnt">039d</p>
+	<p class="entiEnt">&amp;Nu;</p>
+</a></div><div><a title="Xi">
+	<p class="charEnt">&Xi;</p>
+	<p class="codeEnt">926</p>
+	<p class="hexaEnt">039e</p>
+	<p class="entiEnt">&amp;Xi;</p>
+</a></div><div><a title="Omicron">
+	<p class="charEnt">&Omicron;</p>
+	<p class="codeEnt">927</p>
+	<p class="hexaEnt">039f</p>
+	<p class="entiEnt">&amp;Omicron;</p>
+</a></div><div><a title="Pi">
+	<p class="charEnt">&Pi;</p>
+	<p class="codeEnt">928</p>
+	<p class="hexaEnt">03a0</p>
+	<p class="entiEnt">&amp;Pi;</p>
+</a></div><div><a title="Rho">
+	<p class="charEnt">&Rho;</p>
+	<p class="codeEnt">929</p>
+	<p class="hexaEnt">03a1</p>
+	<p class="entiEnt">&amp;Rho;</p>
+</a></div><div><a title="Sigma">
+	<p class="charEnt">&Sigma;</p>
+	<p class="codeEnt">931</p>
+	<p class="hexaEnt">03a3</p>
+	<p class="entiEnt">&amp;Sigma;</p>
+</a></div><div><a title="Tau">
+	<p class="charEnt">&Tau;</p>
+	<p class="codeEnt">932</p>
+	<p class="hexaEnt">03a4</p>
+	<p class="entiEnt">&amp;Tau;</p>
+</a></div><div><a title="Upsilon">
+	<p class="charEnt">&Upsilon;</p>
+	<p class="codeEnt">933</p>
+	<p class="hexaEnt">03a5</p>
+	<p class="entiEnt">&amp;Upsilon;</p>
+</a></div><div><a title="Phi">
+	<p class="charEnt">&Phi;</p>
+	<p class="codeEnt">934</p>
+	<p class="hexaEnt">03a6</p>
+	<p class="entiEnt">&amp;Phi;</p>
+</a></div><div><a title="Chi">
+	<p class="charEnt">&Chi;</p>
+	<p class="codeEnt">935</p>
+	<p class="hexaEnt">03a7</p>
+	<p class="entiEnt">&amp;Chi;</p>
+</a></div><div><a title="Psi">
+	<p class="charEnt">&Psi;</p>
+	<p class="codeEnt">936</p>
+	<p class="hexaEnt">03a8</p>
+	<p class="entiEnt">&amp;Psi;</p>
+</a></div><div><a title="Omega">
+	<p class="charEnt">&Omega;</p>
+	<p class="codeEnt">937</p>
+	<p class="hexaEnt">03a9</p>
+	<p class="entiEnt">&amp;Omega;</p>
+</a></div><div><a title="alpha">
+	<p class="charEnt">&alpha;</p>
+	<p class="codeEnt">945</p>
+	<p class="hexaEnt">03b1</p>
+	<p class="entiEnt">&amp;alpha;</p>
+</a></div><div><a title="beta">
+	<p class="charEnt">&beta;</p>
+	<p class="codeEnt">946</p>
+	<p class="hexaEnt">03b2</p>
+	<p class="entiEnt">&amp;beta;</p>
+</a></div><div><a title="gamma">
+	<p class="charEnt">&gamma;</p>
+	<p class="codeEnt">947</p>
+	<p class="hexaEnt">03b3</p>
+	<p class="entiEnt">&amp;gamma;</p>
+</a></div><div><a title="delta">
+	<p class="charEnt">&delta;</p>
+	<p class="codeEnt">948</p>
+	<p class="hexaEnt">03b4</p>
+	<p class="entiEnt">&amp;delta;</p>
+</a></div><div><a title="epsiv">
+	<p class="charEnt">&epsiv;</p>
+	<p class="codeEnt">949</p>
+	<p class="hexaEnt">03b5</p>
+	<p class="entiEnt">&amp;epsiv;</p>
+</a></div><div><a title="zeta">
+	<p class="charEnt">&zeta;</p>
+	<p class="codeEnt">950</p>
+	<p class="hexaEnt">03b6</p>
+	<p class="entiEnt">&amp;zeta;</p>
+</a></div><div><a title="eta">
+	<p class="charEnt">&eta;</p>
+	<p class="codeEnt">951</p>
+	<p class="hexaEnt">03b7</p>
+	<p class="entiEnt">&amp;eta;</p>
+</a></div><div><a title="theta">
+	<p class="charEnt">&theta;</p>
+	<p class="codeEnt">952</p>
+	<p class="hexaEnt">03b8</p>
+	<p class="entiEnt">&amp;theta;</p>
+</a></div><div><a title="iota">
+	<p class="charEnt">&iota;</p>
+	<p class="codeEnt">953</p>
+	<p class="hexaEnt">03b9</p>
+	<p class="entiEnt">&amp;iota;</p>
+</a></div><div><a title="kappa">
+	<p class="charEnt">&kappa;</p>
+	<p class="codeEnt">954</p>
+	<p class="hexaEnt">03ba</p>
+	<p class="entiEnt">&amp;kappa;</p>
+</a></div><div><a title="lambda">
+	<p class="charEnt">&lambda;</p>
+	<p class="codeEnt">955</p>
+	<p class="hexaEnt">03bb</p>
+	<p class="entiEnt">&amp;lambda;</p>
+</a></div><div><a title="mu">
+	<p class="charEnt">&mu;</p>
+	<p class="codeEnt">956</p>
+	<p class="hexaEnt">03bc</p>
+	<p class="entiEnt">&amp;mu;</p>
+</a></div><div><a title="nu">
+	<p class="charEnt">&nu;</p>
+	<p class="codeEnt">957</p>
+	<p class="hexaEnt">03bd</p>
+	<p class="entiEnt">&amp;nu;</p>
+</a></div><div><a title="xi">
+	<p class="charEnt">&xi;</p>
+	<p class="codeEnt">958</p>
+	<p class="hexaEnt">03be</p>
+	<p class="entiEnt">&amp;xi;</p>
+</a></div><div><a title="omicron">
+	<p class="charEnt">&omicron;</p>
+	<p class="codeEnt">959</p>
+	<p class="hexaEnt">03bf</p>
+	<p class="entiEnt">&amp;omicron;</p>
+</a></div><div><a title="pi">
+	<p class="charEnt">&pi;</p>
+	<p class="codeEnt">960</p>
+	<p class="hexaEnt">03c0</p>
+	<p class="entiEnt">&amp;pi;</p>
+</a></div><div><a title="rho">
+	<p class="charEnt">&rho;</p>
+	<p class="codeEnt">961</p>
+	<p class="hexaEnt">03c1</p>
+	<p class="entiEnt">&amp;rho;</p>
+</a></div><div><a title="sigmav">
+	<p class="charEnt">&sigmav;</p>
+	<p class="codeEnt">962</p>
+	<p class="hexaEnt">03c2</p>
+	<p class="entiEnt">&amp;sigmav;</p>
+</a></div><div><a title="sigma">
+	<p class="charEnt">&sigma;</p>
+	<p class="codeEnt">963</p>
+	<p class="hexaEnt">03c3</p>
+	<p class="entiEnt">&amp;sigma;</p>
+</a></div><div><a title="tau">
+	<p class="charEnt">&tau;</p>
+	<p class="codeEnt">964</p>
+	<p class="hexaEnt">03c4</p>
+	<p class="entiEnt">&amp;tau;</p>
+</a></div><div><a title="upsi">
+	<p class="charEnt">&upsi;</p>
+	<p class="codeEnt">965</p>
+	<p class="hexaEnt">03c5</p>
+	<p class="entiEnt">&amp;upsi;</p>
+</a></div><div><a title="phi">
+	<p class="charEnt">&phi;</p>
+	<p class="codeEnt">966</p>
+	<p class="hexaEnt">03c6</p>
+	<p class="entiEnt">&amp;phi;</p>
+</a></div><div><a title="chi">
+	<p class="charEnt">&chi;</p>
+	<p class="codeEnt">967</p>
+	<p class="hexaEnt">03c7</p>
+	<p class="entiEnt">&amp;chi;</p>
+</a></div><div><a title="psi">
+	<p class="charEnt">&psi;</p>
+	<p class="codeEnt">968</p>
+	<p class="hexaEnt">03c8</p>
+	<p class="entiEnt">&amp;psi;</p>
+</a></div><div><a title="omega">
+	<p class="charEnt">&omega;</p>
+	<p class="codeEnt">969</p>
+	<p class="hexaEnt">03c9</p>
+	<p class="entiEnt">&amp;omega;</p>
+</a></div><div><a title="thetav">
+	<p class="charEnt">&thetav;</p>
+	<p class="codeEnt">977</p>
+	<p class="hexaEnt">03d1</p>
+	<p class="entiEnt">&amp;thetav;</p>
+</a></div><div><a title="Upsi">
+	<p class="charEnt">&Upsi;</p>
+	<p class="codeEnt">978</p>
+	<p class="hexaEnt">03d2</p>
+	<p class="entiEnt">&amp;Upsi;</p>
+</a></div><div><a title="straightphi">
+	<p class="charEnt">&straightphi;</p>
+	<p class="codeEnt">981</p>
+	<p class="hexaEnt">03d5</p>
+	<p class="entiEnt">&amp;straightphi;</p>
+</a></div><div><a title="piv">
+	<p class="charEnt">&piv;</p>
+	<p class="codeEnt">982</p>
+	<p class="hexaEnt">03d6</p>
+	<p class="entiEnt">&amp;piv;</p>
+</a></div><div><a title="Gammad">
+	<p class="charEnt">&Gammad;</p>
+	<p class="codeEnt">988</p>
+	<p class="hexaEnt">03dc</p>
+	<p class="entiEnt">&amp;Gammad;</p>
+</a></div><div><a title="gammad">
+	<p class="charEnt">&gammad;</p>
+	<p class="codeEnt">989</p>
+	<p class="hexaEnt">03dd</p>
+	<p class="entiEnt">&amp;gammad;</p>
+</a></div><div><a title="kappav">
+	<p class="charEnt">&kappav;</p>
+	<p class="codeEnt">1008</p>
+	<p class="hexaEnt">03f0</p>
+	<p class="entiEnt">&amp;kappav;</p>
+</a></div><div><a title="rhov">
+	<p class="charEnt">&rhov;</p>
+	<p class="codeEnt">1009</p>
+	<p class="hexaEnt">03f1</p>
+	<p class="entiEnt">&amp;rhov;</p>
+</a></div><div><a title="epsi">
+	<p class="charEnt">&epsi;</p>
+	<p class="codeEnt">1013</p>
+	<p class="hexaEnt">03f5</p>
+	<p class="entiEnt">&amp;epsi;</p>
+</a></div><div><a title="bepsi">
+	<p class="charEnt">&bepsi;</p>
+	<p class="codeEnt">1014</p>
+	<p class="hexaEnt">03f6</p>
+	<p class="entiEnt">&amp;bepsi;</p>
+</a></div><div><a title="iiota">
+	<p class="charEnt">&iiota;</p>
+	<p class="codeEnt">8489</p>
+	<p class="hexaEnt">2129</p>
+	<p class="entiEnt">&amp;iiota;</p>
+</a></div>
+	</div>
+	
+	<h2>Les recherches les plus courantes :</h2>
+	
+	<p>
+		<a href="entities6bf5.html?search=accents" title="Accents">Accents</a> -
+		<a href="entitiesf0f2.html?search=animal" title="Animal">Animal</a> -
+		<a href="entities653e.html?search=audio" title="Audio">Audio</a> -
+		<a href="entitiesdb52.html?search=bureau" title="Bureau">Bureau</a> -
+		<a href="entities049a.html?search=fleches" title="Flèches">Flèches</a> -
+		<a href="entitiesc878.html?search=ligatures" title="Lettres liées">Lettres liées (ligatures)</a> -
+		<a href="entities8033.html?search=meteo" title="Météorologie">Météorologie</a> -
+		<a href="entities9ea3.html?search=monnaies" title="Symboles monétaires">Symboles monétaires</a> -
+		<a href="entities98fd.html?search=numeros" title="Numéros">Numéros</a> -
+		<a href="entities3641.html?search=math" title="Math">Math</a> -
+		<a href="entities64b1.html?search=unites" title="Unités">Unités</a> -
+	</p>
+	<p>Alphabets internationaux :
+		<a href="entities5d3a.html?search=arabo-indien" title="Arabo-indien">Arabo-indien</a> -
+		<a href="entitiesd630.html?search=armenien" title="Arménien">Arménien</a> -
+		<a href="entities7fc7.html?search=bengali" title="Bengali">Bengali</a> -
+		<a href="entities9722.html?search=birman" title="Birman">Birman</a> -
+		<a href="entities6d2e.html?search=devanagari" title="Dévanāgarī">Dévanāgarī</a> -
+		<a href="entities20de.html?search=gothique" title="Gothique">Gothique</a> -
+		<a href="entitiesb23f.html?search=hebreu" title="Hébreu">Hébreu</a> -
+		<a href="entities5126.html?search=goudjarati" title="Goudjarati">Goudjarati</a> -
+		<a href="entitiesad43.html?search=gourmoukhi" title="Gurmukhi">Gurmukhi</a> -
+		<a href="entitiesf8bd.html?search=grec" title="Grec">Grec</a> -
+		<a href="entities22f8.html?search=kannara" title="Kannara">Kannara</a> -
+		<a href="entities41a4.html?search=khmer" title="Khmer">Khmer</a> -
+		<a href="entities7b3d.html?search=laotien" title="Laotien">Laotien</a> -
+		<a href="entitiesfc55.html?search=malayalam" title="Malayalam">Malayalam</a> -
+		<a href="entities53fc.html?search=mongol" title="Mongol">Mongol</a> -
+		<a href="entities6a54.html?search=n'ko" title="N'ko">N'ko</a> -
+		<a href="entities1db5.html?search=oriya" title="Oriya">Oriya</a> -
+		<a href="entities8149.html?search=singhalais" title="Singhalais">Singhalais</a> -
+		<a href="entitiesa517.html?search=tamoul" title="Tamoul">Tamoul</a> -
+		<a href="entities914e.html?search=telougou" title="Télougou">Télougou</a> -
+		<a href="entities6130.html?search=thai" title="Thaï">Thaï</a> -
+		<a href="entities60a7.html?search=tibetain" title="Tibétain">Tibétain</a>
+	</p>	
+	<p>Cette fonctionnalité est encore en phase de développement.
+		Merci de votre compréhension.
+	</p>
+	
+	<h2>Liste des caractères trouvés.</h2>
+	<ul style="columns:2"><li onclick="showChar('c913')"><span style="cursor:pointer">Alpha</span></li>
+<div id="c913" class="character" title="Alpha">
+	<p>Alpha<br/><span class="codeEnt">Code décimal UTF : 913</span><br/>
+		<span class="hexaEnt">Code hexa : 0391</span>	
+	</p>
+	<p class="char">&Alpha;</p>
+</div><li onclick="showChar('c914')"><span style="cursor:pointer">Beta</span></li>
+<div id="c914" class="character" title="Beta">
+	<p>Beta<br/><span class="codeEnt">Code décimal UTF : 914</span><br/>
+		<span class="hexaEnt">Code hexa : 0392</span>	
+	</p>
+	<p class="char">&Beta;</p>
+</div><li onclick="showChar('c915')"><span style="cursor:pointer">Gamma</span></li>
+<div id="c915" class="character" title="Gamma">
+	<p>Gamma<br/><span class="codeEnt">Code décimal UTF : 915</span><br/>
+		<span class="hexaEnt">Code hexa : 0393</span>	
+	</p>
+	<p class="char">&Gamma;</p>
+</div><li onclick="showChar('c916')"><span style="cursor:pointer">Delta</span></li>
+<div id="c916" class="character" title="Delta">
+	<p>Delta<br/><span class="codeEnt">Code décimal UTF : 916</span><br/>
+		<span class="hexaEnt">Code hexa : 0394</span>	
+	</p>
+	<p class="char">&Delta;</p>
+</div><li onclick="showChar('c917')"><span style="cursor:pointer">Epsilon</span></li>
+<div id="c917" class="character" title="Epsilon">
+	<p>Epsilon<br/><span class="codeEnt">Code décimal UTF : 917</span><br/>
+		<span class="hexaEnt">Code hexa : 0395</span>	
+	</p>
+	<p class="char">&Epsilon;</p>
+</div><li onclick="showChar('c918')"><span style="cursor:pointer">Zeta</span></li>
+<div id="c918" class="character" title="Zeta">
+	<p>Zeta<br/><span class="codeEnt">Code décimal UTF : 918</span><br/>
+		<span class="hexaEnt">Code hexa : 0396</span>	
+	</p>
+	<p class="char">&Zeta;</p>
+</div><li onclick="showChar('c919')"><span style="cursor:pointer">Eta</span></li>
+<div id="c919" class="character" title="Eta">
+	<p>Eta<br/><span class="codeEnt">Code décimal UTF : 919</span><br/>
+		<span class="hexaEnt">Code hexa : 0397</span>	
+	</p>
+	<p class="char">&Eta;</p>
+</div><li onclick="showChar('c920')"><span style="cursor:pointer">Theta</span></li>
+<div id="c920" class="character" title="Theta">
+	<p>Theta<br/><span class="codeEnt">Code décimal UTF : 920</span><br/>
+		<span class="hexaEnt">Code hexa : 0398</span>	
+	</p>
+	<p class="char">&Theta;</p>
+</div><li onclick="showChar('c921')"><span style="cursor:pointer">Iota</span></li>
+<div id="c921" class="character" title="Iota">
+	<p>Iota<br/><span class="codeEnt">Code décimal UTF : 921</span><br/>
+		<span class="hexaEnt">Code hexa : 0399</span>	
+	</p>
+	<p class="char">&Iota;</p>
+</div><li onclick="showChar('c922')"><span style="cursor:pointer">Kappa</span></li>
+<div id="c922" class="character" title="Kappa">
+	<p>Kappa<br/><span class="codeEnt">Code décimal UTF : 922</span><br/>
+		<span class="hexaEnt">Code hexa : 039a</span>	
+	</p>
+	<p class="char">&Kappa;</p>
+</div><li onclick="showChar('c923')"><span style="cursor:pointer">Lambda</span></li>
+<div id="c923" class="character" title="Lambda">
+	<p>Lambda<br/><span class="codeEnt">Code décimal UTF : 923</span><br/>
+		<span class="hexaEnt">Code hexa : 039b</span>	
+	</p>
+	<p class="char">&Lambda;</p>
+</div><li onclick="showChar('c924')"><span style="cursor:pointer">Mu</span></li>
+<div id="c924" class="character" title="Mu">
+	<p>Mu<br/><span class="codeEnt">Code décimal UTF : 924</span><br/>
+		<span class="hexaEnt">Code hexa : 039c</span>	
+	</p>
+	<p class="char">&Mu;</p>
+</div><li onclick="showChar('c925')"><span style="cursor:pointer">Nu</span></li>
+<div id="c925" class="character" title="Nu">
+	<p>Nu<br/><span class="codeEnt">Code décimal UTF : 925</span><br/>
+		<span class="hexaEnt">Code hexa : 039d</span>	
+	</p>
+	<p class="char">&Nu;</p>
+</div><li onclick="showChar('c926')"><span style="cursor:pointer">Xi</span></li>
+<div id="c926" class="character" title="Xi">
+	<p>Xi<br/><span class="codeEnt">Code décimal UTF : 926</span><br/>
+		<span class="hexaEnt">Code hexa : 039e</span>	
+	</p>
+	<p class="char">&Xi;</p>
+</div><li onclick="showChar('c927')"><span style="cursor:pointer">Omicron</span></li>
+<div id="c927" class="character" title="Omicron">
+	<p>Omicron<br/><span class="codeEnt">Code décimal UTF : 927</span><br/>
+		<span class="hexaEnt">Code hexa : 039f</span>	
+	</p>
+	<p class="char">&Omicron;</p>
+</div><li onclick="showChar('c928')"><span style="cursor:pointer">Pi</span></li>
+<div id="c928" class="character" title="Pi">
+	<p>Pi<br/><span class="codeEnt">Code décimal UTF : 928</span><br/>
+		<span class="hexaEnt">Code hexa : 03a0</span>	
+	</p>
+	<p class="char">&Pi;</p>
+</div><li onclick="showChar('c929')"><span style="cursor:pointer">Rho</span></li>
+<div id="c929" class="character" title="Rho">
+	<p>Rho<br/><span class="codeEnt">Code décimal UTF : 929</span><br/>
+		<span class="hexaEnt">Code hexa : 03a1</span>	
+	</p>
+	<p class="char">&Rho;</p>
+</div><li onclick="showChar('c931')"><span style="cursor:pointer">Sigma</span></li>
+<div id="c931" class="character" title="Sigma">
+	<p>Sigma<br/><span class="codeEnt">Code décimal UTF : 931</span><br/>
+		<span class="hexaEnt">Code hexa : 03a3</span>	
+	</p>
+	<p class="char">&Sigma;</p>
+</div><li onclick="showChar('c932')"><span style="cursor:pointer">Tau</span></li>
+<div id="c932" class="character" title="Tau">
+	<p>Tau<br/><span class="codeEnt">Code décimal UTF : 932</span><br/>
+		<span class="hexaEnt">Code hexa : 03a4</span>	
+	</p>
+	<p class="char">&Tau;</p>
+</div><li onclick="showChar('c933')"><span style="cursor:pointer">Upsilon</span></li>
+<div id="c933" class="character" title="Upsilon">
+	<p>Upsilon<br/><span class="codeEnt">Code décimal UTF : 933</span><br/>
+		<span class="hexaEnt">Code hexa : 03a5</span>	
+	</p>
+	<p class="char">&Upsilon;</p>
+</div><li onclick="showChar('c934')"><span style="cursor:pointer">Phi</span></li>
+<div id="c934" class="character" title="Phi">
+	<p>Phi<br/><span class="codeEnt">Code décimal UTF : 934</span><br/>
+		<span class="hexaEnt">Code hexa : 03a6</span>	
+	</p>
+	<p class="char">&Phi;</p>
+</div><li onclick="showChar('c935')"><span style="cursor:pointer">Chi</span></li>
+<div id="c935" class="character" title="Chi">
+	<p>Chi<br/><span class="codeEnt">Code décimal UTF : 935</span><br/>
+		<span class="hexaEnt">Code hexa : 03a7</span>	
+	</p>
+	<p class="char">&Chi;</p>
+</div><li onclick="showChar('c936')"><span style="cursor:pointer">Psi</span></li>
+<div id="c936" class="character" title="Psi">
+	<p>Psi<br/><span class="codeEnt">Code décimal UTF : 936</span><br/>
+		<span class="hexaEnt">Code hexa : 03a8</span>	
+	</p>
+	<p class="char">&Psi;</p>
+</div><li onclick="showChar('c937')"><span style="cursor:pointer">Omega</span></li>
+<div id="c937" class="character" title="Omega">
+	<p>Omega<br/><span class="codeEnt">Code décimal UTF : 937</span><br/>
+		<span class="hexaEnt">Code hexa : 03a9</span>	
+	</p>
+	<p class="char">&Omega;</p>
+</div><li onclick="showChar('c945')"><span style="cursor:pointer">alpha</span></li>
+<div id="c945" class="character" title="alpha">
+	<p>alpha<br/><span class="codeEnt">Code décimal UTF : 945</span><br/>
+		<span class="hexaEnt">Code hexa : 03b1</span>	
+	</p>
+	<p class="char">&alpha;</p>
+</div><li onclick="showChar('c946')"><span style="cursor:pointer">beta</span></li>
+<div id="c946" class="character" title="beta">
+	<p>beta<br/><span class="codeEnt">Code décimal UTF : 946</span><br/>
+		<span class="hexaEnt">Code hexa : 03b2</span>	
+	</p>
+	<p class="char">&beta;</p>
+</div><li onclick="showChar('c947')"><span style="cursor:pointer">gamma</span></li>
+<div id="c947" class="character" title="gamma">
+	<p>gamma<br/><span class="codeEnt">Code décimal UTF : 947</span><br/>
+		<span class="hexaEnt">Code hexa : 03b3</span>	
+	</p>
+	<p class="char">&gamma;</p>
+</div><li onclick="showChar('c948')"><span style="cursor:pointer">delta</span></li>
+<div id="c948" class="character" title="delta">
+	<p>delta<br/><span class="codeEnt">Code décimal UTF : 948</span><br/>
+		<span class="hexaEnt">Code hexa : 03b4</span>	
+	</p>
+	<p class="char">&delta;</p>
+</div><li onclick="showChar('c949')"><span style="cursor:pointer">epsiv</span></li>
+<div id="c949" class="character" title="epsiv">
+	<p>epsiv<br/><span class="codeEnt">Code décimal UTF : 949</span><br/>
+		<span class="hexaEnt">Code hexa : 03b5</span>	
+	</p>
+	<p class="char">&epsiv;</p>
+</div><li onclick="showChar('c950')"><span style="cursor:pointer">zeta</span></li>
+<div id="c950" class="character" title="zeta">
+	<p>zeta<br/><span class="codeEnt">Code décimal UTF : 950</span><br/>
+		<span class="hexaEnt">Code hexa : 03b6</span>	
+	</p>
+	<p class="char">&zeta;</p>
+</div><li onclick="showChar('c951')"><span style="cursor:pointer">eta</span></li>
+<div id="c951" class="character" title="eta">
+	<p>eta<br/><span class="codeEnt">Code décimal UTF : 951</span><br/>
+		<span class="hexaEnt">Code hexa : 03b7</span>	
+	</p>
+	<p class="char">&eta;</p>
+</div><li onclick="showChar('c952')"><span style="cursor:pointer">theta</span></li>
+<div id="c952" class="character" title="theta">
+	<p>theta<br/><span class="codeEnt">Code décimal UTF : 952</span><br/>
+		<span class="hexaEnt">Code hexa : 03b8</span>	
+	</p>
+	<p class="char">&theta;</p>
+</div><li onclick="showChar('c953')"><span style="cursor:pointer">iota</span></li>
+<div id="c953" class="character" title="iota">
+	<p>iota<br/><span class="codeEnt">Code décimal UTF : 953</span><br/>
+		<span class="hexaEnt">Code hexa : 03b9</span>	
+	</p>
+	<p class="char">&iota;</p>
+</div><li onclick="showChar('c954')"><span style="cursor:pointer">kappa</span></li>
+<div id="c954" class="character" title="kappa">
+	<p>kappa<br/><span class="codeEnt">Code décimal UTF : 954</span><br/>
+		<span class="hexaEnt">Code hexa : 03ba</span>	
+	</p>
+	<p class="char">&kappa;</p>
+</div><li onclick="showChar('c955')"><span style="cursor:pointer">lambda</span></li>
+<div id="c955" class="character" title="lambda">
+	<p>lambda<br/><span class="codeEnt">Code décimal UTF : 955</span><br/>
+		<span class="hexaEnt">Code hexa : 03bb</span>	
+	</p>
+	<p class="char">&lambda;</p>
+</div><li onclick="showChar('c956')"><span style="cursor:pointer">mu</span></li>
+<div id="c956" class="character" title="mu">
+	<p>mu<br/><span class="codeEnt">Code décimal UTF : 956</span><br/>
+		<span class="hexaEnt">Code hexa : 03bc</span>	
+	</p>
+	<p class="char">&mu;</p>
+</div><li onclick="showChar('c957')"><span style="cursor:pointer">nu</span></li>
+<div id="c957" class="character" title="nu">
+	<p>nu<br/><span class="codeEnt">Code décimal UTF : 957</span><br/>
+		<span class="hexaEnt">Code hexa : 03bd</span>	
+	</p>
+	<p class="char">&nu;</p>
+</div><li onclick="showChar('c958')"><span style="cursor:pointer">xi</span></li>
+<div id="c958" class="character" title="xi">
+	<p>xi<br/><span class="codeEnt">Code décimal UTF : 958</span><br/>
+		<span class="hexaEnt">Code hexa : 03be</span>	
+	</p>
+	<p class="char">&xi;</p>
+</div><li onclick="showChar('c959')"><span style="cursor:pointer">omicron</span></li>
+<div id="c959" class="character" title="omicron">
+	<p>omicron<br/><span class="codeEnt">Code décimal UTF : 959</span><br/>
+		<span class="hexaEnt">Code hexa : 03bf</span>	
+	</p>
+	<p class="char">&omicron;</p>
+</div><li onclick="showChar('c960')"><span style="cursor:pointer">pi</span></li>
+<div id="c960" class="character" title="pi">
+	<p>pi<br/><span class="codeEnt">Code décimal UTF : 960</span><br/>
+		<span class="hexaEnt">Code hexa : 03c0</span>	
+	</p>
+	<p class="char">&pi;</p>
+</div><li onclick="showChar('c961')"><span style="cursor:pointer">rho</span></li>
+<div id="c961" class="character" title="rho">
+	<p>rho<br/><span class="codeEnt">Code décimal UTF : 961</span><br/>
+		<span class="hexaEnt">Code hexa : 03c1</span>	
+	</p>
+	<p class="char">&rho;</p>
+</div><li onclick="showChar('c962')"><span style="cursor:pointer">sigmav</span></li>
+<div id="c962" class="character" title="sigmav">
+	<p>sigmav<br/><span class="codeEnt">Code décimal UTF : 962</span><br/>
+		<span class="hexaEnt">Code hexa : 03c2</span>	
+	</p>
+	<p class="char">&sigmav;</p>
+</div><li onclick="showChar('c963')"><span style="cursor:pointer">sigma</span></li>
+<div id="c963" class="character" title="sigma">
+	<p>sigma<br/><span class="codeEnt">Code décimal UTF : 963</span><br/>
+		<span class="hexaEnt">Code hexa : 03c3</span>	
+	</p>
+	<p class="char">&sigma;</p>
+</div><li onclick="showChar('c964')"><span style="cursor:pointer">tau</span></li>
+<div id="c964" class="character" title="tau">
+	<p>tau<br/><span class="codeEnt">Code décimal UTF : 964</span><br/>
+		<span class="hexaEnt">Code hexa : 03c4</span>	
+	</p>
+	<p class="char">&tau;</p>
+</div><li onclick="showChar('c965')"><span style="cursor:pointer">upsi</span></li>
+<div id="c965" class="character" title="upsi">
+	<p>upsi<br/><span class="codeEnt">Code décimal UTF : 965</span><br/>
+		<span class="hexaEnt">Code hexa : 03c5</span>	
+	</p>
+	<p class="char">&upsi;</p>
+</div><li onclick="showChar('c966')"><span style="cursor:pointer">phi</span></li>
+<div id="c966" class="character" title="phi">
+	<p>phi<br/><span class="codeEnt">Code décimal UTF : 966</span><br/>
+		<span class="hexaEnt">Code hexa : 03c6</span>	
+	</p>
+	<p class="char">&phi;</p>
+</div><li onclick="showChar('c967')"><span style="cursor:pointer">chi</span></li>
+<div id="c967" class="character" title="chi">
+	<p>chi<br/><span class="codeEnt">Code décimal UTF : 967</span><br/>
+		<span class="hexaEnt">Code hexa : 03c7</span>	
+	</p>
+	<p class="char">&chi;</p>
+</div><li onclick="showChar('c968')"><span style="cursor:pointer">psi</span></li>
+<div id="c968" class="character" title="psi">
+	<p>psi<br/><span class="codeEnt">Code décimal UTF : 968</span><br/>
+		<span class="hexaEnt">Code hexa : 03c8</span>	
+	</p>
+	<p class="char">&psi;</p>
+</div><li onclick="showChar('c969')"><span style="cursor:pointer">omega</span></li>
+<div id="c969" class="character" title="omega">
+	<p>omega<br/><span class="codeEnt">Code décimal UTF : 969</span><br/>
+		<span class="hexaEnt">Code hexa : 03c9</span>	
+	</p>
+	<p class="char">&omega;</p>
+</div><li onclick="showChar('c977')"><span style="cursor:pointer">thetav</span></li>
+<div id="c977" class="character" title="thetav">
+	<p>thetav<br/><span class="codeEnt">Code décimal UTF : 977</span><br/>
+		<span class="hexaEnt">Code hexa : 03d1</span>	
+	</p>
+	<p class="char">&thetav;</p>
+</div><li onclick="showChar('c978')"><span style="cursor:pointer">Upsi</span></li>
+<div id="c978" class="character" title="Upsi">
+	<p>Upsi<br/><span class="codeEnt">Code décimal UTF : 978</span><br/>
+		<span class="hexaEnt">Code hexa : 03d2</span>	
+	</p>
+	<p class="char">&Upsi;</p>
+</div><li onclick="showChar('c981')"><span style="cursor:pointer">straightphi</span></li>
+<div id="c981" class="character" title="straightphi">
+	<p>straightphi<br/><span class="codeEnt">Code décimal UTF : 981</span><br/>
+		<span class="hexaEnt">Code hexa : 03d5</span>	
+	</p>
+	<p class="char">&straightphi;</p>
+</div><li onclick="showChar('c982')"><span style="cursor:pointer">piv</span></li>
+<div id="c982" class="character" title="piv">
+	<p>piv<br/><span class="codeEnt">Code décimal UTF : 982</span><br/>
+		<span class="hexaEnt">Code hexa : 03d6</span>	
+	</p>
+	<p class="char">&piv;</p>
+</div><li onclick="showChar('c988')"><span style="cursor:pointer">Gammad</span></li>
+<div id="c988" class="character" title="Gammad">
+	<p>Gammad<br/><span class="codeEnt">Code décimal UTF : 988</span><br/>
+		<span class="hexaEnt">Code hexa : 03dc</span>	
+	</p>
+	<p class="char">&Gammad;</p>
+</div><li onclick="showChar('c989')"><span style="cursor:pointer">gammad</span></li>
+<div id="c989" class="character" title="gammad">
+	<p>gammad<br/><span class="codeEnt">Code décimal UTF : 989</span><br/>
+		<span class="hexaEnt">Code hexa : 03dd</span>	
+	</p>
+	<p class="char">&gammad;</p>
+</div><li onclick="showChar('c1008')"><span style="cursor:pointer">kappav</span></li>
+<div id="c1008" class="character" title="kappav">
+	<p>kappav<br/><span class="codeEnt">Code décimal UTF : 1008</span><br/>
+		<span class="hexaEnt">Code hexa : 03f0</span>	
+	</p>
+	<p class="char">&kappav;</p>
+</div><li onclick="showChar('c1009')"><span style="cursor:pointer">rhov</span></li>
+<div id="c1009" class="character" title="rhov">
+	<p>rhov<br/><span class="codeEnt">Code décimal UTF : 1009</span><br/>
+		<span class="hexaEnt">Code hexa : 03f1</span>	
+	</p>
+	<p class="char">&rhov;</p>
+</div><li onclick="showChar('c1013')"><span style="cursor:pointer">epsi</span></li>
+<div id="c1013" class="character" title="epsi">
+	<p>epsi<br/><span class="codeEnt">Code décimal UTF : 1013</span><br/>
+		<span class="hexaEnt">Code hexa : 03f5</span>	
+	</p>
+	<p class="char">&epsi;</p>
+</div><li onclick="showChar('c1014')"><span style="cursor:pointer">bepsi</span></li>
+<div id="c1014" class="character" title="bepsi">
+	<p>bepsi<br/><span class="codeEnt">Code décimal UTF : 1014</span><br/>
+		<span class="hexaEnt">Code hexa : 03f6</span>	
+	</p>
+	<p class="char">&bepsi;</p>
+</div><li onclick="showChar('c8489')"><span style="cursor:pointer">iiota</span></li>
+<div id="c8489" class="character" title="iiota">
+	<p>iiota<br/><span class="codeEnt">Code décimal UTF : 8489</span><br/>
+		<span class="hexaEnt">Code hexa : 2129</span>	
+	</p>
+	<p class="char">&iiota;</p>
+</div></ul>
+				
+				
+			</main>
+			<p>&nbsp;</p><div class="adsense-in-article">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-6434138622132038"
+     data-ad-slot="7328470077"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+		</div>
+	</div>
+		<footer id="footer">
+		<a href="../v2-contact.html">Contact</a> &nbsp; &bull; &nbsp; 
+		<a href="../v2-copyright.html">Copyright</a> &nbsp; &bull; &nbsp; 
+		<a href="../v2-privacy.html">Vie privée</a> &nbsp; &bull; &nbsp; 
+<!--		<a href="http://stylescss.free.fr/v2-lexique.php">Lexique</a> &bull; -->
+		Lexique
+	</footer>
+	<div id="privacy" title="Protection de la vie privée">
+		<p class="center">
+		<input type="button" value="Accepter les cookies" onclick="allowCookies()"/>
+		</p>
+	</div>
+</body>
+<!-- Mirrored from stylescss.free.fr/v2-tools/entities.php?search=grec by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Apr 2020 15:06:51 GMT -->
+</html>

@@ -1,0 +1,569 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<!-- Mirrored from stylescss.free.fr/v2-tutoriels/colors.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Apr 2020 15:03:11 GMT -->
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="colors">
+	<meta name="description" content="Les noms standardisés, les codes de couleurs, et, de façon plus générale, toutes les méthodes pour définir une couleur en CSS.">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta name="robots" content="index,follow" />
+
+	<script src="../v2-js/jquery/jquery-3.3.1.min.js"></script>
+	<script src="../v2-js/jquery-ui/jquery-ui.min.js"></script>
+	<script src="../v2-js/general8e0e.js?v=8"></script>
+	<script src="../v2-js/caniuse3860.js?v=1"></script>
+
+	<link rel="shortcut icon" href="../v2-img/icone5e1f.png?v=2" />	
+	<link rel="stylesheet" href="../v2-js/jquery-ui/jquery-ui.min.css" type="text/css"/>
+	<link rel="stylesheet" href="../v2-css/jquery-ui-alp3860.css?v=1" type="text/css"/>
+	<link rel="stylesheet" href="../v2-css/general8fa7.css?v=18" type="text/css"/>
+	<link rel="stylesheet" href="../v2-css/print3860.css?v=1" media="print" type="text/css"/>
+	<link rel="canonical" href="colors.html" />
+	<meta name="google-site-verification" content="reqp0hShXC1ODVxZiPpy4b_7T6c86o39Tz4tT92N2uw" />
+
+	<meta property="og:url" content="http://stylescss.free.fr/v2-tutoriels/colors.php" />
+	<meta property="og:title" content="Les couleurs en CSS"/>
+	<meta property="og:image" content="http://stylescss.free.fr/v2-img/og-image.png"/>
+	<meta property="og:image:width" content="1200"/>
+	<meta property="og:image:height" content="630"/>
+	<meta property="og:description" content="Les noms standardisés, les codes de couleurs, et, de façon plus générale, toutes les méthodes pour définir une couleur en CSS."/>
+	<meta property="og:type" content="article"/>
+	<meta property="og:locale" content="fr_FR"/>
+	<meta property="og:site_name" content="Tutoriels CSS"/>
+	<meta property="article:author" content="StylesCSS" />
+	<script>$(document).ready(function() {
+var divTest=document.createElement('div');
+divTest.style['color']='';divTest.style['color']='auto';if(divTest.style.color=='') {$('#label-auto').addClass('not-supported');}if(!('color' in document.documentElement.style)) {$('#demo-std .demo-title code').addClass('not-supported');}});</script><style> @supports not (color:auto) {#label-auto,#value-auto {text-decoration:line-through;color:red;} }</style>	<script>
+		function trierCouleurs() {
+			var orderby=$('#orderby').val();
+			$('#nuancier_noms').load('colors-ajax8fc6.html?sortby='+orderby);
+		}
+		$(document).ready(function() {
+			trierCouleurs();
+		});
+	</script>
+	<style>
+		.nuancier {display:flex; flex-wrap:wrap;}
+		.nuancier>div {flex-basis:23%; min-width:120px; text-align:center; margin: 0.2%; padding:1%; border:solid 1px silver;}
+		.nuancier>div:hover {color:white;}
+		.nuancier div {background:white;} /* pour le cas où une couleur ne serait pas reconnue */
+	</style>
+			<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-36064604-1']);
+		_gaq.push(['_trackPageview']);
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+	
+	<title>Les couleurs en CSS</title>
+</head><body id="page-top">
+	<nav id="hamburger">	<a href="../tdm.html" title="Menu">
+	<img src="../v2-img/hamburger.png" alt="Menu" />
+	</a></nav>
+	<div id="page">		
+		<nav id="tdm" class="tdm-screen">	<h2 onclick="tdmToggle('tdm-index')">Index</h2>
+		<div id="tdm-index" class="tdm-toggle">
+		<div class="tdm-item"><a href="../index-2.html" title="Accueil">Page d'accueil</a></div>
+		<div class="tdm-item"><a href="../index-2.html#index-families" title="Index thématique">Index thématique</a></div>
+	</div>
+	
+	<h2>Rechercher sur le site.</h2>
+	<form id="frm-search" name="frm-search" role="search" method="GET" action="http://stylescss.free.fr/v2-search.php">
+	<input id="search" type="text" name="search" value="" />
+	<input id="submit" type="submit" value="Chercher" onclick=""/>
+</form>
+	
+	<h2>Participer.</h2>
+	<input id="btn-remarque" type="button" value="Signaler une erreur" onclick="$('#frm-remarque').show(500)"/>
+	
+	<h2 onclick="tdmToggle('tdm-tutoriels')">Tutoriels sur CSS</h2>
+		<div id="tdm-tutoriels" class="tdm-toggle">
+		<div class="tdm-item"><a href="intro-css.html" title="Tutoriel CSS : introduction aux CSS">Introduction aux CSS</a></div>
+		<div class="tdm-item"><a href="html-css.html" title="Tutoriel CSS : association de HTML et de CSS">Associer HTML et CSS</a></div>
+		<div class="tdm-item"><a href="syntaxe-css.html" title="Tutoriel CSS : syntaxe CSS">Syntaxe de base des CSS</a></div>
+		<div class="tdm-item"><a href="box-model.html" title="Tutoriel CSS : block, inline, box-model">Box model et autres choses</a></div>
+		<div class="tdm-item"></div>
+		<div class="tdm-item"><a href="priorities.html" title="Tutoriel CSS : les priorités CSS">Les règles de priorité</a></div>
+		<div class="tdm-item">Les <a href="flex-box.html" title="Tutoriel CSS : les flex-box">flex-box</a></div>
+		<div class="tdm-item">Les <a href="grid.html" title="Tutoriel CSS : les grilles">grilles CSS</a></div>
+		<div class="tdm-item">Les <a href="../v2-properties/transform.html" title="Tutoriel CSS : les transformations géométriques">transformations géométriques</a></div>
+		<div class="tdm-item">Les <a href="../v2-properties/animation.html" title="Tutoriel CSS : les animations">animations en CSS</a></div>
+		<div class="tdm-item"><a href="responsive.html" title="Tutoriel CSS : mises en page responsives">Mises en page responsive</a></div>
+	</div>
+	
+	<h2 onclick="tdmToggle('tdm-tools')">Outils CSS</h2>
+		<div id="tdm-tools" class="tdm-toggle">
+		<div class="tdm-item"><a href="../v2-tools/colors-synth.html" title="Outils pour synthétiser les couleurs">Synthétiseur de couleurs</a></div>
+		<div class="tdm-item"><a href="../v2-tools/entities.html" title="rechercher des codes de caractères">Outil de recherche de caractères</a></div>
+		<div class="tdm-item"><a href="../v2-tools/external-tools.html" title="Outils proposés par d'autres sites">Outils sur d'autres sites</a></div>
+	</div>
+
+	<!-- <h2>Nouveauté :</h2>
+<div id="flash">
+	Un nouvel outil est en ligne. 
+	Il permet de trouver les caractères spéciaux à partir de mots-clé.
+	<br/><br/>
+	A ajouter dans vos favoris : 
+	<a href="http://stylescss.free.fr/v2-tools/entities.php">Recherche de caractères</a>.
+</div> -->
+	
+	<h2 onclick="tdmToggle('tdm-tricks')">Astuces en CSS</h2>
+		<div id="tdm-tricks" class="tdm-toggle">
+		<div class="tdm-item"><a href="../v2-tricks/cube.html" title="Un cube de photos tournant, en CSS">Un cube photos en CSS pur</a></div>
+		<div class="tdm-item"><a href="../v2-tricks/fixed-headers.html" title="Un tableau avec en-têtes fixes">Un tableau avec défilement</a></div>
+		<div class="tdm-item"><a href="../v2-tricks/geometrics.html" title="Formes géométriques en CSS">Des formes géométriques</a></div>
+		<div class="tdm-item"><a href="../v2-tricks/lettrine.html" title="Des lettrines en CSS">Des lettrines en CSS</a></div>
+		<div class="tdm-item"><a href="../v2-tricks/responsive-square.html" title="Un élément carré et responsif">Carré et responsive</a></div>
+		<div class="tdm-item"><a href="../v2-tricks/round-images.html" title="Des images rondes en CSS">Des images rondes en CSS</a></div>
+		<div class="tdm-item"><a href="../v2-tricks/text-shape.html" title="Afficher du texte dans une forme">Du texte dans une forme</a></div>
+		<div class="tdm-item"><a href="../v2-tricks/tags.html" title="Afficher du code HTML CSS">Afficher de l'HTML avec CSS</a></div>
+		<div class="tdm-item"><a href="../v2-tricks/tricks.html" title="Astuces en CSS">D'autres astuces avec CSS</a></div>
+	</div>
+
+	<h2 onclick="tdmToggle('tdm-functions')">Fonctions</h2>
+	<div id="tdm-functions" class="tdm-toggle"><a href="../v2-functions/attr.html" title="attr()"><div class="tdm-item experimental">attr()</div></a><a href="../v2-functions/blur.html" title="blur()"><div class="tdm-item standardized">blur()</div></a><a href="../v2-functions/brightness.html" title="brightness()"><div class="tdm-item standardized">brightness()</div></a><a href="../v2-functions/calc.html" title="calc()"><div class="tdm-item standardized">calc()</div></a><a href="../v2-functions/circle.html" title="circle()"><div class="tdm-item standardized">circle()</div></a><a href="../v2-functions/clamp.html" title="clamp()"><div class="tdm-item standardized">clamp()</div></a><a href="../v2-functions/conic-gradient.html" title="conic-gradient()"><div class="tdm-item standardized">conic-gradient()</div></a><a href="../v2-functions/contrast.html" title="contrast()"><div class="tdm-item standardized">contrast()</div></a><a href="../v2-functions/counter.html" title="counter()"><div class="tdm-item standardized">counter()</div></a><a href="../v2-functions/counters.html" title="counters()"><div class="tdm-item standardized">counters()</div></a><a href="../v2-functions/cross-fade.html" title="cross-fade()"><div class="tdm-item experimental">cross-fade()</div></a><a href="../v2-functions/cubic-bezier.html" title="cubic-bezier()"><div class="tdm-item standardized">cubic-bezier()</div></a><a href="../v2-functions/drop-shadow.html" title="drop-shadow()"><div class="tdm-item standardized">drop-shadow()</div></a><a href="../v2-functions/element.html" title="element()"><div class="tdm-item standardized">element()</div></a><a href="../v2-functions/ellipse.html" title="ellipse()"><div class="tdm-item standardized">ellipse()</div></a><a href="../v2-functions/fit-content.html" title="fit-content()"><div class="tdm-item standardized">fit-content()</div></a><a href="../v2-functions/grayscale.html" title="grayscale()"><div class="tdm-item standardized">grayscale()</div></a><a href="../v2-functions/hsl.html" title="hsl()"><div class="tdm-item standardized">hsl()</div></a><a href="../v2-functions/hsl.html" title="hsla()"><div class="tdm-item standardized">hsla()</div></a><a href="../v2-functions/hue-rotate.html" title="hue-rotate()"><div class="tdm-item standardized">hue-rotate()</div></a><a href="../v2-functions/hwb.html" title="hwb()"><div class="tdm-item standardized">hwb()</div></a><a href="../v2-functions/image.html" title="image()"><div class="tdm-item experimental">image()</div></a><a href="../v2-functions/inset.html" title="inset()"><div class="tdm-item standardized">inset()</div></a><a href="../v2-functions/invert.html" title="invert()"><div class="tdm-item standardized">invert()</div></a><a href="../v2-functions/linear-gradient.html" title="linear-gradient()"><div class="tdm-item standardized">linear-gradient()</div></a><a href="../v2-functions/matrix.html" title="matrix()"><div class="tdm-item standardized">matrix()</div></a><a href="../v2-functions/matrix3d.html" title="matrix3d()"><div class="tdm-item standardized">matrix3d()</div></a><a href="../v2-functions/min-max.html" title="max()"><div class="tdm-item standardized">max()</div></a><a href="../v2-functions/min-max.html" title="min()"><div class="tdm-item standardized">min()</div></a><a href="../v2-functions/minmax.html" title="minmax()"><div class="tdm-item standardized">minmax()</div></a><a href="../v2-functions/opacity.html" title="opacity()"><div class="tdm-item standardized">opacity()</div></a><a href="../v2-functions/perspective.html" title="perspective()"><div class="tdm-item standardized">perspective()</div></a><a href="../v2-functions/polygon.html" title="polygon()"><div class="tdm-item standardized">polygon()</div></a><a href="../v2-functions/radial-gradient.html" title="radial-gradient()"><div class="tdm-item standardized">radial-gradient()</div></a><a href="../v2-functions/rect.html" title="rect()"><div class="tdm-item deprecated">rect()</div></a><a href="../v2-functions/repeat.html" title="repeat()"><div class="tdm-item standardized">repeat()</div></a><a href="../v2-functions/repeating-conic-gradient.html" title="repeating-conic-gradient()"><div class="tdm-item experimental">repeating-conic-gradient()</div></a><a href="../v2-functions/repeating-linear-gradient.html" title="repeating-linear-gradient()"><div class="tdm-item standardized">repeating-linear-gradient()</div></a><a href="../v2-functions/repeating-radial-gradient.html" title="repeating-radial-gradient()"><div class="tdm-item standardized">repeating-radial-gradient()</div></a><a href="../v2-functions/rgb.html" title="rgb()"><div class="tdm-item standardized">rgb()</div></a><a href="../v2-functions/rgb.html" title="rgba()"><div class="tdm-item standardized">rgba()</div></a><a href="../v2-functions/rotate.html" title="rotate()"><div class="tdm-item standardized">rotate()</div></a><a href="../v2-functions/rotate3d.html" title="rotate3d()"><div class="tdm-item standardized">rotate3d()</div></a><a href="../v2-functions/rotate3d.html" title="rotateX()"><div class="tdm-item standardized">rotateX()</div></a><a href="../v2-functions/rotate3d.html" title="rotateY()"><div class="tdm-item standardized">rotateY()</div></a><a href="../v2-functions/rotate3d.html" title="rotateZ()"><div class="tdm-item standardized">rotateZ()</div></a><a href="../v2-functions/saturate.html" title="saturate()"><div class="tdm-item standardized">saturate()</div></a><a href="../v2-functions/scale.html" title="scale()"><div class="tdm-item standardized">scale()</div></a><a href="../v2-functions/scale3d.html" title="scale3d()"><div class="tdm-item standardized">scale3d()</div></a><a href="../v2-functions/scale3d.html" title="scaleX()"><div class="tdm-item standardized">scaleX()</div></a><a href="../v2-functions/scale3d.html" title="scaleY()"><div class="tdm-item standardized">scaleY()</div></a><a href="../v2-functions/scale3d.html" title="scaleZ()"><div class="tdm-item standardized">scaleZ()</div></a><a href="../v2-functions/sepia.html" title="sepia()"><div class="tdm-item standardized">sepia()</div></a><a href="../v2-functions/skew.html" title="skew()"><div class="tdm-item standardized">skew()</div></a><a href="../v2-functions/skew.html" title="skewX()"><div class="tdm-item standardized">skewX()</div></a><a href="../v2-functions/skew.html" title="skewY()"><div class="tdm-item standardized">skewY()</div></a><a href="../v2-functions/steps.html" title="steps()"><div class="tdm-item standardized">steps()</div></a><a href="../v2-functions/symbols.html" title="symbols()"><div class="tdm-item standardized">symbols()</div></a><a href="../v2-functions/translate.html" title="translate()"><div class="tdm-item standardized">translate()</div></a><a href="../v2-functions/translate3d.html" title="translate3d()"><div class="tdm-item standardized">translate3d()</div></a><a href="../v2-functions/translate.html" title="translateX()"><div class="tdm-item standardized">translateX()</div></a><a href="../v2-functions/translate.html" title="translateY"><div class="tdm-item standardized">translateY</div></a><a href="../v2-functions/translate3d.html" title="translateZ()"><div class="tdm-item standardized">translateZ()</div></a><a href="../v2-functions/url.html" title="url()"><div class="tdm-item standardized">url()</div></a><a href="../v2-functions/var.html" title="var()"><div class="tdm-item standardized">var()</div></a></div>
+	
+	<h2 onclick="tdmToggle('tdm-references')">Références CSS</h2>
+		<div id="tdm-references" class="tdm-toggle">
+		<div class="tdm-item"><a href="../v2-selectors/selectors.html" title="selectors : Liste des sélecteurs CSS, et leur description."><code>selectors</code></a></div>
+		<div class="tdm-item"><a href="../v2-selectors/pseudo-elements.html" title="pseudo-elements : Liste des pseudo-éléments."><code>pseudo-elements</code></a></div>
+		<div class="tdm-item"><a href="../v2-selectors/pseudo-class.html" title="pseudo-class : Liste des pseudo-classes."><code>pseudo-class</code></a></div>
+		<div class="tdm-item"><a href="../v2-references/units.html" title="Unités CSS">unités CSS</a></div>
+		<div class="tdm-item"><a href="colors.html" title="Les couleurs CSS">couleurs CSS</a></div>
+		<div class="tdm-item"><a href="entities.html" title="Les entités CSS">Entités</a></div>
+	</div>
+	
+	<h2 onclick="tdmToggle('tdm-properties')">Propriétés CSS</h2>
+	<div id="tdm-lettres"><div class="tdm-lettre"><a href="#tdm-AA" title="@" onclick="tdmToggle('tdm-AA')">@</a></div><div class="tdm-lettre"><a href="#tdm-A" title="A" onclick="tdmToggle('tdm-A')">A</a></div><div class="tdm-lettre"><a href="#tdm-B" title="B" onclick="tdmToggle('tdm-B')">B</a></div><div class="tdm-lettre"><a href="#tdm-C" title="C" onclick="tdmToggle('tdm-C')">C</a></div><div class="tdm-lettre"><a href="#tdm-D" title="D" onclick="tdmToggle('tdm-D')">D</a></div><div class="tdm-lettre"><a href="#tdm-E" title="E" onclick="tdmToggle('tdm-E')">E</a></div><div class="tdm-lettre"><a href="#tdm-F" title="F" onclick="tdmToggle('tdm-F')">F</a></div><div class="tdm-lettre"><a href="#tdm-G" title="G" onclick="tdmToggle('tdm-G')">G</a></div><div class="tdm-lettre"><a href="#tdm-H" title="H" onclick="tdmToggle('tdm-H')">H</a></div><div class="tdm-lettre"><a href="#tdm-I" title="I" onclick="tdmToggle('tdm-I')">I</a></div><div class="tdm-lettre"><a href="#tdm-J" title="J" onclick="tdmToggle('tdm-J')">J</a></div><div class="tdm-lettre"><a href="#tdm-L" title="L" onclick="tdmToggle('tdm-L')">L</a></div><div class="tdm-lettre"><a href="#tdm-M" title="M" onclick="tdmToggle('tdm-M')">M</a></div><div class="tdm-lettre"><a href="#tdm-O" title="O" onclick="tdmToggle('tdm-O')">O</a></div><div class="tdm-lettre"><a href="#tdm-P" title="P" onclick="tdmToggle('tdm-P')">P</a></div><div class="tdm-lettre"><a href="#tdm-Q" title="Q" onclick="tdmToggle('tdm-Q')">Q</a></div><div class="tdm-lettre"><a href="#tdm-R" title="R" onclick="tdmToggle('tdm-R')">R</a></div><div class="tdm-lettre"><a href="#tdm-S" title="S" onclick="tdmToggle('tdm-S')">S</a></div><div class="tdm-lettre"><a href="#tdm-T" title="T" onclick="tdmToggle('tdm-T')">T</a></div><div class="tdm-lettre"><a href="#tdm-U" title="U" onclick="tdmToggle('tdm-U')">U</a></div><div class="tdm-lettre"><a href="#tdm-V" title="V" onclick="tdmToggle('tdm-V')">V</a></div><div class="tdm-lettre"><a href="#tdm-W" title="W" onclick="tdmToggle('tdm-W')">W</a></div><div class="tdm-lettre"><a href="#tdm-Z" title="Z" onclick="tdmToggle('tdm-Z')">Z</a></div></div><div style="margin-top:20px;"><input id="cbDeprecated" type="checkbox" onclick="showDeprecated(this.checked)"> <label for="cbDeprecated">Montrer les obsolètes</label><br/><input id="cbExperimental" type="checkbox" onclick="showExperimental(this.checked)"> <label for="cbExperimental">Montrer les nouveautés</label></div><div id="tdm-AA" class="tdm-alpha tdm-toggle"><h3><span>@</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/%40apply.html" title="@apply"><div class="tdm-item standardized">@apply</div></a><a href="../v2-properties/%40charset.html" title="@charset"><div class="tdm-item standardized">@charset</div></a><a href="../v2-properties/%40counter-style.html" title="@counter-style"><div class="tdm-item standardized">@counter-style</div></a><a href="../v2-properties/%40font-face.html" title="@font-face"><div class="tdm-item standardized">@font-face</div></a><a href="../v2-properties/%40font-feature-values.html" title="@font-feature-values"><div class="tdm-item experimental">@font-feature-values</div></a><a href="../v2-properties/%40import.html" title="@import"><div class="tdm-item standardized">@import</div></a><a href="../v2-properties/%40keyframes.html" title="@keyframes"><div class="tdm-item standardized">@keyframes</div></a><a href="../v2-properties/%40media.html" title="@media"><div class="tdm-item standardized">@media</div></a><a href="../v2-properties/%40page.html" title="@page"><div class="tdm-item standardized">@page</div></a><a href="../v2-properties/%40supports.html" title="@supports"><div class="tdm-item standardized">@supports</div></a></div><div id="tdm-A" class="tdm-alpha tdm-toggle"><h3><span>A</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/align-content.html" title="align-content"><div class="tdm-item standardized">align-content</div></a><a href="../v2-properties/align-items.html" title="align-items"><div class="tdm-item standardized">align-items</div></a><a href="../v2-properties/align-self.html" title="align-self"><div class="tdm-item standardized">align-self</div></a><a href="../v2-properties/all.html" title="all"><div class="tdm-item standardized">all</div></a><a href="../v2-properties/animation.html" title="animation"><div class="tdm-item standardized">animation</div></a><a href="../v2-properties/animation-delay.html" title="animation-delay"><div class="tdm-item standardized">animation-delay</div></a><a href="../v2-properties/animation-direction.html" title="animation-direction"><div class="tdm-item standardized">animation-direction</div></a><a href="../v2-properties/animation-duration.html" title="animation-duration"><div class="tdm-item standardized">animation-duration</div></a><a href="../v2-properties/animation-fill-mode.html" title="animation-fill-mode"><div class="tdm-item standardized">animation-fill-mode</div></a><a href="../v2-properties/animation-iteration-count.html" title="animation-iteration-count"><div class="tdm-item standardized">animation-iteration-count</div></a><a href="../v2-properties/animation-name.html" title="animation-name"><div class="tdm-item standardized">animation-name</div></a><a href="../v2-properties/animation-play-state.html" title="animation-play-state"><div class="tdm-item standardized">animation-play-state</div></a><a href="../v2-properties/animation-timing-function.html" title="animation-timing-function"><div class="tdm-item standardized">animation-timing-function</div></a><a href="../v2-properties/appearance.html" title="appearance"><div class="tdm-item experimental">appearance</div></a><a href="../v2-properties/azimuth.html" title="azimuth"><div class="tdm-item deprecated">azimuth</div></a></div><div id="tdm-B" class="tdm-alpha tdm-toggle"><h3><span>B</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/backdrop-filter.html" title="backdrop-filter"><div class="tdm-item standardized">backdrop-filter</div></a><a href="../v2-properties/backface-visibility.html" title="backface-visibility"><div class="tdm-item standardized">backface-visibility</div></a><a href="../v2-properties/background.html" title="background"><div class="tdm-item standardized">background</div></a><a href="../v2-properties/background-attachment.html" title="background-attachment"><div class="tdm-item standardized">background-attachment</div></a><a href="../v2-properties/background-blend-mode.html" title="background-blend-mode"><div class="tdm-item standardized">background-blend-mode</div></a><a href="../v2-properties/background-clip.html" title="background-clip"><div class="tdm-item standardized">background-clip</div></a><a href="../v2-properties/background-color.html" title="background-color"><div class="tdm-item standardized">background-color</div></a><a href="../v2-properties/background-image.html" title="background-image"><div class="tdm-item standardized">background-image</div></a><a href="../v2-properties/background-origin.html" title="background-origin"><div class="tdm-item standardized">background-origin</div></a><a href="../v2-properties/background-position.html" title="background-position"><div class="tdm-item standardized">background-position</div></a><a href="../v2-properties/background-repeat.html" title="background-repeat"><div class="tdm-item standardized">background-repeat</div></a><a href="../v2-properties/background-size.html" title="background-size"><div class="tdm-item standardized">background-size</div></a><a href="../v2-properties/bleed.html" title="bleed"><div class="tdm-item standardized">bleed</div></a><a href="../v2-properties/border.html" title="border"><div class="tdm-item standardized">border</div></a><a href="../v2-properties/border-xxx-radius.html" title="border-bottom-left-radius"><div class="tdm-item standardized">border-bottom-left-radius</div></a><a href="../v2-properties/border-xxx-radius.html" title="border-bottom-right-radius"><div class="tdm-item standardized">border-bottom-right-radius</div></a><a href="../v2-properties/border-collapse.html" title="border-collapse"><div class="tdm-item standardized">border-collapse</div></a><a href="../v2-properties/border-color.html" title="border-color"><div class="tdm-item standardized">border-color</div></a><a href="../v2-properties/border-image.html" title="border-image"><div class="tdm-item standardized">border-image</div></a><a href="../v2-properties/border-image-outset.html" title="border-image-outset"><div class="tdm-item standardized">border-image-outset</div></a><a href="../v2-properties/border-image-repeat.html" title="border-image-repeat"><div class="tdm-item standardized">border-image-repeat</div></a><a href="../v2-properties/border-image-slice.html" title="border-image-slice"><div class="tdm-item standardized">border-image-slice</div></a><a href="../v2-properties/border-image-source.html" title="border-image-source"><div class="tdm-item standardized">border-image-source</div></a><a href="../v2-properties/border-image-width.html" title="border-image-width"><div class="tdm-item standardized">border-image-width</div></a><a href="../v2-properties/border-radius.html" title="border-radius"><div class="tdm-item standardized">border-radius</div></a><a href="../v2-properties/border-spacing.html" title="border-spacing"><div class="tdm-item standardized">border-spacing</div></a><a href="../v2-properties/border-style.html" title="border-style"><div class="tdm-item standardized">border-style</div></a><a href="../v2-properties/border-xxx-radius.html" title="border-top-left-radius"><div class="tdm-item standardized">border-top-left-radius</div></a><a href="../v2-properties/border-xxx-radius.html" title="border-top-right-radius"><div class="tdm-item standardized">border-top-right-radius</div></a><a href="../v2-properties/border-width.html" title="border-width"><div class="tdm-item standardized">border-width</div></a><a href="../v2-properties/top-right-bottom-left.html" title="bottom"><div class="tdm-item standardized">bottom</div></a><a href="../v2-properties/box-decoration-break.html" title="box-decoration-break"><div class="tdm-item standardized">box-decoration-break</div></a><a href="../v2-properties/box-shadow.html" title="box-shadow"><div class="tdm-item standardized">box-shadow</div></a><a href="../v2-properties/box-sizing.html" title="box-sizing"><div class="tdm-item standardized">box-sizing</div></a><a href="../v2-properties/break-before-after.html" title="break-after"><div class="tdm-item standardized">break-after</div></a><a href="../v2-properties/break-before-after.html" title="break-before"><div class="tdm-item standardized">break-before</div></a><a href="../v2-properties/break-inside.html" title="break-inside"><div class="tdm-item standardized">break-inside</div></a></div><div id="tdm-C" class="tdm-alpha tdm-toggle"><h3><span>C</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/caption-side.html" title="caption-side"><div class="tdm-item standardized">caption-side</div></a><a href="../v2-properties/caret-color.html" title="caret-color"><div class="tdm-item standardized">caret-color</div></a><a href="../v2-properties/clear.html" title="clear"><div class="tdm-item standardized">clear</div></a><a href="../v2-properties/clip.html" title="clip"><div class="tdm-item deprecated">clip</div></a><a href="../v2-properties/clip-path.html" title="clip-path"><div class="tdm-item standardized">clip-path</div></a><a href="../v2-properties/color.html" title="color"><div class="tdm-item standardized">color</div></a><a href="../v2-properties/color-adjust.html" title="color-adjust"><div class="tdm-item standardized">color-adjust</div></a><a href="../v2-properties/column-count.html" title="column-count"><div class="tdm-item standardized">column-count</div></a><a href="../v2-properties/column-fill.html" title="column-fill"><div class="tdm-item standardized">column-fill</div></a><a href="../v2-properties/column-gap.html" title="column-gap"><div class="tdm-item standardized">column-gap</div></a><a href="../v2-properties/column-rule.html" title="column-rule"><div class="tdm-item standardized">column-rule</div></a><a href="../v2-properties/column-rule-color.html" title="column-rule-color"><div class="tdm-item standardized">column-rule-color</div></a><a href="../v2-properties/column-rule-style.html" title="column-rule-style"><div class="tdm-item standardized">column-rule-style</div></a><a href="../v2-properties/column-rule-width.html" title="column-rule-width"><div class="tdm-item standardized">column-rule-width</div></a><a href="../v2-properties/column-span.html" title="column-span"><div class="tdm-item standardized">column-span</div></a><a href="../v2-properties/column-width.html" title="column-width"><div class="tdm-item standardized">column-width</div></a><a href="../v2-properties/columns.html" title="columns"><div class="tdm-item standardized">columns</div></a><a href="../v2-properties/content.html" title="content"><div class="tdm-item standardized">content</div></a><a href="../v2-properties/counter-reset-increment.html" title="counter-increment"><div class="tdm-item standardized">counter-increment</div></a><a href="../v2-properties/counter-reset-increment.html" title="counter-reset"><div class="tdm-item standardized">counter-reset</div></a><a href="../v2-properties/cue.html" title="cue"><div class="tdm-item deprecated">cue</div></a><a href="../v2-properties/cue.html" title="cue-after"><div class="tdm-item deprecated">cue-after</div></a><a href="../v2-properties/cue.html" title="cue-before"><div class="tdm-item deprecated">cue-before</div></a><a href="../v2-properties/cursor.html" title="cursor"><div class="tdm-item standardized">cursor</div></a></div><div id="tdm-D" class="tdm-alpha tdm-toggle"><h3><span>D</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/direction.html" title="direction"><div class="tdm-item standardized">direction</div></a><a href="../v2-properties/display.html" title="display"><div class="tdm-item standardized">display</div></a></div><div id="tdm-E" class="tdm-alpha tdm-toggle"><h3><span>E</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/elevation.html" title="elevation"><div class="tdm-item deprecated">elevation</div></a><a href="../v2-properties/empty-cells.html" title="empty-cells"><div class="tdm-item standardized">empty-cells</div></a></div><div id="tdm-F" class="tdm-alpha tdm-toggle"><h3><span>F</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/filter.html" title="filter"><div class="tdm-item standardized">filter</div></a><a href="../v2-properties/flex.html" title="flex"><div class="tdm-item standardized">flex</div></a><a href="../v2-properties/flex-basis.html" title="flex-basis"><div class="tdm-item standardized">flex-basis</div></a><a href="../v2-properties/flex-direction.html" title="flex-direction"><div class="tdm-item standardized">flex-direction</div></a><a href="../v2-properties/flex-flow.html" title="flex-flow"><div class="tdm-item standardized">flex-flow</div></a><a href="../v2-properties/flex-grow.html" title="flex-grow"><div class="tdm-item standardized">flex-grow</div></a><a href="../v2-properties/flex-shrink.html" title="flex-shrink"><div class="tdm-item standardized">flex-shrink</div></a><a href="../v2-properties/flex-wrap.html" title="flex-wrap"><div class="tdm-item standardized">flex-wrap</div></a><a href="../v2-properties/float.html" title="float"><div class="tdm-item standardized">float</div></a><a href="../v2-properties/font.html" title="font"><div class="tdm-item standardized">font</div></a><a href="../v2-properties/font-display.html" title="font-display"><div class="tdm-item experimental">font-display</div></a><a href="../v2-properties/font-family.html" title="font-family"><div class="tdm-item standardized">font-family</div></a><a href="../v2-properties/font-feature-settings.html" title="font-feature-settings"><div class="tdm-item experimental">font-feature-settings</div></a><a href="../v2-properties/font-kerning.html" title="font-kerning"><div class="tdm-item standardized">font-kerning</div></a><a href="../v2-properties/font-optical-sizing.html" title="font-optical-sizing"><div class="tdm-item experimental">font-optical-sizing</div></a><a href="../v2-properties/font-size.html" title="font-size"><div class="tdm-item standardized">font-size</div></a><a href="../v2-properties/font-size-adjust.html" title="font-size-adjust"><div class="tdm-item standardized">font-size-adjust</div></a><a href="../v2-properties/font-stretch.html" title="font-stretch"><div class="tdm-item standardized">font-stretch</div></a><a href="../v2-properties/font-style.html" title="font-style"><div class="tdm-item standardized">font-style</div></a><a href="../v2-properties/font-synthesis.html" title="font-synthesis"><div class="tdm-item standardized">font-synthesis</div></a><a href="../v2-properties/font-variant.html" title="font-variant"><div class="tdm-item standardized">font-variant</div></a><a href="../v2-properties/font-variant-alternates.html" title="font-variant-alternates"><div class="tdm-item standardized">font-variant-alternates</div></a><a href="../v2-properties/font-variant-caps.html" title="font-variant-caps"><div class="tdm-item standardized">font-variant-caps</div></a><a href="../v2-properties/font-variant-east-asian.html" title="font-variant-east-asian"><div class="tdm-item standardized">font-variant-east-asian</div></a><a href="../v2-properties/font-variant-ligatures.html" title="font-variant-ligatures"><div class="tdm-item standardized">font-variant-ligatures</div></a><a href="../v2-properties/font-variant-numeric.html" title="font-variant-numeric"><div class="tdm-item standardized">font-variant-numeric</div></a><a href="../v2-properties/font-variant-position.html" title="font-variant-position"><div class="tdm-item standardized">font-variant-position</div></a><a href="../v2-properties/font-weight.html" title="font-weight"><div class="tdm-item standardized">font-weight</div></a></div><div id="tdm-G" class="tdm-alpha tdm-toggle"><h3><span>G</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/grid.html" title="grid"><div class="tdm-item standardized">grid</div></a><a href="../v2-properties/grid-area.html" title="grid-area"><div class="tdm-item standardized">grid-area</div></a><a href="../v2-properties/grid-auto-columns.html" title="grid-auto-columns"><div class="tdm-item standardized">grid-auto-columns</div></a><a href="../v2-properties/grid-auto-flow.html" title="grid-auto-flow"><div class="tdm-item standardized">grid-auto-flow</div></a><a href="../v2-properties/grid-auto-rows.html" title="grid-auto-rows"><div class="tdm-item standardized">grid-auto-rows</div></a><a href="../v2-properties/grid-row-column.html" title="grid-column"><div class="tdm-item standardized">grid-column</div></a><a href="../v2-properties/grid-row-column.html" title="grid-column-end"><div class="tdm-item standardized">grid-column-end</div></a><a href="../v2-properties/grid-gap.html" title="grid-column-gap"><div class="tdm-item standardized">grid-column-gap</div></a><a href="../v2-properties/grid-row-column.html" title="grid-column-start"><div class="tdm-item standardized">grid-column-start</div></a><a href="../v2-properties/grid-gap.html" title="grid-gap"><div class="tdm-item standardized">grid-gap</div></a><a href="../v2-properties/grid-row-column.html" title="grid-row"><div class="tdm-item standardized">grid-row</div></a><a href="../v2-properties/grid-row-column.html" title="grid-row-end"><div class="tdm-item standardized">grid-row-end</div></a><a href="../v2-properties/grid-gap.html" title="grid-row-gap"><div class="tdm-item standardized">grid-row-gap</div></a><a href="../v2-properties/grid-row-column.html" title="grid-row-start"><div class="tdm-item standardized">grid-row-start</div></a><a href="../v2-properties/grid-template.html" title="grid-template"><div class="tdm-item standardized">grid-template</div></a><a href="../v2-properties/grid-template-areas.html" title="grid-template-areas"><div class="tdm-item standardized">grid-template-areas</div></a><a href="../v2-properties/grid-template-columns.html" title="grid-template-columns"><div class="tdm-item standardized">grid-template-columns</div></a><a href="../v2-properties/grid-template-rows.html" title="grid-template-rows"><div class="tdm-item standardized">grid-template-rows</div></a></div><div id="tdm-H" class="tdm-alpha tdm-toggle"><h3><span>H</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/hanging-punctuation.html" title="hanging-punctuation"><div class="tdm-item experimental">hanging-punctuation</div></a><a href="../v2-properties/height-width.html" title="height"><div class="tdm-item standardized">height</div></a><a href="../v2-properties/hyphens.html" title="hyphens"><div class="tdm-item standardized">hyphens</div></a></div><div id="tdm-I" class="tdm-alpha tdm-toggle"><h3><span>I</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/image-rendering.html" title="image-rendering"><div class="tdm-item standardized">image-rendering</div></a><a href="../v2-properties/ime-mode.html" title="ime-mode"><div class="tdm-item deprecated">ime-mode</div></a><a href="../v2-properties/isolation.html" title="isolation"><div class="tdm-item standardized">isolation</div></a></div><div id="tdm-J" class="tdm-alpha tdm-toggle"><h3><span>J</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/justify-content.html" title="justify-content"><div class="tdm-item standardized">justify-content</div></a><a href="../v2-properties/justify-items.html" title="justify-items"><div class="tdm-item standardized">justify-items</div></a><a href="../v2-properties/justify-self.html" title="justify-self"><div class="tdm-item standardized">justify-self</div></a></div><div id="tdm-L" class="tdm-alpha tdm-toggle"><h3><span>L</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/top-right-bottom-left.html" title="left"><div class="tdm-item standardized">left</div></a><a href="../v2-properties/letter-spacing.html" title="letter-spacing"><div class="tdm-item standardized">letter-spacing</div></a><a href="../v2-properties/line-break.html" title="line-break"><div class="tdm-item standardized">line-break</div></a><a href="../v2-properties/line-height.html" title="line-height"><div class="tdm-item standardized">line-height</div></a><a href="../v2-properties/list-style.html" title="list-style"><div class="tdm-item standardized">list-style</div></a><a href="../v2-properties/list-style-image.html" title="list-style-image"><div class="tdm-item standardized">list-style-image</div></a><a href="../v2-properties/list-style-position.html" title="list-style-position"><div class="tdm-item standardized">list-style-position</div></a><a href="../v2-properties/list-style-type.html" title="list-style-type"><div class="tdm-item standardized">list-style-type</div></a></div><div id="tdm-M" class="tdm-alpha tdm-toggle"><h3><span>M</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/margin.html" title="margin"><div class="tdm-item standardized">margin</div></a><a href="../v2-properties/margin.html" title="margin-block-end"><div class="tdm-item standardized">margin-block-end</div></a><a href="../v2-properties/margin.html" title="margin-block-start"><div class="tdm-item standardized">margin-block-start</div></a><a href="../v2-properties/margin.html" title="margin-bottom"><div class="tdm-item standardized">margin-bottom</div></a><a href="../v2-properties/margin.html" title="margin-inline-end"><div class="tdm-item standardized">margin-inline-end</div></a><a href="../v2-properties/margin.html" title="margin-inline-start"><div class="tdm-item standardized">margin-inline-start</div></a><a href="../v2-properties/margin.html" title="margin-left"><div class="tdm-item standardized">margin-left</div></a><a href="../v2-properties/margin.html" title="margin-right"><div class="tdm-item standardized">margin-right</div></a><a href="../v2-properties/margin.html" title="margin-top"><div class="tdm-item standardized">margin-top</div></a><a href="../v2-properties/margin-trim.html" title="margin-trim"><div class="tdm-item experimental">margin-trim</div></a><a href="../v2-properties/marker-offset.html" title="marker-offset"><div class="tdm-item deprecated">marker-offset</div></a><a href="../v2-properties/marks.html" title="marks"><div class="tdm-item deprecated">marks</div></a><a href="../v2-properties/mask.html" title="mask"><div class="tdm-item experimental">mask</div></a><a href="../v2-properties/mask-border.html" title="mask-border"><div class="tdm-item experimental">mask-border</div></a><a href="../v2-properties/mask-clip.html" title="mask-clip"><div class="tdm-item experimental">mask-clip</div></a><a href="../v2-properties/mask-image.html" title="mask-image"><div class="tdm-item experimental">mask-image</div></a><a href="../v2-properties/mask-mode.html" title="mask-mode"><div class="tdm-item experimental">mask-mode</div></a><a href="../v2-properties/mask-origin.html" title="mask-origin"><div class="tdm-item experimental">mask-origin</div></a><a href="../v2-properties/mask-position.html" title="mask-position"><div class="tdm-item experimental">mask-position</div></a><a href="../v2-properties/mask-repeat.html" title="mask-repeat"><div class="tdm-item experimental">mask-repeat</div></a><a href="../v2-properties/mask-size.html" title="mask-size"><div class="tdm-item experimental">mask-size</div></a><a href="../v2-properties/min-max.html" title="max-height"><div class="tdm-item standardized">max-height</div></a><a href="../v2-properties/min-max.html" title="max-width"><div class="tdm-item standardized">max-width</div></a><a href="../v2-properties/min-max.html" title="min-height"><div class="tdm-item standardized">min-height</div></a><a href="../v2-properties/min-max.html" title="min-width"><div class="tdm-item standardized">min-width</div></a><a href="../v2-properties/mix-blend-mode.html" title="mix-blend-mode"><div class="tdm-item standardized">mix-blend-mode</div></a><a href="../v2-properties/moz-border.html" title="moz-border-colors"><div class="tdm-item deprecated">moz-border-colors</div></a></div><div id="tdm-O" class="tdm-alpha tdm-toggle"><h3><span>O</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/object-fit.html" title="object-fit"><div class="tdm-item standardized">object-fit</div></a><a href="../v2-properties/object-position.html" title="object-position"><div class="tdm-item standardized">object-position</div></a><a href="../v2-properties/opacity.html" title="opacity"><div class="tdm-item standardized">opacity</div></a><a href="../v2-properties/order.html" title="order"><div class="tdm-item standardized">order</div></a><a href="../v2-properties/orphans-widows.html" title="orphans"><div class="tdm-item standardized">orphans</div></a><a href="../v2-properties/outline.html" title="outline"><div class="tdm-item standardized">outline</div></a><a href="../v2-properties/outline-color.html" title="outline-color"><div class="tdm-item standardized">outline-color</div></a><a href="../v2-properties/outline-offset.html" title="outline-offset"><div class="tdm-item standardized">outline-offset</div></a><a href="../v2-properties/outline-style.html" title="outline-style"><div class="tdm-item standardized">outline-style</div></a><a href="../v2-properties/outline-width.html" title="outline-width"><div class="tdm-item standardized">outline-width</div></a><a href="../v2-properties/overflow.html" title="overflow"><div class="tdm-item standardized">overflow</div></a><a href="../v2-properties/word-break-wrap.html" title="overflow-wrap"><div class="tdm-item standardized">overflow-wrap</div></a><a href="../v2-properties/overflow.html" title="overflow-x"><div class="tdm-item standardized">overflow-x</div></a><a href="../v2-properties/overflow.html" title="overflow-y"><div class="tdm-item standardized">overflow-y</div></a></div><div id="tdm-P" class="tdm-alpha tdm-toggle"><h3><span>P</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/padding.html" title="padding"><div class="tdm-item standardized">padding</div></a><a href="../v2-properties/padding.html" title="padding-block-end"><div class="tdm-item standardized">padding-block-end</div></a><a href="../v2-properties/padding-2.html" title="padding-block-start"><div class="tdm-item standardized">padding-block-start</div></a><a href="../v2-properties/padding.html" title="padding-bottom"><div class="tdm-item standardized">padding-bottom</div></a><a href="../v2-properties/padding.html" title="padding-inline-end"><div class="tdm-item standardized">padding-inline-end</div></a><a href="../v2-properties/padding.html" title="padding-inline-start"><div class="tdm-item standardized">padding-inline-start</div></a><a href="../v2-properties/padding.html" title="padding-left"><div class="tdm-item standardized">padding-left</div></a><a href="../v2-properties/padding.html" title="padding-right"><div class="tdm-item standardized">padding-right</div></a><a href="../v2-properties/padding.html" title="padding-top"><div class="tdm-item standardized">padding-top</div></a><a href="../v2-properties/page-break.html" title="page-break-after"><div class="tdm-item deprecated">page-break-after</div></a><a href="../v2-properties/page-break.html" title="page-break-before"><div class="tdm-item deprecated">page-break-before</div></a><a href="../v2-properties/page-break.html" title="page-break-inside"><div class="tdm-item deprecated">page-break-inside</div></a><a href="../v2-properties/pause.html" title="pause"><div class="tdm-item deprecated">pause</div></a><a href="../v2-properties/perspective.html" title="perspective"><div class="tdm-item standardized">perspective</div></a><a href="../v2-properties/perspective-origin.html" title="perspective-origin"><div class="tdm-item standardized">perspective-origin</div></a><a href="../v2-properties/pitch.html" title="pitch"><div class="tdm-item deprecated">pitch</div></a><a href="../v2-properties/pitch-range.html" title="pitch-range"><div class="tdm-item deprecated">pitch-range</div></a><a href="../v2-properties/play-during.html" title="play-during"><div class="tdm-item deprecated">play-during</div></a><a href="../v2-properties/pointer-events.html" title="pointer-events"><div class="tdm-item standardized">pointer-events</div></a><a href="../v2-properties/position.html" title="position"><div class="tdm-item standardized">position</div></a></div><div id="tdm-Q" class="tdm-alpha tdm-toggle"><h3><span>Q</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/quotes.html" title="quotes"><div class="tdm-item standardized">quotes</div></a></div><div id="tdm-R" class="tdm-alpha tdm-toggle"><h3><span>R</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/resize.html" title="resize"><div class="tdm-item standardized">resize</div></a><a href="../v2-properties/richness.html" title="richness"><div class="tdm-item deprecated">richness</div></a><a href="../v2-properties/top-right-bottom-left.html" title="right"><div class="tdm-item standardized">right</div></a></div><div id="tdm-S" class="tdm-alpha tdm-toggle"><h3><span>S</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/scroll-behavior.html" title="scroll-behavior"><div class="tdm-item standardized">scroll-behavior</div></a><a href="../v2-properties/scrollbar.html" title="scrollbar-3dlight-color"><div class="tdm-item deprecated">scrollbar-3dlight-color</div></a><a href="../v2-properties/scrollbar.html" title="scrollbar-arrow-color"><div class="tdm-item deprecated">scrollbar-arrow-color</div></a><a href="../v2-properties/scrollbar.html" title="scrollbar-base-color"><div class="tdm-item deprecated">scrollbar-base-color</div></a><a href="../v2-properties/scrollbar.html" title="scrollbar-darkshadow-colo"><div class="tdm-item deprecated">scrollbar-darkshadow-colo</div></a><a href="../v2-properties/scrollbar.html" title="scrollbar-face-color"><div class="tdm-item deprecated">scrollbar-face-color</div></a><a href="../v2-properties/scrollbar.html" title="scrollbar-highlight-color"><div class="tdm-item deprecated">scrollbar-highlight-color</div></a><a href="../v2-properties/scrollbar.html" title="scrollbar-shadow-color"><div class="tdm-item deprecated">scrollbar-shadow-color</div></a><a href="../v2-properties/scrollbar.html" title="scrollbar-track-color"><div class="tdm-item deprecated">scrollbar-track-color</div></a><a href="../v2-properties/shape-outside.html" title="shape-outside"><div class="tdm-item standardized">shape-outside</div></a><a href="../v2-properties/size.html" title="size"><div class="tdm-item standardized">size</div></a><a href="../v2-properties/speak.html" title="speak"><div class="tdm-item deprecated">speak</div></a><a href="../v2-properties/speak2.html" title="speak-header"><div class="tdm-item deprecated">speak-header</div></a><a href="../v2-properties/speak2.html" title="speak-numeral"><div class="tdm-item deprecated">speak-numeral</div></a><a href="../v2-properties/speak2.html" title="speak-punctuation"><div class="tdm-item deprecated">speak-punctuation</div></a><a href="../v2-properties/speech-rate.html" title="speech-rate"><div class="tdm-item deprecated">speech-rate</div></a><a href="../v2-properties/stress.html" title="stress"><div class="tdm-item deprecated">stress</div></a></div><div id="tdm-T" class="tdm-alpha tdm-toggle"><h3><span>T</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/tab-size.html" title="tab-size"><div class="tdm-item standardized">tab-size</div></a><a href="../v2-properties/table-layout.html" title="table-layout"><div class="tdm-item standardized">table-layout</div></a><a href="../v2-properties/text-align.html" title="text-align"><div class="tdm-item standardized">text-align</div></a><a href="../v2-properties/text-align-last.html" title="text-align-last"><div class="tdm-item standardized">text-align-last</div></a><a href="../v2-properties/text-decoration.html" title="text-decoration"><div class="tdm-item standardized">text-decoration</div></a><a href="../v2-properties/text-decoration-color.html" title="text-decoration-color"><div class="tdm-item standardized">text-decoration-color</div></a><a href="../v2-properties/text-decoration-line.html" title="text-decoration-line"><div class="tdm-item standardized">text-decoration-line</div></a><a href="../v2-properties/text-decoration-style.html" title="text-decoration-style"><div class="tdm-item standardized">text-decoration-style</div></a><a href="../v2-properties/text-emphasis.html" title="text-emphasis"><div class="tdm-item standardized">text-emphasis</div></a><a href="../v2-properties/text-emphasis-color.html" title="text-emphasis-color"><div class="tdm-item standardized">text-emphasis-color</div></a><a href="../v2-properties/text-emphasis-position.html" title="text-emphasis-position"><div class="tdm-item standardized">text-emphasis-position</div></a><a href="../v2-properties/text-emphasis-style.html" title="text-emphasis-style"><div class="tdm-item standardized">text-emphasis-style</div></a><a href="../v2-properties/text-indent.html" title="text-indent"><div class="tdm-item standardized">text-indent</div></a><a href="../v2-properties/text-justify.html" title="text-justify"><div class="tdm-item standardized">text-justify</div></a><a href="../v2-properties/text-overflow.html" title="text-overflow"><div class="tdm-item standardized">text-overflow</div></a><a href="../v2-properties/text-rendering.html" title="text-rendering"><div class="tdm-item standardized">text-rendering</div></a><a href="../v2-properties/text-shadow.html" title="text-shadow"><div class="tdm-item standardized">text-shadow</div></a><a href="../v2-properties/text-transform.html" title="text-transform"><div class="tdm-item standardized">text-transform</div></a><a href="../v2-properties/top-right-bottom-left.html" title="top"><div class="tdm-item standardized">top</div></a><a href="../v2-properties/touch-action.html" title="touch-action"><div class="tdm-item standardized">touch-action</div></a><a href="../v2-properties/transform.html" title="transform"><div class="tdm-item standardized">transform</div></a><a href="../v2-properties/transform-origin.html" title="transform-origin"><div class="tdm-item standardized">transform-origin</div></a><a href="../v2-properties/transform-style.html" title="transform-style"><div class="tdm-item standardized">transform-style</div></a><a href="../v2-properties/transition.html" title="transition"><div class="tdm-item standardized">transition</div></a><a href="../v2-properties/transition-delay.html" title="transition-delay"><div class="tdm-item standardized">transition-delay</div></a><a href="../v2-properties/transition-duration.html" title="transition-duration"><div class="tdm-item standardized">transition-duration</div></a><a href="../v2-properties/transition-property.html" title="transition-property"><div class="tdm-item standardized">transition-property</div></a><a href="../v2-properties/transition-timing-function.html" title="transition-timing-function"><div class="tdm-item standardized">transition-timing-function</div></a></div><div id="tdm-U" class="tdm-alpha tdm-toggle"><h3><span>U</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/unicode-bidi.html" title="unicode-bidi"><div class="tdm-item standardized">unicode-bidi</div></a><a href="../v2-properties/user-select.html" title="user-select"><div class="tdm-item standardized">user-select</div></a></div><div id="tdm-V" class="tdm-alpha tdm-toggle"><h3><span>V</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/vertical-align.html" title="vertical-align"><div class="tdm-item standardized">vertical-align</div></a><a href="../v2-properties/visibility.html" title="visibility"><div class="tdm-item standardized">visibility</div></a><a href="../v2-properties/voice-family.html" title="voice-family"><div class="tdm-item deprecated">voice-family</div></a><a href="../v2-properties/volume.html" title="volume"><div class="tdm-item deprecated">volume</div></a></div><div id="tdm-W" class="tdm-alpha tdm-toggle"><h3><span>W</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/white-space.html" title="white-space"><div class="tdm-item standardized">white-space</div></a><a href="../v2-properties/orphans-widows.html" title="widows"><div class="tdm-item standardized">widows</div></a><a href="../v2-properties/height-width.html" title="width"><div class="tdm-item standardized">width</div></a><a href="../v2-properties/will-change.html" title="will-change"><div class="tdm-item standardized">will-change</div></a><a href="../v2-properties/word-break-wrap.html" title="word-break"><div class="tdm-item standardized">word-break</div></a><a href="../v2-properties/word-spacing.html" title="word-spacing"><div class="tdm-item standardized">word-spacing</div></a><a href="../v2-properties/word-break-wrap.html" title="word-wrap"><div class="tdm-item standardized">word-wrap</div></a><a href="../v2-properties/writing-mode.html" title="writing-mode"><div class="tdm-item standardized">writing-mode</div></a></div><div id="tdm-Z" class="tdm-alpha tdm-toggle"><h3><span>Z</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/z-index.html" title="z-index"><div class="tdm-item standardized">z-index</div></a></div>
+</nav>
+		<div id="contenu">
+			<div class="adsense-in-article">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-6434138622132038"
+     data-ad-slot="7328470077"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+			<form id="frm-remarque" method="post" action="http://stylescss.free.fr/v2-lib/remarque-post.php">
+	<input id="rem-number" name="rem-number" type="hidden" value="12"/>
+	<input id="rem-url" name="rem-url" type="hidden" value="/v2-tutoriels/colors.php"/>
+	<h3>Une remarque ? Une suggestion ?...</h3>
+	<div>
+		Merci de participer à l'amélioration de ce site.
+		Prenez le temps de rédiger votre remarque le plus précisément possible :<br/>
+		<textarea id="rem-description" name="rem-description" ></textarea>
+	</div>
+	<div>
+		<label for="rem-antispam">Question anti-spam :<br/>Comment dit-on OUI en anglais ?</label><br/>
+		<input id="rem-antispam" name="rem-antispam" type="text" />
+	</div>
+	<div id="rem-buttons">
+		<input type="button" value="Annuler" onclick="$('#frm-remarque').hide()"/>
+		<input type="button" value="Envoyer" onclick="postRemarque()"/>
+	</div>
+	<div id="rem-ar"></div>
+</form>
+			<main>
+				<h1>Dénomination et codes des couleurs en CSS</h1>
+				<p>Les couleurs CSS sont les mêmes que celles de HTML mais la syntaxe pour désigner une couleur est plus
+	diversifiée : CSS reconnait en effet les codes hexadécimaux, la décomposition <abbr title="Red Green Blue">RGB</abbr>,
+	la décomposition <abbr title="Hue Saturation Luminosity">HSL</abbr> et surtout les couleurs nommées.
+</p>
+	<h2>Table des matières.</h2>
+	<ul>
+		<li><a href="#syntaxes" title="Syntaxes des couleurs CSS">Syntaxes pour spécifier une couleur</a>
+		</li>
+		<li><a href="#nuancier" title="Couleurs nommées en CSS/HTML">Liste et nuancier des couleurs nommées</a>
+		</li>
+		<li><a href="#system-colors" title="Couleurs système">Les couleurs systèmes <span class="deprecated" title="Obsolète">✗</span></a>
+		</li>
+		<li>Voyez aussi notre <a href="../v2-tools/colors-synth.html" title="Outils pour synthétiser les couleurs">Synthétiseur de couleurs</a>.
+		</li>
+	</ul>
+	
+<section id="gamut"><h2>Espace de couleurs.</h2>
+	<p>CSS utilise par défaut l'espace <code><abbr title="Standard Red Green Blue">sRGB</abbr></code> qui est le plus
+		facile à restituer, même sur du matériel ancien. Il est cependant possible de choisir un autre espace de 
+		couleurs avec la directive <code>@color-profile</code>.
+	</p>
+</section>
+
+
+<section id="syntaxes"><h2>Codification des couleurs.</h2>
+<ul class="syntaxes">
+
+	<p>Voici toutes les syntaxes pour désigner une couleur.
+	</p>
+	
+<li><div class="syntaxe"><code>
+lightblue
+</code></div>
+	<p>Le nom d'une couleur. Il y a 132 noms de couleurs normalisés par le W3C 
+		(voir le <a href="#nuancier" title="Tableau des couleurs nommées en CSS">nuancier</a> ci-dessous).
+		Le nom ne doit pas être entre guillemets, ni entre apostrophes ; il n'est pas sensible à la casse.
+		Ces noms sont maintenant reconnus par tous les navigateurs.
+	</p>
+</li>
+
+<li><div class="syntaxe"><code>
+transparent
+</code></div>
+	<p>La couleur totalement transparente, donc invisible. Équivalent à <code>#0000</code>.
+	</p>
+</li>
+
+<li><div class="syntaxe"><code>
+currentcolor
+</code></div>
+	<p>Ce terme désigne la couleur courante, celle du texte, définie par la propriété <a href="../v2-properties/color.html" title="color : Couleur du texte."><code>color</code></a>.<br/>
+		Il peut être utile pour définir la couleur d'autre chose que le texte (par exemple une bordure) lorsque
+		cette dernière a été modifiée au préalable et que l'on souhaite revenir à la même couleur que le texte.
+	</p>
+</li>
+
+<li><div class="syntaxe"><code>
+#rrggbb
+</code></div>
+	<p>Le code hexadécimal de la couleur sur 6 digits, précédés d'un dièse ( <code>#</code> ).
+		Les deux premiers digits (<code>rr</code>) représentent la valeur de rouge, 
+		les deux suivants le vert (<code>gg</code>) et les deux derniers le bleu (<code>bb</code>).<br/>
+		Ces trois valeurs peuvent évoluer de <code>00</code> à <code>ff</code>.
+		En mélangeant dans des proportions différentes ces trois couleurs de base, on peut obtenir n'importe laquelle
+		des couleurs.<br/>
+		Cette notation hexadécimale est parfaitement reconnue par tous les navigateurs. 
+		Malheureusement, les codes ne sont pas très faciles à lire.
+		Pour vous faciliter la tâche, vous pouvez vous reporter au nuancier ci-dessous.
+	</p>
+</li>
+		
+<li><div class="syntaxe"><code>
+#rgb
+</code></div>
+	<p>Le code hexadécimal de la couleur sur 3 digits, précédés d'un dièse ( <code>#</code> ).
+		Cette notation est une version simplifiée de la précédente,	qui offre cependant moins de nuances de couleurs
+		puisqu'on attribue un seul digit à chacune des couleurs.<br/>
+		<code>#f00</code> est équivalent à <code>#ff0000</code>.<br/>
+		<code>#0a0</code> est équivalent à <code>#00aa00</code>.
+	</p>
+</li>
+		
+<li><div class="syntaxe"><code>
+#rrggbbaa
+</code></div>
+	<p>Le code hexadécimal de la couleur sur 8 digits, précédés d'un dièse ( <code>#</code> ).
+		Les deux derniers digits (<code>aa</code>) traduisent l'opacité de la couleur, <code>00</code>
+		correspondant à une couleur totalement transparente (donc invisible) et <code>ff</code> une
+		couleur totalement opaque.<br/>
+		<code>#ff0000ff</code> est du rouge totalement opaque (non transparent).<br/> 
+		<code>#0000ff80</code> est du bleu semi-transparent.
+	</p>
+</li>
+
+<li><div class="syntaxe"><code>
+#rgba
+</code></div>
+	<p>Variante de la notation précédente mais en n'affectant qu'un seul digit à chacune des composantes.<br/>
+		<code>0f0f</code> est un vert totalement opaque.<br/>
+		<code>00f8</code> est un bleu semi-transparent.
+	</p>
+</li>	
+
+<li><div class="syntaxe"><code>
+rgb(r,g,b)
+rgba(r,g,b,a)
+hsl(h,s,l)
+hsla(h,s,l,a)
+hwb(h,w,b)    <span class="experimental" title="Problème de compatibilité">⚠</span>
+hwba(h,w,b,a) <span class="experimental" title="Problème de compatibilité">⚠</span>
+</code></div>
+	<p>Toutes ces fonctions définissent une couleur à partir de 3 composantes, et éventuellement, d'un quatrième
+		qui est la transparence, mais chacune dans un référentiel différent.<br/>
+		Les deux premières, <code>rgb()</code> et <code>rgba()</code>, utilisent le référentiel bien connu
+		rouge, vert, bleu.<br/>
+		<code>hsl()</code> et <code>hsla()</code> travaillent dans le référentiel Teinte, Luminosité, Saturation.<br/>
+		<code>hwb()</code> et <code>hwb()</code>, encore peu connues, construisent une couleur à partir d'une teinte,
+		et en ajoutant une dose de blanc (<code>w</code>) et de noir (<code>b</code>).
+	</p>
+	<p>Voici une présentation rapide des paramètres nécessaires à ces fonctions :
+	</p>
+	<ol>
+		<li><code>r</code>, <code>g</code> et <code>b</code> correspondent aux couleurs rouge, verte et bleue. 
+			Ce sont trois nombres de 0 à 255.
+		</li>
+		<li><code>a</code> est le taux de transparence : un pourcentage de 0 à 100%.
+		</li>
+		<li><code>h</code> est la teinte de la couleur souhaitée. C'est un nombre de 0 à 360 suivi d'une des
+			<a href="../v2-references/units.html#angle" title="Unités CSS d'angle">unités angulaires en CSS</a>. Exemple : <code>214deg</code>.
+		</li>
+		<li><code>s</code> est la saturation de la couleur : un pourcentage de 0% à 100%.
+		</li>
+		<li><code>l</code> est la luminosité de la couleur : un pourcentage de 0% à 100%.
+		</li>
+		<li><code>w</code> est le taux de blanc : un pourcentage de 0% à 100%.
+		</li>
+		<li><code>b</code> est le taux de noir : un pourcentage de 0% à 100%.
+		</li>
+
+	</ol>
+	<p>Reportez-vous à la description de ces fonctions pour des explications plus complètes : <a href="../v2-functions/rgb.html" title="rgb() : Détermine une couleur à partir des valeurs de Rouge, de Vert et de Bleu."><code>rgb()</code></a>,
+		<a href="../v2-functions/rgb.html" title="rgba() : Détermine une couleur et sa transparence à partir des valeurs de Rouge, de Vert, de Bleu et de la valeur Alpha."><code>rgba()</code></a>, <a href="../v2-functions/hsl.html" title="hsl() : Détermine une couleur à partir des paramètres Teinte (Hue), Saturation et Luminosité."><code>hsl()</code></a>, <a href="../v2-functions/hsl.html" title="hsla() : Détermine une couleur et sa transparence à partir des paramètres Teinte (Hue), Saturation, Luminosité et Alpha."><code>hsla()</code></a>, <a href="../v2-functions/hwb.html" title="hwb() : Définit une couleur à partir de sa teinte et d'une dose de noir et de blanc."><code>hwb()</code></a>, et <code>hwba()</code>.
+	</p>
+</li>	
+
+</ul></section>
+
+
+<section id="nuancier"><h2>Nuancier : toutes les couleurs nommées.</h2>
+
+	<p>Ces noms de couleur sont maintenant standardisés : tous les navigateurs devraient 
+		les reconnaître.
+	</p>
+	<p>Trier les couleurs par : <select id="orderby" onchange="trierCouleurs()">
+		<option value="NOM">Noms des couleurs</option>
+		<option value="LUM_STD">Luminance standard</option>
+		<option value="LUM_PER">Luminance perçue</option>
+	</select></p>
+
+	<div id="nuancier_noms" class="nuancier">
+		<div style="background-color:#F0F8FF;">#F0F8FF<br/>AliceBlue</div>
+		<div style="background-color:#FAEBD7;">#FAEBD7<br/>AntiqueWhite</div>
+		<div style="background-color:#00FFFF;">#00FFFF<br/>Aqua</div>
+		<div style="background-color:#7FFFD4;">#7FFFD4<br/>AquaMarine</div>
+		<div style="background-color:#F0FFFF;">#F0FFFF<br/>Azure</div>
+		<div style="background-color:#F5F5DC;">#F5F5DC<br/>Beige</div>
+		<div style="background-color:#FFE4C4;">#FFE4C4<br/>Bisque</div>
+		<div style="background-color:#000000;">#000000<br/>Black</div>
+		<div style="background-color:#FFEBCD;">#FFEBCD<br/>BlanchedAlmond</div>
+		<div style="background-color:#0000FF;">#0000FF<br/>Blue</div>
+		<div style="background-color:#8A2BE2;">#8A2BE2<br/>BlueViolet</div>
+		<div style="background-color:#A52A2A;">#A52A2A<br/>Brown</div>
+		<div style="background-color:#DEB887;">#DEB887<br/>BurlyWood</div>
+		<div style="background-color:#5F9EA0;">#5F9EA0<br/>CadetBlue</div>
+		<div style="background-color:#7FFF00;">#7FFF00<br/>Chartreuse</div>
+		<div style="background-color:#D2691E;">#D2691E<br/>Chocolate</div>
+		<div style="background-color:#FF7F50;">#FF7F50<br/>Coral</div>
+		<div style="background-color:#6495ED;">#6495ED<br/>CornflowerBlue</div>
+		<div style="background-color:#FFF8DC;">#FFF8DC<br/>Cornsilk </div>
+		<div style="background-color:#DC143C;">#DC143C<br/>Crimson</div>
+		<div style="background-color:#00008B;">#00008B<br/>DarkBlue</div>
+		<div style="background-color:#008B8B;">#008B8B<br/>DarkCyan</div>
+		<div style="background-color:#B8860B;">#B8860B<br/>DarkGoldenRod</div>
+		<div style="background-color:#A9A9A9;">#A9A9A9<br/>DarkGray</div>
+		<div style="background-color:#006400;">#006400<br/>DarkGreen</div>
+		<div style="background-color:#BDB76B;">#BDB76B<br/>DarkKhaki</div>
+		<div style="background-color:#8B008B;">#8B008B<br/>DarkMagenta</div>
+		<div style="background-color:#556B2F;">#556B2F<br/>DarkOliveGreen</div>
+		<div style="background-color:#FF8C00;">#FF8C00<br/>DarkOrange</div>
+		<div style="background-color:#9932CC;">#9932CC<br/>DarkOrchid</div>
+		<div style="background-color:#8B0000;">#8B0000<br/>DarkRed</div>
+		<div style="background-color:#E9967A;">#E9967A<br/>DarkSalmon</div>
+		<div style="background-color:#8FBC8F;">#8FBC8F<br/>DarkSeaGreen</div>
+		<div style="background-color:#483D8B;">#483D8B<br/>DarkSlateBlue</div>
+		<div style="background-color:#2F4F4F;">#2F4F4F<br/>DarkSlateGray</div>
+		<div style="background-color:#00CED1;">#00CED1<br/>DarkTurquoise</div>
+		<div style="background-color:#9400D3;">#9400D3<br/>DarkViolet</div>
+		<div style="background-color:#FF1493;">#FF1493<br/>DeepPink</div>
+		<div style="background-color:#00BFFF;">#00BFFF<br/>DeepSkyBLue</div>
+		<div style="background-color:#696969;">#696969<br/>DimGray</div>
+		<div style="background-color:#1E90FF;">#1E90FF<br/>DodgerBlue</div>
+		<div style="background-color:#D19275;">#D19275<br/>Feldspar</div>
+		<div style="background-color:#B22222;">#B22222<br/>FireBrick</div>
+		<div style="background-color:#FFFAF0;">#FFFAF0<br/>FloralWhite</div>
+		<div style="background-color:#228B22;">#228B22<br/>ForestGreen</div>
+		<div style="background-color:#FF00FF;">#FF00FF<br/>Fuchsia</div>
+		<div style="background-color:#DCDCDC;">#DCDCDC<br/>Gainsboro</div>
+		<div style="background-color:#F8F8FF;">#F8F8FF<br/>GhostWhite</div>
+		<div style="background-color:#FFD700;">#FFD700<br/>Gold</div>
+		<div style="background-color:#DAA520;">#DAA520<br/>GoldenRod</div>
+		<div style="background-color:#808080;">#808080<br/>Gray</div>
+		<div style="background-color:#008000;">#008000<br/>Green</div>
+		<div style="background-color:#ADFF2F;">#ADFF2F<br/>GreenYellow</div>
+		<div style="background-color:#F0FFF0;">#F0FFF0<br/>HoneyDew</div>
+		<div style="background-color:#FF69B4;">#FF69B4<br/>HotPink</div>
+		<div style="background-color:#CD5C5C;">#CD5C5C<br/>IndianRed</div>
+		<div style="background-color:#4B0082;">#4B0082<br/>Indigo</div>
+		<div style="background-color:#FFFFF0;">#FFFFF0<br/>Ivory</div>
+		<div style="background-color:#F0E68C;">#F0E68C<br/>Khaki</div>
+		<div style="background-color:#E6E6FA;">#E6E6FA<br/>Lavender</div>
+		<div style="background-color:#FFF0F5;">#FFF0F5<br/>LavenderBlush</div>
+		<div style="background-color:#7CFC00;">#7CFC00<br/>LawnGreen</div>
+		<div style="background-color:#FFFACD;">#FFFACD<br/>LemonChiffon</div>
+		<div style="background-color:#ADD8E6;">#ADD8E6<br/>LightBlue</div>
+		<div style="background-color:#F08080;">#F08080<br/>LightCoral</div>
+		<div style="background-color:#E0FFFF;">#E0FFFF<br/>LightCyan</div>
+		<div style="background-color:#FAFAD2;">#FAFAD2<br/>LightGoldenRodYellow</div>
+		<div style="background-color:#90EE90;">#90EE90<br/>LightGreen</div>
+		<div style="background-color:#D3D3D3;">#D3D3D3<br/>LightGrey</div>
+		<div style="background-color:#FFB6C1;">#FFB6C1<br/>LightPink</div>
+		<div style="background-color:#FFA07A;">#FFA07A<br/>LightSalmon</div>
+		<div style="background-color:#20B2AA;">#20B2AA<br/>LightSeaGreen</div>
+		<div style="background-color:#87CEFA;">#87CEFA<br/>LightSkyBlue</div>
+		<div style="background-color:#8470FF;">#8470FF<br/>LightSlateBlue</div>
+		<div style="background-color:#778899;">#778899<br/>LightSlateGray</div>
+		<div style="background-color:#B0C4DE;">#B0C4DE<br/>LightSteelBlue</div>
+		<div style="background-color:#FFFFE0;">#FFFFE0<br/>LightYellow</div>
+		<div style="background-color:#00FF00;">#00FF00<br/>Lime</div>
+		<div style="background-color:#32CD32;">#32CD32<br/>LimeGreen</div>
+		<div style="background-color:#FAF0E6;">#FAF0E6<br/>Linen</div>
+		<div style="background-color:#800000;">#800000<br/>Maroon</div>
+		<div style="background-color:#66CDAA;">#66CDAA<br/>MediumAquaMarine</div>
+		<div style="background-color:#0000CD;">#0000CD<br/>MediumBlue</div>
+		<div style="background-color:#BA55D3;">#BA55D3<br/>MediumOrchid</div>
+		<div style="background-color:#9370D8;">#9370D8<br/>MediumPurple</div>
+		<div style="background-color:#3CB371;">#3CB371<br/>MediumSeaGreen</div>
+		<div style="background-color:#7B68EE;">#7B68EE<br/>MediumSlateBlue</div>
+		<div style="background-color:#00FA9A;">#00FA9A<br/>MediumSpringGreen</div>
+		<div style="background-color:#48D1CC;">#48D1CC<br/>MediumTurquoise</div>
+		<div style="background-color:#C71585;">#C71585<br/>MediumVioletRed</div>
+		<div style="background-color:#191970;">#191970<br/>MidnightBlue</div>
+		<div style="background-color:#F5FFFA;">#F5FFFA<br/>MintCream</div>
+		<div style="background-color:#FFE4E1;">#FFE4E1<br/>MistyRose</div>
+		<div style="background-color:#FFE4B5;">#FFE4B5<br/>Moccasin</div>
+		<div style="background-color:#FFDEAD;">#FFDEAD<br/>NavajoWhite</div>
+		<div style="background-color:#000080;">#000080<br/>Navy</div>
+		<div style="background-color:#FDF5E6;">#FDF5E6<br/>OldLace</div>
+		<div style="background-color:#808000;">#808000<br/>Olive</div>
+		<div style="background-color:#6B8E23;">#6B8E23<br/>OliveDrab</div>
+		<div style="background-color:#FFA500;">#FFA500<br/>Orange</div>
+		<div style="background-color:#FF4500;">#FF4500<br/>OrangeRed</div>
+		<div style="background-color:#DA70D6;">#DA70D6<br/>Orchid</div>
+		<div style="background-color:#EEE8AA;">#EEE8AA<br/>PaleGoldenRod </div>
+		<div style="background-color:#98FB98;">#98FB98<br/>PaleGreen</div>
+		<div style="background-color:#AFEEEE;">#AFEEEE<br/>PaleTurquoise</div>
+		<div style="background-color:#D87093;">#D87093<br/>PaleVioletRed</div>
+		<div style="background-color:#FFEFD5;">#FFEFD5<br/>PapayaWhip</div>
+		<div style="background-color:#FFDAB9;">#FFDAB9<br/>PeachPuff</div>
+		<div style="background-color:#CD853F;">#CD853F<br/>Peru</div>
+		<div style="background-color:#FFC0CB;">#FFC0CB<br/>Pink</div>
+		<div style="background-color:#DDA0DD;">#DDA0DD<br/>Plum</div>
+		<div style="background-color:#B0E0E6;">#B0E0E6<br/>PowderBlue</div>
+		<div style="background-color:#800080;">#800080<br/>Purple</div>
+		<div style="background-color:#FF0000;">#FF0000<br/>Red</div>
+		<div style="background-color:#BC8F8F;">#BC8F8F<br/>RosyBrown</div>
+		<div style="background-color:#4169E1;">#4169E1<br/>RoyalBlue</div>
+		<div style="background-color:#8B4513;">#8B4513<br/>SaddleBrown</div>
+		<div style="background-color:#FA8072;">#FA8072<br/>Salmon</div>
+		<div style="background-color:#F4A460;">#F4A460<br/>SandyBrown</div>
+		<div style="background-color:#2E8B57;">#2E8B57<br/>SeaGreen</div>
+		<div style="background-color:#FFF5EE;">#FFF5EE<br/>SeaShell</div>
+		<div style="background-color:#A0522D;">#A0522D<br/>Sienna</div>
+		<div style="background-color:#C0C0C0;">#C0C0C0<br/>Silver</div>
+		<div style="background-color:#87CEEB;">#87CEEB<br/>SkyBlue</div>
+		<div style="background-color:#6A5ACD;">#6A5ACD<br/>SlateBlue</div>
+		<div style="background-color:#708090;">#708090<br/>SlateGray</div>
+		<div style="background-color:#FFFAFA;">#FFFAFA<br/>Snow</div>
+		<div style="background-color:#00FF7F;">#00FF7F<br/>SpringGreen</div>
+		<div style="background-color:#4682B4;">#4682B4<br/>SteelBlue</div>
+		<div style="background-color:#D2B48C;">#D2B48C<br/>Tan</div>
+		<div style="background-color:#D8BFD8;">#D8BFD8<br/>Thistle</div>
+		<div style="background-color:#008080;">#008080<br/>Teal</div>
+		<div style="background-color:#FF6347;">#FF6347<br/>Tomato</div>
+		<div style="background-color:#40E0D0;">#40E0D0<br/>Turquoise</div>
+		<div style="background-color:#D02090;">#D02090<br/>VioletRed</div>
+		<div style="background-color:#F5DEB3;">#F5DEB3<br/>Wheat</div>
+		<div style="background-color:#FFFFFF;">#FFFFFF<br/>White</div>
+		<div style="background-color:#F5F5F5;">#F5F5F5<br/>WhiteSmoke </div>
+		<div style="background-color:#FFFF00;">#FFFF00<br/>Yellow</div>
+		<div style="background-color:#9ACD32;">#9ACD32<br/>YellowGreen</div>
+	</div>
+	
+	<p>&nbsp;</p>
+	<p>Remarque : plusieurs appellations existent parfois pour une même couleur :
+	</p>
+	<div class="nuancier">
+		<div style="background:fuchsia">Fuchsia / Magenta<br/></div>
+		<div style="background:Gray">Gray / Grey<br/>Et tous les dérivés</div>
+		<div style="background:Aqua">Aqua / Cyan</div>
+	</div>
+</section>
+	
+	<h2>Noms obsolètes ou mal reconnus. <span class="deprecated" title="Obsolète">✗</span></h2>
+	<div class="nuancier">
+		<div style="background-color:#D19275;">
+			<div style="background-color:#D19275;">#D19275</div>
+			<div style="background-color:feldspar;">Feldspar</div>
+		</div>
+		<div style="background-color:#8470FF;">
+			<div style="background-color:#8470FF;">#8470FF</div>
+			<div style="background-color:LightSlateBlue;">LightSlateBlue</div>
+		</div>
+	</div>
+
+<section id="system-colors"><h2>Couleurs système. <span class="deprecated" title="Obsolète">✗</span></h2>
+	<p>Ces noms de couleurs étaient initialement disponibles pour faciliter
+		l'intégration d'une page dans la charte du système d'exploitation.
+		Cette fonctionnalité est maintenant déclarée obsolète : évitez de l'utiliser.
+	</p>
+	
+	<div class="nuancier">
+		<div style="background-color:ActiveBorder">ActiveBorder</div>
+		<div style="background-color:ActiveCaption">ActiveCaption</div>
+		<div style="background-color:AppWorkspace">AppWorkspace</div>
+		<div style="background-color:Background">Background</div>
+		<div style="background-color:ButtonFace">ButtonFace</div>
+		<div style="background-color:ButtonHighlight">ButtonHighlight</div>
+		<div style="background-color:ButtonText">ButtonText</div>
+		<div style="background-color:CaptionText">CaptionText</div>
+		<div style="background-color:GrayText">GrayText</div>
+		<div style="background-color:Highlight">Highlight</div>
+		<div style="background-color:HighlightText">HighlightText</div>
+		<div style="background-color:InactiveBorder">InactiveBorder</div>
+		<div style="background-color:InactiveCaption">InactiveCaption</div>
+		<div style="background-color:InfoBackground">InfoBackground</div>
+		<div style="background-color:infoText">InfoText</div>
+		<div style="background-color:Menu">Menu</div>
+		<div style="background-color:MenuText">MenuText</div>
+		<div style="background-color:Scrollbar">Scrollbar</div>
+		<div style="background-color:ThreeDDarkShadow">ThreeDDarkShadow</div>
+		<div style="background-color:ThreeDFace">ThreeDFace</div>
+		<div style="background-color:ThreeDHighlight">ThreeDHighlight</div>
+		<div style="background-color:ThreeDLightShadow">ThreeDLightShadow</div>
+		<div style="background-color:ThreeDShadow">ThreedShadow</div>
+		<div style="background-color:Window">Window</div>
+		<div style="background-color:WindowFrame">WindowFrame</div>
+		<div style="background-color:WindowText">WindowText</div>
+	</div>
+</section>
+				
+				
+			</main>
+			<p>&nbsp;</p><div class="adsense-in-article">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-6434138622132038"
+     data-ad-slot="7328470077"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+		</div>
+	</div>
+		<footer id="footer">
+		<a href="../v2-contact.html">Contact</a> &nbsp; &bull; &nbsp; 
+		<a href="../v2-copyright.html">Copyright</a> &nbsp; &bull; &nbsp; 
+		<a href="../v2-privacy.html">Vie privée</a> &nbsp; &bull; &nbsp; 
+<!--		<a href="http://stylescss.free.fr/v2-lexique.php">Lexique</a> &bull; -->
+		Lexique
+	</footer>
+	<div id="privacy" title="Protection de la vie privée">
+		<p class="center">
+		<input type="button" value="Accepter les cookies" onclick="allowCookies()"/>
+		</p>
+	</div>
+</body>
+<!-- Mirrored from stylescss.free.fr/v2-tutoriels/colors.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Apr 2020 15:03:12 GMT -->
+</html>

@@ -1,0 +1,4 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+stylescss.free.fr	TRUE	/	FALSE	1999999999	PHPSESSID	87b69b1b9a1fbf663a2948f264955f43
+

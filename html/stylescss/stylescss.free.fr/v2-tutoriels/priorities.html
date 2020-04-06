@@ -1,0 +1,463 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<!-- Mirrored from stylescss.free.fr/v2-tutoriels/priorities.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Apr 2020 14:58:43 GMT -->
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="CSS,Cascading,Style,Sheet,tutoriel,tuto,priorités">
+	<meta name="description" content="Tutoriel CSS : explication des règles de priorité en CSS.">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta name="robots" content="index,follow" />
+
+	<script src="../v2-js/jquery/jquery-3.3.1.min.js"></script>
+	<script src="../v2-js/jquery-ui/jquery-ui.min.js"></script>
+	<script src="../v2-js/general8e0e.js?v=8"></script>
+	<script src="../v2-js/caniuse3860.js?v=1"></script>
+
+	<link rel="shortcut icon" href="../v2-img/icone5e1f.png?v=2" />	
+	<link rel="stylesheet" href="../v2-js/jquery-ui/jquery-ui.min.css" type="text/css"/>
+	<link rel="stylesheet" href="../v2-css/jquery-ui-alp3860.css?v=1" type="text/css"/>
+	<link rel="stylesheet" href="../v2-css/general8fa7.css?v=18" type="text/css"/>
+	<link rel="stylesheet" href="../v2-css/print3860.css?v=1" media="print" type="text/css"/>
+	<link rel="canonical" href="priorities.html" />
+	<meta name="google-site-verification" content="reqp0hShXC1ODVxZiPpy4b_7T6c86o39Tz4tT92N2uw" />
+
+	<meta property="og:url" content="http://stylescss.free.fr/v2-tutoriels/priorities.php" />
+	<meta property="og:title" content="Les règles de priorité en CSS - Tutoriel"/>
+	<meta property="og:image" content="http://stylescss.free.fr/v2-img/og-image.png"/>
+	<meta property="og:image:width" content="1200"/>
+	<meta property="og:image:height" content="630"/>
+	<meta property="og:description" content="Tutoriel CSS : explication des règles de priorité en CSS."/>
+	<meta property="og:type" content="article"/>
+	<meta property="og:locale" content="fr_FR"/>
+	<meta property="og:site_name" content="Tutoriels CSS"/>
+	<meta property="article:author" content="StylesCSS" />
+	
+			<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-36064604-1']);
+		_gaq.push(['_trackPageview']);
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+	
+	<title>Les règles de priorité en CSS - Tutoriel</title>
+</head><body id="page-top">
+	<nav id="hamburger">	<a href="../tdm.html" title="Menu">
+	<img src="../v2-img/hamburger.png" alt="Menu" />
+	</a></nav>
+	<div id="page">		
+		<nav id="tdm" class="tdm-screen">	<h2 onclick="tdmToggle('tdm-index')">Index</h2>
+		<div id="tdm-index" class="tdm-toggle">
+		<div class="tdm-item"><a href="../index-2.html" title="Accueil">Page d'accueil</a></div>
+		<div class="tdm-item"><a href="../index-2.html#index-families" title="Index thématique">Index thématique</a></div>
+	</div>
+	
+	<h2>Rechercher sur le site.</h2>
+	<form id="frm-search" name="frm-search" role="search" method="GET" action="http://stylescss.free.fr/v2-search.php">
+	<input id="search" type="text" name="search" value="" />
+	<input id="submit" type="submit" value="Chercher" onclick=""/>
+</form>
+	
+	<h2>Participer.</h2>
+	<input id="btn-remarque" type="button" value="Signaler une erreur" onclick="$('#frm-remarque').show(500)"/>
+	
+	<h2 onclick="tdmToggle('tdm-tutoriels')">Tutoriels sur CSS</h2>
+		<div id="tdm-tutoriels" class="tdm-toggle">
+		<div class="tdm-item"><a href="intro-css.html" title="Tutoriel CSS : introduction aux CSS">Introduction aux CSS</a></div>
+		<div class="tdm-item"><a href="html-css.html" title="Tutoriel CSS : association de HTML et de CSS">Associer HTML et CSS</a></div>
+		<div class="tdm-item"><a href="syntaxe-css.html" title="Tutoriel CSS : syntaxe CSS">Syntaxe de base des CSS</a></div>
+		<div class="tdm-item"><a href="box-model.html" title="Tutoriel CSS : block, inline, box-model">Box model et autres choses</a></div>
+		<div class="tdm-item"></div>
+		<div class="tdm-item"><a href="priorities.html" title="Tutoriel CSS : les priorités CSS">Les règles de priorité</a></div>
+		<div class="tdm-item">Les <a href="flex-box.html" title="Tutoriel CSS : les flex-box">flex-box</a></div>
+		<div class="tdm-item">Les <a href="grid.html" title="Tutoriel CSS : les grilles">grilles CSS</a></div>
+		<div class="tdm-item">Les <a href="../v2-properties/transform.html" title="Tutoriel CSS : les transformations géométriques">transformations géométriques</a></div>
+		<div class="tdm-item">Les <a href="../v2-properties/animation.html" title="Tutoriel CSS : les animations">animations en CSS</a></div>
+		<div class="tdm-item"><a href="responsive.html" title="Tutoriel CSS : mises en page responsives">Mises en page responsive</a></div>
+	</div>
+	
+	<h2 onclick="tdmToggle('tdm-tools')">Outils CSS</h2>
+		<div id="tdm-tools" class="tdm-toggle">
+		<div class="tdm-item"><a href="../v2-tools/colors-synth.html" title="Outils pour synthétiser les couleurs">Synthétiseur de couleurs</a></div>
+		<div class="tdm-item"><a href="../v2-tools/entities.html" title="rechercher des codes de caractères">Outil de recherche de caractères</a></div>
+		<div class="tdm-item"><a href="../v2-tools/external-tools.html" title="Outils proposés par d'autres sites">Outils sur d'autres sites</a></div>
+	</div>
+
+	<!-- <h2>Nouveauté :</h2>
+<div id="flash">
+	Un nouvel outil est en ligne. 
+	Il permet de trouver les caractères spéciaux à partir de mots-clé.
+	<br/><br/>
+	A ajouter dans vos favoris : 
+	<a href="http://stylescss.free.fr/v2-tools/entities.php">Recherche de caractères</a>.
+</div> -->
+	
+	<h2 onclick="tdmToggle('tdm-tricks')">Astuces en CSS</h2>
+		<div id="tdm-tricks" class="tdm-toggle">
+		<div class="tdm-item"><a href="../v2-tricks/cube.html" title="Un cube de photos tournant, en CSS">Un cube photos en CSS pur</a></div>
+		<div class="tdm-item"><a href="../v2-tricks/fixed-headers.html" title="Un tableau avec en-têtes fixes">Un tableau avec défilement</a></div>
+		<div class="tdm-item"><a href="../v2-tricks/geometrics.html" title="Formes géométriques en CSS">Des formes géométriques</a></div>
+		<div class="tdm-item"><a href="../v2-tricks/lettrine.html" title="Des lettrines en CSS">Des lettrines en CSS</a></div>
+		<div class="tdm-item"><a href="../v2-tricks/responsive-square.html" title="Un élément carré et responsif">Carré et responsive</a></div>
+		<div class="tdm-item"><a href="../v2-tricks/round-images.html" title="Des images rondes en CSS">Des images rondes en CSS</a></div>
+		<div class="tdm-item"><a href="../v2-tricks/text-shape.html" title="Afficher du texte dans une forme">Du texte dans une forme</a></div>
+		<div class="tdm-item"><a href="../v2-tricks/tags.html" title="Afficher du code HTML CSS">Afficher de l'HTML avec CSS</a></div>
+		<div class="tdm-item"><a href="../v2-tricks/tricks.html" title="Astuces en CSS">D'autres astuces avec CSS</a></div>
+	</div>
+
+	<h2 onclick="tdmToggle('tdm-functions')">Fonctions</h2>
+	<div id="tdm-functions" class="tdm-toggle"><a href="../v2-functions/attr.html" title="attr()"><div class="tdm-item experimental">attr()</div></a><a href="../v2-functions/blur.html" title="blur()"><div class="tdm-item standardized">blur()</div></a><a href="../v2-functions/brightness.html" title="brightness()"><div class="tdm-item standardized">brightness()</div></a><a href="../v2-functions/calc.html" title="calc()"><div class="tdm-item standardized">calc()</div></a><a href="../v2-functions/circle.html" title="circle()"><div class="tdm-item standardized">circle()</div></a><a href="../v2-functions/clamp.html" title="clamp()"><div class="tdm-item standardized">clamp()</div></a><a href="../v2-functions/conic-gradient.html" title="conic-gradient()"><div class="tdm-item standardized">conic-gradient()</div></a><a href="../v2-functions/contrast.html" title="contrast()"><div class="tdm-item standardized">contrast()</div></a><a href="../v2-functions/counter.html" title="counter()"><div class="tdm-item standardized">counter()</div></a><a href="../v2-functions/counters.html" title="counters()"><div class="tdm-item standardized">counters()</div></a><a href="../v2-functions/cross-fade.html" title="cross-fade()"><div class="tdm-item experimental">cross-fade()</div></a><a href="../v2-functions/cubic-bezier.html" title="cubic-bezier()"><div class="tdm-item standardized">cubic-bezier()</div></a><a href="../v2-functions/drop-shadow.html" title="drop-shadow()"><div class="tdm-item standardized">drop-shadow()</div></a><a href="../v2-functions/element.html" title="element()"><div class="tdm-item standardized">element()</div></a><a href="../v2-functions/ellipse.html" title="ellipse()"><div class="tdm-item standardized">ellipse()</div></a><a href="../v2-functions/fit-content.html" title="fit-content()"><div class="tdm-item standardized">fit-content()</div></a><a href="../v2-functions/grayscale.html" title="grayscale()"><div class="tdm-item standardized">grayscale()</div></a><a href="../v2-functions/hsl.html" title="hsl()"><div class="tdm-item standardized">hsl()</div></a><a href="../v2-functions/hsl.html" title="hsla()"><div class="tdm-item standardized">hsla()</div></a><a href="../v2-functions/hue-rotate.html" title="hue-rotate()"><div class="tdm-item standardized">hue-rotate()</div></a><a href="../v2-functions/hwb.html" title="hwb()"><div class="tdm-item standardized">hwb()</div></a><a href="../v2-functions/image.html" title="image()"><div class="tdm-item experimental">image()</div></a><a href="../v2-functions/inset.html" title="inset()"><div class="tdm-item standardized">inset()</div></a><a href="../v2-functions/invert.html" title="invert()"><div class="tdm-item standardized">invert()</div></a><a href="../v2-functions/linear-gradient.html" title="linear-gradient()"><div class="tdm-item standardized">linear-gradient()</div></a><a href="../v2-functions/matrix.html" title="matrix()"><div class="tdm-item standardized">matrix()</div></a><a href="../v2-functions/matrix3d.html" title="matrix3d()"><div class="tdm-item standardized">matrix3d()</div></a><a href="../v2-functions/min-max.html" title="max()"><div class="tdm-item standardized">max()</div></a><a href="../v2-functions/min-max.html" title="min()"><div class="tdm-item standardized">min()</div></a><a href="../v2-functions/minmax.html" title="minmax()"><div class="tdm-item standardized">minmax()</div></a><a href="../v2-functions/opacity.html" title="opacity()"><div class="tdm-item standardized">opacity()</div></a><a href="../v2-functions/perspective.html" title="perspective()"><div class="tdm-item standardized">perspective()</div></a><a href="../v2-functions/polygon.html" title="polygon()"><div class="tdm-item standardized">polygon()</div></a><a href="../v2-functions/radial-gradient.html" title="radial-gradient()"><div class="tdm-item standardized">radial-gradient()</div></a><a href="../v2-functions/rect.html" title="rect()"><div class="tdm-item deprecated">rect()</div></a><a href="../v2-functions/repeat.html" title="repeat()"><div class="tdm-item standardized">repeat()</div></a><a href="../v2-functions/repeating-conic-gradient.html" title="repeating-conic-gradient()"><div class="tdm-item experimental">repeating-conic-gradient()</div></a><a href="../v2-functions/repeating-linear-gradient.html" title="repeating-linear-gradient()"><div class="tdm-item standardized">repeating-linear-gradient()</div></a><a href="../v2-functions/repeating-radial-gradient.html" title="repeating-radial-gradient()"><div class="tdm-item standardized">repeating-radial-gradient()</div></a><a href="../v2-functions/rgb.html" title="rgb()"><div class="tdm-item standardized">rgb()</div></a><a href="../v2-functions/rgb.html" title="rgba()"><div class="tdm-item standardized">rgba()</div></a><a href="../v2-functions/rotate.html" title="rotate()"><div class="tdm-item standardized">rotate()</div></a><a href="../v2-functions/rotate3d.html" title="rotate3d()"><div class="tdm-item standardized">rotate3d()</div></a><a href="../v2-functions/rotate3d.html" title="rotateX()"><div class="tdm-item standardized">rotateX()</div></a><a href="../v2-functions/rotate3d.html" title="rotateY()"><div class="tdm-item standardized">rotateY()</div></a><a href="../v2-functions/rotate3d.html" title="rotateZ()"><div class="tdm-item standardized">rotateZ()</div></a><a href="../v2-functions/saturate.html" title="saturate()"><div class="tdm-item standardized">saturate()</div></a><a href="../v2-functions/scale.html" title="scale()"><div class="tdm-item standardized">scale()</div></a><a href="../v2-functions/scale3d.html" title="scale3d()"><div class="tdm-item standardized">scale3d()</div></a><a href="../v2-functions/scale3d.html" title="scaleX()"><div class="tdm-item standardized">scaleX()</div></a><a href="../v2-functions/scale3d.html" title="scaleY()"><div class="tdm-item standardized">scaleY()</div></a><a href="../v2-functions/scale3d.html" title="scaleZ()"><div class="tdm-item standardized">scaleZ()</div></a><a href="../v2-functions/sepia.html" title="sepia()"><div class="tdm-item standardized">sepia()</div></a><a href="../v2-functions/skew.html" title="skew()"><div class="tdm-item standardized">skew()</div></a><a href="../v2-functions/skew.html" title="skewX()"><div class="tdm-item standardized">skewX()</div></a><a href="../v2-functions/skew.html" title="skewY()"><div class="tdm-item standardized">skewY()</div></a><a href="../v2-functions/steps.html" title="steps()"><div class="tdm-item standardized">steps()</div></a><a href="../v2-functions/symbols.html" title="symbols()"><div class="tdm-item standardized">symbols()</div></a><a href="../v2-functions/translate.html" title="translate()"><div class="tdm-item standardized">translate()</div></a><a href="../v2-functions/translate3d.html" title="translate3d()"><div class="tdm-item standardized">translate3d()</div></a><a href="../v2-functions/translate.html" title="translateX()"><div class="tdm-item standardized">translateX()</div></a><a href="../v2-functions/translate.html" title="translateY"><div class="tdm-item standardized">translateY</div></a><a href="../v2-functions/translate3d.html" title="translateZ()"><div class="tdm-item standardized">translateZ()</div></a><a href="../v2-functions/url.html" title="url()"><div class="tdm-item standardized">url()</div></a><a href="../v2-functions/var.html" title="var()"><div class="tdm-item standardized">var()</div></a></div>
+	
+	<h2 onclick="tdmToggle('tdm-references')">Références CSS</h2>
+		<div id="tdm-references" class="tdm-toggle">
+		<div class="tdm-item"><a href="../v2-selectors/selectors.html" title="selectors : Liste des sélecteurs CSS, et leur description."><code>selectors</code></a></div>
+		<div class="tdm-item"><a href="../v2-selectors/pseudo-elements.html" title="pseudo-elements : Liste des pseudo-éléments."><code>pseudo-elements</code></a></div>
+		<div class="tdm-item"><a href="../v2-selectors/pseudo-class.html" title="pseudo-class : Liste des pseudo-classes."><code>pseudo-class</code></a></div>
+		<div class="tdm-item"><a href="../v2-references/units.html" title="Unités CSS">unités CSS</a></div>
+		<div class="tdm-item"><a href="colors.html" title="Les couleurs CSS">couleurs CSS</a></div>
+		<div class="tdm-item"><a href="entities.html" title="Les entités CSS">Entités</a></div>
+	</div>
+	
+	<h2 onclick="tdmToggle('tdm-properties')">Propriétés CSS</h2>
+	<div id="tdm-lettres"><div class="tdm-lettre"><a href="#tdm-AA" title="@" onclick="tdmToggle('tdm-AA')">@</a></div><div class="tdm-lettre"><a href="#tdm-A" title="A" onclick="tdmToggle('tdm-A')">A</a></div><div class="tdm-lettre"><a href="#tdm-B" title="B" onclick="tdmToggle('tdm-B')">B</a></div><div class="tdm-lettre"><a href="#tdm-C" title="C" onclick="tdmToggle('tdm-C')">C</a></div><div class="tdm-lettre"><a href="#tdm-D" title="D" onclick="tdmToggle('tdm-D')">D</a></div><div class="tdm-lettre"><a href="#tdm-E" title="E" onclick="tdmToggle('tdm-E')">E</a></div><div class="tdm-lettre"><a href="#tdm-F" title="F" onclick="tdmToggle('tdm-F')">F</a></div><div class="tdm-lettre"><a href="#tdm-G" title="G" onclick="tdmToggle('tdm-G')">G</a></div><div class="tdm-lettre"><a href="#tdm-H" title="H" onclick="tdmToggle('tdm-H')">H</a></div><div class="tdm-lettre"><a href="#tdm-I" title="I" onclick="tdmToggle('tdm-I')">I</a></div><div class="tdm-lettre"><a href="#tdm-J" title="J" onclick="tdmToggle('tdm-J')">J</a></div><div class="tdm-lettre"><a href="#tdm-L" title="L" onclick="tdmToggle('tdm-L')">L</a></div><div class="tdm-lettre"><a href="#tdm-M" title="M" onclick="tdmToggle('tdm-M')">M</a></div><div class="tdm-lettre"><a href="#tdm-O" title="O" onclick="tdmToggle('tdm-O')">O</a></div><div class="tdm-lettre"><a href="#tdm-P" title="P" onclick="tdmToggle('tdm-P')">P</a></div><div class="tdm-lettre"><a href="#tdm-Q" title="Q" onclick="tdmToggle('tdm-Q')">Q</a></div><div class="tdm-lettre"><a href="#tdm-R" title="R" onclick="tdmToggle('tdm-R')">R</a></div><div class="tdm-lettre"><a href="#tdm-S" title="S" onclick="tdmToggle('tdm-S')">S</a></div><div class="tdm-lettre"><a href="#tdm-T" title="T" onclick="tdmToggle('tdm-T')">T</a></div><div class="tdm-lettre"><a href="#tdm-U" title="U" onclick="tdmToggle('tdm-U')">U</a></div><div class="tdm-lettre"><a href="#tdm-V" title="V" onclick="tdmToggle('tdm-V')">V</a></div><div class="tdm-lettre"><a href="#tdm-W" title="W" onclick="tdmToggle('tdm-W')">W</a></div><div class="tdm-lettre"><a href="#tdm-Z" title="Z" onclick="tdmToggle('tdm-Z')">Z</a></div></div><div style="margin-top:20px;"><input id="cbDeprecated" type="checkbox" onclick="showDeprecated(this.checked)"> <label for="cbDeprecated">Montrer les obsolètes</label><br/><input id="cbExperimental" type="checkbox" onclick="showExperimental(this.checked)"> <label for="cbExperimental">Montrer les nouveautés</label></div><div id="tdm-AA" class="tdm-alpha tdm-toggle"><h3><span>@</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/%40apply.html" title="@apply"><div class="tdm-item standardized">@apply</div></a><a href="../v2-properties/%40charset.html" title="@charset"><div class="tdm-item standardized">@charset</div></a><a href="../v2-properties/%40counter-style.html" title="@counter-style"><div class="tdm-item standardized">@counter-style</div></a><a href="../v2-properties/%40font-face.html" title="@font-face"><div class="tdm-item standardized">@font-face</div></a><a href="../v2-properties/%40font-feature-values.html" title="@font-feature-values"><div class="tdm-item experimental">@font-feature-values</div></a><a href="../v2-properties/%40import.html" title="@import"><div class="tdm-item standardized">@import</div></a><a href="../v2-properties/%40keyframes.html" title="@keyframes"><div class="tdm-item standardized">@keyframes</div></a><a href="../v2-properties/%40media.html" title="@media"><div class="tdm-item standardized">@media</div></a><a href="../v2-properties/%40page.html" title="@page"><div class="tdm-item standardized">@page</div></a><a href="../v2-properties/%40supports.html" title="@supports"><div class="tdm-item standardized">@supports</div></a></div><div id="tdm-A" class="tdm-alpha tdm-toggle"><h3><span>A</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/align-content.html" title="align-content"><div class="tdm-item standardized">align-content</div></a><a href="../v2-properties/align-items.html" title="align-items"><div class="tdm-item standardized">align-items</div></a><a href="../v2-properties/align-self.html" title="align-self"><div class="tdm-item standardized">align-self</div></a><a href="../v2-properties/all.html" title="all"><div class="tdm-item standardized">all</div></a><a href="../v2-properties/animation.html" title="animation"><div class="tdm-item standardized">animation</div></a><a href="../v2-properties/animation-delay.html" title="animation-delay"><div class="tdm-item standardized">animation-delay</div></a><a href="../v2-properties/animation-direction.html" title="animation-direction"><div class="tdm-item standardized">animation-direction</div></a><a href="../v2-properties/animation-duration.html" title="animation-duration"><div class="tdm-item standardized">animation-duration</div></a><a href="../v2-properties/animation-fill-mode.html" title="animation-fill-mode"><div class="tdm-item standardized">animation-fill-mode</div></a><a href="../v2-properties/animation-iteration-count.html" title="animation-iteration-count"><div class="tdm-item standardized">animation-iteration-count</div></a><a href="../v2-properties/animation-name.html" title="animation-name"><div class="tdm-item standardized">animation-name</div></a><a href="../v2-properties/animation-play-state.html" title="animation-play-state"><div class="tdm-item standardized">animation-play-state</div></a><a href="../v2-properties/animation-timing-function.html" title="animation-timing-function"><div class="tdm-item standardized">animation-timing-function</div></a><a href="../v2-properties/appearance.html" title="appearance"><div class="tdm-item experimental">appearance</div></a><a href="../v2-properties/azimuth.html" title="azimuth"><div class="tdm-item deprecated">azimuth</div></a></div><div id="tdm-B" class="tdm-alpha tdm-toggle"><h3><span>B</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/backdrop-filter.html" title="backdrop-filter"><div class="tdm-item standardized">backdrop-filter</div></a><a href="../v2-properties/backface-visibility.html" title="backface-visibility"><div class="tdm-item standardized">backface-visibility</div></a><a href="../v2-properties/background.html" title="background"><div class="tdm-item standardized">background</div></a><a href="../v2-properties/background-attachment.html" title="background-attachment"><div class="tdm-item standardized">background-attachment</div></a><a href="../v2-properties/background-blend-mode.html" title="background-blend-mode"><div class="tdm-item standardized">background-blend-mode</div></a><a href="../v2-properties/background-clip.html" title="background-clip"><div class="tdm-item standardized">background-clip</div></a><a href="../v2-properties/background-color.html" title="background-color"><div class="tdm-item standardized">background-color</div></a><a href="../v2-properties/background-image.html" title="background-image"><div class="tdm-item standardized">background-image</div></a><a href="../v2-properties/background-origin.html" title="background-origin"><div class="tdm-item standardized">background-origin</div></a><a href="../v2-properties/background-position.html" title="background-position"><div class="tdm-item standardized">background-position</div></a><a href="../v2-properties/background-repeat.html" title="background-repeat"><div class="tdm-item standardized">background-repeat</div></a><a href="../v2-properties/background-size.html" title="background-size"><div class="tdm-item standardized">background-size</div></a><a href="../v2-properties/bleed.html" title="bleed"><div class="tdm-item standardized">bleed</div></a><a href="../v2-properties/border.html" title="border"><div class="tdm-item standardized">border</div></a><a href="../v2-properties/border-xxx-radius.html" title="border-bottom-left-radius"><div class="tdm-item standardized">border-bottom-left-radius</div></a><a href="../v2-properties/border-xxx-radius.html" title="border-bottom-right-radius"><div class="tdm-item standardized">border-bottom-right-radius</div></a><a href="../v2-properties/border-collapse.html" title="border-collapse"><div class="tdm-item standardized">border-collapse</div></a><a href="../v2-properties/border-color.html" title="border-color"><div class="tdm-item standardized">border-color</div></a><a href="../v2-properties/border-image.html" title="border-image"><div class="tdm-item standardized">border-image</div></a><a href="../v2-properties/border-image-outset.html" title="border-image-outset"><div class="tdm-item standardized">border-image-outset</div></a><a href="../v2-properties/border-image-repeat.html" title="border-image-repeat"><div class="tdm-item standardized">border-image-repeat</div></a><a href="../v2-properties/border-image-slice.html" title="border-image-slice"><div class="tdm-item standardized">border-image-slice</div></a><a href="../v2-properties/border-image-source.html" title="border-image-source"><div class="tdm-item standardized">border-image-source</div></a><a href="../v2-properties/border-image-width.html" title="border-image-width"><div class="tdm-item standardized">border-image-width</div></a><a href="../v2-properties/border-radius.html" title="border-radius"><div class="tdm-item standardized">border-radius</div></a><a href="../v2-properties/border-spacing.html" title="border-spacing"><div class="tdm-item standardized">border-spacing</div></a><a href="../v2-properties/border-style.html" title="border-style"><div class="tdm-item standardized">border-style</div></a><a href="../v2-properties/border-xxx-radius.html" title="border-top-left-radius"><div class="tdm-item standardized">border-top-left-radius</div></a><a href="../v2-properties/border-xxx-radius.html" title="border-top-right-radius"><div class="tdm-item standardized">border-top-right-radius</div></a><a href="../v2-properties/border-width.html" title="border-width"><div class="tdm-item standardized">border-width</div></a><a href="../v2-properties/top-right-bottom-left.html" title="bottom"><div class="tdm-item standardized">bottom</div></a><a href="../v2-properties/box-decoration-break.html" title="box-decoration-break"><div class="tdm-item standardized">box-decoration-break</div></a><a href="../v2-properties/box-shadow.html" title="box-shadow"><div class="tdm-item standardized">box-shadow</div></a><a href="../v2-properties/box-sizing.html" title="box-sizing"><div class="tdm-item standardized">box-sizing</div></a><a href="../v2-properties/break-before-after.html" title="break-after"><div class="tdm-item standardized">break-after</div></a><a href="../v2-properties/break-before-after.html" title="break-before"><div class="tdm-item standardized">break-before</div></a><a href="../v2-properties/break-inside.html" title="break-inside"><div class="tdm-item standardized">break-inside</div></a></div><div id="tdm-C" class="tdm-alpha tdm-toggle"><h3><span>C</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/caption-side.html" title="caption-side"><div class="tdm-item standardized">caption-side</div></a><a href="../v2-properties/caret-color.html" title="caret-color"><div class="tdm-item standardized">caret-color</div></a><a href="../v2-properties/clear.html" title="clear"><div class="tdm-item standardized">clear</div></a><a href="../v2-properties/clip.html" title="clip"><div class="tdm-item deprecated">clip</div></a><a href="../v2-properties/clip-path.html" title="clip-path"><div class="tdm-item standardized">clip-path</div></a><a href="../v2-properties/color.html" title="color"><div class="tdm-item standardized">color</div></a><a href="../v2-properties/color-adjust.html" title="color-adjust"><div class="tdm-item standardized">color-adjust</div></a><a href="../v2-properties/column-count.html" title="column-count"><div class="tdm-item standardized">column-count</div></a><a href="../v2-properties/column-fill.html" title="column-fill"><div class="tdm-item standardized">column-fill</div></a><a href="../v2-properties/column-gap.html" title="column-gap"><div class="tdm-item standardized">column-gap</div></a><a href="../v2-properties/column-rule.html" title="column-rule"><div class="tdm-item standardized">column-rule</div></a><a href="../v2-properties/column-rule-color.html" title="column-rule-color"><div class="tdm-item standardized">column-rule-color</div></a><a href="../v2-properties/column-rule-style.html" title="column-rule-style"><div class="tdm-item standardized">column-rule-style</div></a><a href="../v2-properties/column-rule-width.html" title="column-rule-width"><div class="tdm-item standardized">column-rule-width</div></a><a href="../v2-properties/column-span.html" title="column-span"><div class="tdm-item standardized">column-span</div></a><a href="../v2-properties/column-width.html" title="column-width"><div class="tdm-item standardized">column-width</div></a><a href="../v2-properties/columns.html" title="columns"><div class="tdm-item standardized">columns</div></a><a href="../v2-properties/content.html" title="content"><div class="tdm-item standardized">content</div></a><a href="../v2-properties/counter-reset-increment.html" title="counter-increment"><div class="tdm-item standardized">counter-increment</div></a><a href="../v2-properties/counter-reset-increment.html" title="counter-reset"><div class="tdm-item standardized">counter-reset</div></a><a href="../v2-properties/cue.html" title="cue"><div class="tdm-item deprecated">cue</div></a><a href="../v2-properties/cue.html" title="cue-after"><div class="tdm-item deprecated">cue-after</div></a><a href="../v2-properties/cue.html" title="cue-before"><div class="tdm-item deprecated">cue-before</div></a><a href="../v2-properties/cursor.html" title="cursor"><div class="tdm-item standardized">cursor</div></a></div><div id="tdm-D" class="tdm-alpha tdm-toggle"><h3><span>D</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/direction.html" title="direction"><div class="tdm-item standardized">direction</div></a><a href="../v2-properties/display.html" title="display"><div class="tdm-item standardized">display</div></a></div><div id="tdm-E" class="tdm-alpha tdm-toggle"><h3><span>E</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/elevation.html" title="elevation"><div class="tdm-item deprecated">elevation</div></a><a href="../v2-properties/empty-cells.html" title="empty-cells"><div class="tdm-item standardized">empty-cells</div></a></div><div id="tdm-F" class="tdm-alpha tdm-toggle"><h3><span>F</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/filter.html" title="filter"><div class="tdm-item standardized">filter</div></a><a href="../v2-properties/flex.html" title="flex"><div class="tdm-item standardized">flex</div></a><a href="../v2-properties/flex-basis.html" title="flex-basis"><div class="tdm-item standardized">flex-basis</div></a><a href="../v2-properties/flex-direction.html" title="flex-direction"><div class="tdm-item standardized">flex-direction</div></a><a href="../v2-properties/flex-flow.html" title="flex-flow"><div class="tdm-item standardized">flex-flow</div></a><a href="../v2-properties/flex-grow.html" title="flex-grow"><div class="tdm-item standardized">flex-grow</div></a><a href="../v2-properties/flex-shrink.html" title="flex-shrink"><div class="tdm-item standardized">flex-shrink</div></a><a href="../v2-properties/flex-wrap.html" title="flex-wrap"><div class="tdm-item standardized">flex-wrap</div></a><a href="../v2-properties/float.html" title="float"><div class="tdm-item standardized">float</div></a><a href="../v2-properties/font.html" title="font"><div class="tdm-item standardized">font</div></a><a href="../v2-properties/font-display.html" title="font-display"><div class="tdm-item experimental">font-display</div></a><a href="../v2-properties/font-family.html" title="font-family"><div class="tdm-item standardized">font-family</div></a><a href="../v2-properties/font-feature-settings.html" title="font-feature-settings"><div class="tdm-item experimental">font-feature-settings</div></a><a href="../v2-properties/font-kerning.html" title="font-kerning"><div class="tdm-item standardized">font-kerning</div></a><a href="../v2-properties/font-optical-sizing.html" title="font-optical-sizing"><div class="tdm-item experimental">font-optical-sizing</div></a><a href="../v2-properties/font-size.html" title="font-size"><div class="tdm-item standardized">font-size</div></a><a href="../v2-properties/font-size-adjust.html" title="font-size-adjust"><div class="tdm-item standardized">font-size-adjust</div></a><a href="../v2-properties/font-stretch.html" title="font-stretch"><div class="tdm-item standardized">font-stretch</div></a><a href="../v2-properties/font-style.html" title="font-style"><div class="tdm-item standardized">font-style</div></a><a href="../v2-properties/font-synthesis.html" title="font-synthesis"><div class="tdm-item standardized">font-synthesis</div></a><a href="../v2-properties/font-variant.html" title="font-variant"><div class="tdm-item standardized">font-variant</div></a><a href="../v2-properties/font-variant-alternates.html" title="font-variant-alternates"><div class="tdm-item standardized">font-variant-alternates</div></a><a href="../v2-properties/font-variant-caps.html" title="font-variant-caps"><div class="tdm-item standardized">font-variant-caps</div></a><a href="../v2-properties/font-variant-east-asian.html" title="font-variant-east-asian"><div class="tdm-item standardized">font-variant-east-asian</div></a><a href="../v2-properties/font-variant-ligatures.html" title="font-variant-ligatures"><div class="tdm-item standardized">font-variant-ligatures</div></a><a href="../v2-properties/font-variant-numeric.html" title="font-variant-numeric"><div class="tdm-item standardized">font-variant-numeric</div></a><a href="../v2-properties/font-variant-position.html" title="font-variant-position"><div class="tdm-item standardized">font-variant-position</div></a><a href="../v2-properties/font-weight.html" title="font-weight"><div class="tdm-item standardized">font-weight</div></a></div><div id="tdm-G" class="tdm-alpha tdm-toggle"><h3><span>G</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/grid.html" title="grid"><div class="tdm-item standardized">grid</div></a><a href="../v2-properties/grid-area.html" title="grid-area"><div class="tdm-item standardized">grid-area</div></a><a href="../v2-properties/grid-auto-columns.html" title="grid-auto-columns"><div class="tdm-item standardized">grid-auto-columns</div></a><a href="../v2-properties/grid-auto-flow.html" title="grid-auto-flow"><div class="tdm-item standardized">grid-auto-flow</div></a><a href="../v2-properties/grid-auto-rows.html" title="grid-auto-rows"><div class="tdm-item standardized">grid-auto-rows</div></a><a href="../v2-properties/grid-row-column.html" title="grid-column"><div class="tdm-item standardized">grid-column</div></a><a href="../v2-properties/grid-row-column.html" title="grid-column-end"><div class="tdm-item standardized">grid-column-end</div></a><a href="../v2-properties/grid-gap.html" title="grid-column-gap"><div class="tdm-item standardized">grid-column-gap</div></a><a href="../v2-properties/grid-row-column.html" title="grid-column-start"><div class="tdm-item standardized">grid-column-start</div></a><a href="../v2-properties/grid-gap.html" title="grid-gap"><div class="tdm-item standardized">grid-gap</div></a><a href="../v2-properties/grid-row-column.html" title="grid-row"><div class="tdm-item standardized">grid-row</div></a><a href="../v2-properties/grid-row-column.html" title="grid-row-end"><div class="tdm-item standardized">grid-row-end</div></a><a href="../v2-properties/grid-gap.html" title="grid-row-gap"><div class="tdm-item standardized">grid-row-gap</div></a><a href="../v2-properties/grid-row-column.html" title="grid-row-start"><div class="tdm-item standardized">grid-row-start</div></a><a href="../v2-properties/grid-template.html" title="grid-template"><div class="tdm-item standardized">grid-template</div></a><a href="../v2-properties/grid-template-areas.html" title="grid-template-areas"><div class="tdm-item standardized">grid-template-areas</div></a><a href="../v2-properties/grid-template-columns.html" title="grid-template-columns"><div class="tdm-item standardized">grid-template-columns</div></a><a href="../v2-properties/grid-template-rows.html" title="grid-template-rows"><div class="tdm-item standardized">grid-template-rows</div></a></div><div id="tdm-H" class="tdm-alpha tdm-toggle"><h3><span>H</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/hanging-punctuation.html" title="hanging-punctuation"><div class="tdm-item experimental">hanging-punctuation</div></a><a href="../v2-properties/height-width.html" title="height"><div class="tdm-item standardized">height</div></a><a href="../v2-properties/hyphens.html" title="hyphens"><div class="tdm-item standardized">hyphens</div></a></div><div id="tdm-I" class="tdm-alpha tdm-toggle"><h3><span>I</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/image-rendering.html" title="image-rendering"><div class="tdm-item standardized">image-rendering</div></a><a href="../v2-properties/ime-mode.html" title="ime-mode"><div class="tdm-item deprecated">ime-mode</div></a><a href="../v2-properties/isolation.html" title="isolation"><div class="tdm-item standardized">isolation</div></a></div><div id="tdm-J" class="tdm-alpha tdm-toggle"><h3><span>J</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/justify-content.html" title="justify-content"><div class="tdm-item standardized">justify-content</div></a><a href="../v2-properties/justify-items.html" title="justify-items"><div class="tdm-item standardized">justify-items</div></a><a href="../v2-properties/justify-self.html" title="justify-self"><div class="tdm-item standardized">justify-self</div></a></div><div id="tdm-L" class="tdm-alpha tdm-toggle"><h3><span>L</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/top-right-bottom-left.html" title="left"><div class="tdm-item standardized">left</div></a><a href="../v2-properties/letter-spacing.html" title="letter-spacing"><div class="tdm-item standardized">letter-spacing</div></a><a href="../v2-properties/line-break.html" title="line-break"><div class="tdm-item standardized">line-break</div></a><a href="../v2-properties/line-height.html" title="line-height"><div class="tdm-item standardized">line-height</div></a><a href="../v2-properties/list-style.html" title="list-style"><div class="tdm-item standardized">list-style</div></a><a href="../v2-properties/list-style-image.html" title="list-style-image"><div class="tdm-item standardized">list-style-image</div></a><a href="../v2-properties/list-style-position.html" title="list-style-position"><div class="tdm-item standardized">list-style-position</div></a><a href="../v2-properties/list-style-type.html" title="list-style-type"><div class="tdm-item standardized">list-style-type</div></a></div><div id="tdm-M" class="tdm-alpha tdm-toggle"><h3><span>M</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/margin.html" title="margin"><div class="tdm-item standardized">margin</div></a><a href="../v2-properties/margin.html" title="margin-block-end"><div class="tdm-item standardized">margin-block-end</div></a><a href="../v2-properties/margin.html" title="margin-block-start"><div class="tdm-item standardized">margin-block-start</div></a><a href="../v2-properties/margin.html" title="margin-bottom"><div class="tdm-item standardized">margin-bottom</div></a><a href="../v2-properties/margin.html" title="margin-inline-end"><div class="tdm-item standardized">margin-inline-end</div></a><a href="../v2-properties/margin.html" title="margin-inline-start"><div class="tdm-item standardized">margin-inline-start</div></a><a href="../v2-properties/margin.html" title="margin-left"><div class="tdm-item standardized">margin-left</div></a><a href="../v2-properties/margin.html" title="margin-right"><div class="tdm-item standardized">margin-right</div></a><a href="../v2-properties/margin.html" title="margin-top"><div class="tdm-item standardized">margin-top</div></a><a href="../v2-properties/margin-trim.html" title="margin-trim"><div class="tdm-item experimental">margin-trim</div></a><a href="../v2-properties/marker-offset.html" title="marker-offset"><div class="tdm-item deprecated">marker-offset</div></a><a href="../v2-properties/marks.html" title="marks"><div class="tdm-item deprecated">marks</div></a><a href="../v2-properties/mask.html" title="mask"><div class="tdm-item experimental">mask</div></a><a href="../v2-properties/mask-border.html" title="mask-border"><div class="tdm-item experimental">mask-border</div></a><a href="../v2-properties/mask-clip.html" title="mask-clip"><div class="tdm-item experimental">mask-clip</div></a><a href="../v2-properties/mask-image.html" title="mask-image"><div class="tdm-item experimental">mask-image</div></a><a href="../v2-properties/mask-mode.html" title="mask-mode"><div class="tdm-item experimental">mask-mode</div></a><a href="../v2-properties/mask-origin.html" title="mask-origin"><div class="tdm-item experimental">mask-origin</div></a><a href="../v2-properties/mask-position.html" title="mask-position"><div class="tdm-item experimental">mask-position</div></a><a href="../v2-properties/mask-repeat.html" title="mask-repeat"><div class="tdm-item experimental">mask-repeat</div></a><a href="../v2-properties/mask-size.html" title="mask-size"><div class="tdm-item experimental">mask-size</div></a><a href="../v2-properties/min-max.html" title="max-height"><div class="tdm-item standardized">max-height</div></a><a href="../v2-properties/min-max.html" title="max-width"><div class="tdm-item standardized">max-width</div></a><a href="../v2-properties/min-max.html" title="min-height"><div class="tdm-item standardized">min-height</div></a><a href="../v2-properties/min-max.html" title="min-width"><div class="tdm-item standardized">min-width</div></a><a href="../v2-properties/mix-blend-mode.html" title="mix-blend-mode"><div class="tdm-item standardized">mix-blend-mode</div></a><a href="../v2-properties/moz-border.html" title="moz-border-colors"><div class="tdm-item deprecated">moz-border-colors</div></a></div><div id="tdm-O" class="tdm-alpha tdm-toggle"><h3><span>O</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/object-fit.html" title="object-fit"><div class="tdm-item standardized">object-fit</div></a><a href="../v2-properties/object-position.html" title="object-position"><div class="tdm-item standardized">object-position</div></a><a href="../v2-properties/opacity.html" title="opacity"><div class="tdm-item standardized">opacity</div></a><a href="../v2-properties/order.html" title="order"><div class="tdm-item standardized">order</div></a><a href="../v2-properties/orphans-widows.html" title="orphans"><div class="tdm-item standardized">orphans</div></a><a href="../v2-properties/outline.html" title="outline"><div class="tdm-item standardized">outline</div></a><a href="../v2-properties/outline-color.html" title="outline-color"><div class="tdm-item standardized">outline-color</div></a><a href="../v2-properties/outline-offset.html" title="outline-offset"><div class="tdm-item standardized">outline-offset</div></a><a href="../v2-properties/outline-style.html" title="outline-style"><div class="tdm-item standardized">outline-style</div></a><a href="../v2-properties/outline-width.html" title="outline-width"><div class="tdm-item standardized">outline-width</div></a><a href="../v2-properties/overflow.html" title="overflow"><div class="tdm-item standardized">overflow</div></a><a href="../v2-properties/word-break-wrap.html" title="overflow-wrap"><div class="tdm-item standardized">overflow-wrap</div></a><a href="../v2-properties/overflow.html" title="overflow-x"><div class="tdm-item standardized">overflow-x</div></a><a href="../v2-properties/overflow.html" title="overflow-y"><div class="tdm-item standardized">overflow-y</div></a></div><div id="tdm-P" class="tdm-alpha tdm-toggle"><h3><span>P</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/padding.html" title="padding"><div class="tdm-item standardized">padding</div></a><a href="../v2-properties/padding.html" title="padding-block-end"><div class="tdm-item standardized">padding-block-end</div></a><a href="../v2-properties/padding-2.html" title="padding-block-start"><div class="tdm-item standardized">padding-block-start</div></a><a href="../v2-properties/padding.html" title="padding-bottom"><div class="tdm-item standardized">padding-bottom</div></a><a href="../v2-properties/padding.html" title="padding-inline-end"><div class="tdm-item standardized">padding-inline-end</div></a><a href="../v2-properties/padding.html" title="padding-inline-start"><div class="tdm-item standardized">padding-inline-start</div></a><a href="../v2-properties/padding.html" title="padding-left"><div class="tdm-item standardized">padding-left</div></a><a href="../v2-properties/padding.html" title="padding-right"><div class="tdm-item standardized">padding-right</div></a><a href="../v2-properties/padding.html" title="padding-top"><div class="tdm-item standardized">padding-top</div></a><a href="../v2-properties/page-break.html" title="page-break-after"><div class="tdm-item deprecated">page-break-after</div></a><a href="../v2-properties/page-break.html" title="page-break-before"><div class="tdm-item deprecated">page-break-before</div></a><a href="../v2-properties/page-break.html" title="page-break-inside"><div class="tdm-item deprecated">page-break-inside</div></a><a href="../v2-properties/pause.html" title="pause"><div class="tdm-item deprecated">pause</div></a><a href="../v2-properties/perspective.html" title="perspective"><div class="tdm-item standardized">perspective</div></a><a href="../v2-properties/perspective-origin.html" title="perspective-origin"><div class="tdm-item standardized">perspective-origin</div></a><a href="../v2-properties/pitch.html" title="pitch"><div class="tdm-item deprecated">pitch</div></a><a href="../v2-properties/pitch-range.html" title="pitch-range"><div class="tdm-item deprecated">pitch-range</div></a><a href="../v2-properties/play-during.html" title="play-during"><div class="tdm-item deprecated">play-during</div></a><a href="../v2-properties/pointer-events.html" title="pointer-events"><div class="tdm-item standardized">pointer-events</div></a><a href="../v2-properties/position.html" title="position"><div class="tdm-item standardized">position</div></a></div><div id="tdm-Q" class="tdm-alpha tdm-toggle"><h3><span>Q</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/quotes.html" title="quotes"><div class="tdm-item standardized">quotes</div></a></div><div id="tdm-R" class="tdm-alpha tdm-toggle"><h3><span>R</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/resize.html" title="resize"><div class="tdm-item standardized">resize</div></a><a href="../v2-properties/richness.html" title="richness"><div class="tdm-item deprecated">richness</div></a><a href="../v2-properties/top-right-bottom-left.html" title="right"><div class="tdm-item standardized">right</div></a></div><div id="tdm-S" class="tdm-alpha tdm-toggle"><h3><span>S</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/scroll-behavior.html" title="scroll-behavior"><div class="tdm-item standardized">scroll-behavior</div></a><a href="../v2-properties/scrollbar.html" title="scrollbar-3dlight-color"><div class="tdm-item deprecated">scrollbar-3dlight-color</div></a><a href="../v2-properties/scrollbar.html" title="scrollbar-arrow-color"><div class="tdm-item deprecated">scrollbar-arrow-color</div></a><a href="../v2-properties/scrollbar.html" title="scrollbar-base-color"><div class="tdm-item deprecated">scrollbar-base-color</div></a><a href="../v2-properties/scrollbar.html" title="scrollbar-darkshadow-colo"><div class="tdm-item deprecated">scrollbar-darkshadow-colo</div></a><a href="../v2-properties/scrollbar.html" title="scrollbar-face-color"><div class="tdm-item deprecated">scrollbar-face-color</div></a><a href="../v2-properties/scrollbar.html" title="scrollbar-highlight-color"><div class="tdm-item deprecated">scrollbar-highlight-color</div></a><a href="../v2-properties/scrollbar.html" title="scrollbar-shadow-color"><div class="tdm-item deprecated">scrollbar-shadow-color</div></a><a href="../v2-properties/scrollbar.html" title="scrollbar-track-color"><div class="tdm-item deprecated">scrollbar-track-color</div></a><a href="../v2-properties/shape-outside.html" title="shape-outside"><div class="tdm-item standardized">shape-outside</div></a><a href="../v2-properties/size.html" title="size"><div class="tdm-item standardized">size</div></a><a href="../v2-properties/speak.html" title="speak"><div class="tdm-item deprecated">speak</div></a><a href="../v2-properties/speak2.html" title="speak-header"><div class="tdm-item deprecated">speak-header</div></a><a href="../v2-properties/speak2.html" title="speak-numeral"><div class="tdm-item deprecated">speak-numeral</div></a><a href="../v2-properties/speak2.html" title="speak-punctuation"><div class="tdm-item deprecated">speak-punctuation</div></a><a href="../v2-properties/speech-rate.html" title="speech-rate"><div class="tdm-item deprecated">speech-rate</div></a><a href="../v2-properties/stress.html" title="stress"><div class="tdm-item deprecated">stress</div></a></div><div id="tdm-T" class="tdm-alpha tdm-toggle"><h3><span>T</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/tab-size.html" title="tab-size"><div class="tdm-item standardized">tab-size</div></a><a href="../v2-properties/table-layout.html" title="table-layout"><div class="tdm-item standardized">table-layout</div></a><a href="../v2-properties/text-align.html" title="text-align"><div class="tdm-item standardized">text-align</div></a><a href="../v2-properties/text-align-last.html" title="text-align-last"><div class="tdm-item standardized">text-align-last</div></a><a href="../v2-properties/text-decoration.html" title="text-decoration"><div class="tdm-item standardized">text-decoration</div></a><a href="../v2-properties/text-decoration-color.html" title="text-decoration-color"><div class="tdm-item standardized">text-decoration-color</div></a><a href="../v2-properties/text-decoration-line.html" title="text-decoration-line"><div class="tdm-item standardized">text-decoration-line</div></a><a href="../v2-properties/text-decoration-style.html" title="text-decoration-style"><div class="tdm-item standardized">text-decoration-style</div></a><a href="../v2-properties/text-emphasis.html" title="text-emphasis"><div class="tdm-item standardized">text-emphasis</div></a><a href="../v2-properties/text-emphasis-color.html" title="text-emphasis-color"><div class="tdm-item standardized">text-emphasis-color</div></a><a href="../v2-properties/text-emphasis-position.html" title="text-emphasis-position"><div class="tdm-item standardized">text-emphasis-position</div></a><a href="../v2-properties/text-emphasis-style.html" title="text-emphasis-style"><div class="tdm-item standardized">text-emphasis-style</div></a><a href="../v2-properties/text-indent.html" title="text-indent"><div class="tdm-item standardized">text-indent</div></a><a href="../v2-properties/text-justify.html" title="text-justify"><div class="tdm-item standardized">text-justify</div></a><a href="../v2-properties/text-overflow.html" title="text-overflow"><div class="tdm-item standardized">text-overflow</div></a><a href="../v2-properties/text-rendering.html" title="text-rendering"><div class="tdm-item standardized">text-rendering</div></a><a href="../v2-properties/text-shadow.html" title="text-shadow"><div class="tdm-item standardized">text-shadow</div></a><a href="../v2-properties/text-transform.html" title="text-transform"><div class="tdm-item standardized">text-transform</div></a><a href="../v2-properties/top-right-bottom-left.html" title="top"><div class="tdm-item standardized">top</div></a><a href="../v2-properties/touch-action.html" title="touch-action"><div class="tdm-item standardized">touch-action</div></a><a href="../v2-properties/transform.html" title="transform"><div class="tdm-item standardized">transform</div></a><a href="../v2-properties/transform-origin.html" title="transform-origin"><div class="tdm-item standardized">transform-origin</div></a><a href="../v2-properties/transform-style.html" title="transform-style"><div class="tdm-item standardized">transform-style</div></a><a href="../v2-properties/transition.html" title="transition"><div class="tdm-item standardized">transition</div></a><a href="../v2-properties/transition-delay.html" title="transition-delay"><div class="tdm-item standardized">transition-delay</div></a><a href="../v2-properties/transition-duration.html" title="transition-duration"><div class="tdm-item standardized">transition-duration</div></a><a href="../v2-properties/transition-property.html" title="transition-property"><div class="tdm-item standardized">transition-property</div></a><a href="../v2-properties/transition-timing-function.html" title="transition-timing-function"><div class="tdm-item standardized">transition-timing-function</div></a></div><div id="tdm-U" class="tdm-alpha tdm-toggle"><h3><span>U</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/unicode-bidi.html" title="unicode-bidi"><div class="tdm-item standardized">unicode-bidi</div></a><a href="../v2-properties/user-select.html" title="user-select"><div class="tdm-item standardized">user-select</div></a></div><div id="tdm-V" class="tdm-alpha tdm-toggle"><h3><span>V</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/vertical-align.html" title="vertical-align"><div class="tdm-item standardized">vertical-align</div></a><a href="../v2-properties/visibility.html" title="visibility"><div class="tdm-item standardized">visibility</div></a><a href="../v2-properties/voice-family.html" title="voice-family"><div class="tdm-item deprecated">voice-family</div></a><a href="../v2-properties/volume.html" title="volume"><div class="tdm-item deprecated">volume</div></a></div><div id="tdm-W" class="tdm-alpha tdm-toggle"><h3><span>W</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/white-space.html" title="white-space"><div class="tdm-item standardized">white-space</div></a><a href="../v2-properties/orphans-widows.html" title="widows"><div class="tdm-item standardized">widows</div></a><a href="../v2-properties/height-width.html" title="width"><div class="tdm-item standardized">width</div></a><a href="../v2-properties/will-change.html" title="will-change"><div class="tdm-item standardized">will-change</div></a><a href="../v2-properties/word-break-wrap.html" title="word-break"><div class="tdm-item standardized">word-break</div></a><a href="../v2-properties/word-spacing.html" title="word-spacing"><div class="tdm-item standardized">word-spacing</div></a><a href="../v2-properties/word-break-wrap.html" title="word-wrap"><div class="tdm-item standardized">word-wrap</div></a><a href="../v2-properties/writing-mode.html" title="writing-mode"><div class="tdm-item standardized">writing-mode</div></a></div><div id="tdm-Z" class="tdm-alpha tdm-toggle"><h3><span>Z</span><span><a href="#page-top" title="Haut de page"><img src="../v2-img/fleche-haut.png" alt="haut de page"/></a></span></h3><a href="../v2-properties/z-index.html" title="z-index"><div class="tdm-item standardized">z-index</div></a></div>
+</nav>
+		<div id="contenu">
+			<div class="adsense-in-article">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-6434138622132038"
+     data-ad-slot="7328470077"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+			<form id="frm-remarque" method="post" action="http://stylescss.free.fr/v2-lib/remarque-post.php">
+	<input id="rem-number" name="rem-number" type="hidden" value="12"/>
+	<input id="rem-url" name="rem-url" type="hidden" value="/v2-tutoriels/priorities.php"/>
+	<h3>Une remarque ? Une suggestion ?...</h3>
+	<div>
+		Merci de participer à l'amélioration de ce site.
+		Prenez le temps de rédiger votre remarque le plus précisément possible :<br/>
+		<textarea id="rem-description" name="rem-description" ></textarea>
+	</div>
+	<div>
+		<label for="rem-antispam">Question anti-spam :<br/>Comment dit-on OUI en anglais ?</label><br/>
+		<input id="rem-antispam" name="rem-antispam" type="text" />
+	</div>
+	<div id="rem-buttons">
+		<input type="button" value="Annuler" onclick="$('#frm-remarque').hide()"/>
+		<input type="button" value="Envoyer" onclick="postRemarque()"/>
+	</div>
+	<div id="rem-ar"></div>
+</form>
+			<main>
+				<h1>Les règles de priorité en CSS (tutoriel)</h1>
+					<h2>Les règles contradictoires.</h2>
+	
+	<p>Il arrive fréquemment que plusieurs règles CSS soient contradictoires. 
+		Cela se produit chaque fois que l'on tente d'affecter des valeurs différentes
+		à une même propriété.
+	</p>
+	<p>Par exemple, les deux règles CSS suivantes se contredisent sur le premier paragraphe.
+		En effet, la première règle demande que l'élément dont l'identifiant est <code>parag1</code> 
+		soit en rouge, tandis que la deuxième règle demande que les paragraphes soient en bleu. 
+		L'élément <code>parag1</code> étant lui-même un paragraphe, il y a contradiction.
+	</p>
+	
+<div class="syntaxe"><code>
+#parag1 {color:red;}
+p {color:blue;}
+</code></div>
+
+	<p>Voici comment s'affichera le code présenté ci-dessus. On voit que ce n'est pas nécessairement
+		la dernière règle rencontrée qui écrase les précédentes.
+		Dans cet exemple on voit que le sélecteur par identifiant (&nbsp;<code>#</code>&nbsp;) est prioritaire sur 
+		un sélecteur par type d'élément (&nbsp;<code>p</code>&nbsp;).
+	</p>
+<div class="syntaxe-masquable"><code><style>
+#exemple1 {text-align:left;}
+#exemple1 p {margin:0px;}
+</style><style id="exemple1-css">
+#exemple1 #parag1 {color:red;}
+#exemple1 p {color:blue;}
+
+</style></code></div>
+	<div id="exemple1" class="demo" onclick="toggleCss(this)">
+		<p id="parag1">Le premier paragraphe.</p>
+		<p id="parag2">Le deuxième paragraphe.</p>
+	</div>
+
+	<h2>La valeur <code>!important</code>.</h2>
+	
+	<p>Le mot <code>!important</code> peut être ajouté à n'importe quelle valeur dans une règle CSS.
+		Il rend la règle prioritaire. 
+		L'exemple ci-dessous est identique au premier sauf que <code>!important</code> figure dans
+		la deuxième règle. On voit que la priorité des règles a été changée.
+		Cliquez sur l'exemple pour afficher le code CSS.
+	</p>
+	
+<div class="syntaxe-masquable"><code><style>
+#exemple2 {text-align:left;}
+#exemple2 p {margin:0px;}
+</style><style id="exemple2-css">
+#exemple2 #parag1 {color:red;}
+#exemple2 p {color:blue!important;}
+
+</style></code></div>
+	<div id="exemple2" class="demo" onclick="toggleCss(this)">
+		<p id="parag1">Le premier paragraphe.</p>
+		<p id="parag2">Le deuxième paragraphe.</p>
+	</div>
+	
+	<p>Remarque : la mention <code>!important</code> est à utiliser le moins possible.
+	</p>
+	
+	<h2>Les priorités des sélecteurs.</h2>
+	
+	<p>Rappel : le sélecteur est ce qui détermine sur quel(s) élément(s) une règle CSS s'applique.
+		Dans l'exemple ci-dessous, le sélecteur est <code>.encart</code>. Il désigne tous les éléments
+		comportant l'attribut <code>class="encart"</code>.
+	</p>
+	<div class="syntaxe"><code>
+		.encart {border:solid 1px silver;}
+	</code></div>
+	
+	<p>Tous les sélecteurs n'ont pas la même priorité. En cas de contradiction entre deux règles, 
+		celle qui s'applique est celle qui a le sélecteur le plus prioritaire.
+		De façon générale, les sélecteurs ont une priorité d'autant plus grande qu'ils sont plus précis.
+		Le sélecteur très général <code>*</code> a une priorité de 0.
+		A l'inverse, un sélecteur sur un identifiant , qui en principe ne concerne qu'un seul
+		élément de la page, à une priorité de 100.
+	</p>
+	<p>Pour déterminer la priorité d'un sélecteur, il faut considérer la logique suivante :
+	</p>
+	<ul>
+		<li>Une règle avec la mention <code>!important</code> a une priorité de 10000.
+		</li>
+		<li>Une règle écrite dans l'attribut <code>style</code> d'une balise HTML a une priorité de 1000.
+		</li>
+		<li>Une règle avec un sélecteur sur un identifiant (&nbsp;<code>#</code>&nbsp;) a une priorité de 100.
+		</li>
+		<li>Une règle avec un sélecteur sur une classe (&nbsp;.&nbsp;) ou des <a href="../v2-selectors/pseudo-class.html" title="pseudo-class : Liste des pseudo-classes."><code>pseudo-class</code></a> (&nbsp;:&nbsp;) 
+			a une priorité de 10.
+		</li>
+		<li>Une règle avec un sélecteur sur un type d'élément (&nbsp;p&nbsp;) ou des <a href="../v2-selectors/pseudo-elements.html" title="pseudo-elements : Liste des pseudo-éléments."><code>pseudo-elements</code></a>
+			(&nbsp;::&nbsp;) a une priorité de 1.
+		</li>
+		<li>Le sélecteur étoile (&nbsp;<code>*</code>&nbsp;) a une priorité de 0.
+		</li>
+	</ul>
+	
+	<p>Lorsqu'un sélecteur comporte plusieurs parties combinées, les priorités de chacune des parties 
+		s'additionnent pour donner la priorité globale du sélecteur.<br/>
+		Une exception cependant : lorsque le sélecteur est composé de plusieurs parties séparées par une
+		virgule, chaque partie est considérée comme un sélecteur à part entière.
+		Chacune des parties peut éventuellement recevoir une priorité différente.
+	</p>
+	
+	<p>Enfin, lorsque deux règles contradictoires ont un sélecteur de même priorité, la dernière règle
+		rencontrée remplace les valeurs définies par les règles précédentes.
+	</p>
+	
+	<p>Exemples :</p>
+	<div class="syntaxe"><code>
+	/* Sélecteur sur un identifiant -> priorité = 100 */
+	#edito {color:blue;}
+	
+	/* Sélecteur sur une pseudo-classe -> priorité = 10 */
+	:link {color:inherit;}
+	
+	/* Sélecteur sur un type d'élément -> priorité = 1. */
+	p {font-size:1.1em;}
+	
+	/* Règle comportant la mention !important -> priorité = 10000 */
+	p {color:silver!important}   Priorité = 10000.
+	
+	/* Sélecteur sur un identifiant et un type -> priorité = 101 */
+	#edit img {width:25%;}
+	
+	/* Sélecteur comportant 2 désignations de type -> priorité = 2 */
+	td>img {width:100%;}
+	</code></div>
+	
+	
+	<h2>L'emplacement des styles.</h2>
+	
+	<p>Les choses se compliquent si on considère que :
+	</p>
+	<ul>
+		<li>Plusieurs feuilles de styles peuvent être associées à une même page.
+		</li>
+		<li>Des styles peuvent être écrits dans la page elle-même ou dans l'attribut <code>style</code>
+			des balises HTML.
+		</li>
+		<li>Le navigateur dispose de sa propre feuille de styles, appliquée à toutes les pages
+			qu'il affiche.
+		</li>
+		<li>L'utilisateur (l'internaute) peut lui-même définir ses propres styles.<br/>
+			Pour cette raison nous devrons distinguer les styles de l'utilisateur (l'internaute)
+			et les style de l'auteur (celui qui crée le les pages).
+			<br/>
+			Les styles de l'utilisateur sont peu utilisés et ont tendance à disparaître complètement.
+			Voir le paragraphe sur <a href="#userstyles" title="Les feuilles de styles utilisateur">
+			les feuilles de styles utilisateur</a> plus bas dans cette page.
+		</li>
+	</ul>
+	
+	<p>Cela fait apparaître trois sortes de styles : les styles du navigateur, ceux de l'auteur 
+		(le web designer qui a travaillé sur le site) et ceux de l'utilisateur (l'internaute).
+	</p>
+	<p>Le traitement de toutes ces feuilles de styles est effectué dans l'ordre suivant :
+	</p>
+	<ul>
+		<li>Le navigateur effectue une première résolution des conflits sur sa propre feuille de styles
+			(il ne devrait pas y avoir de conflits ici). 
+			Les valeur obtenues seront utilisées si aucun autre style ne vient les modifier.
+		</li>
+		<li>Dans un deuxième temps, il résout les conflits éventuels entre les sélecteurs de la feuille de 
+			styles de l'utilisateur.
+			Les valeurs obtenues remplacent celles de la feuille de styles du navigateur.
+		</li>
+		<li>Enfin le navigateur résout les conflits des sélecteurs sur la ou les feuilles de styles jointes 
+			à la page et sur les styles décrits dans la page elle-même entre les balises <tag>style</tag>
+			et <tag>/style</tag>).
+			Les valeurs obtenues seront celles qui seront finalement utilisées.
+		</li>
+	</ul>
+
+	<p>Cependant, comme la possibilité laissée à l'utilisateur de définir ses propres styles est en voie
+		de disparition, nous pouvons simplifier tout ça et considérer que :
+	</p>
+
+	<ul>
+		<li>Le navigateur affecte les valeurs définies dans sa propre feuille de styles.
+		</li>
+		<li>Le navigateur résout les conflits de sélecteurs sur les styles de l'auteur et applique
+			les valeurs obtenues à la place de celles de sa propre feuille de styles.
+		</li>
+	</ul>
+	
+
+
+	<p>Qu'en est-il des styles écrits dans la page elle-même, entre des balises <tag>style</tag>
+		et <tag>/style</tag>, en général dans le section <tag>head</tag> ? 
+		Ils sont considérés avec la même priorité que les styles auteur provenant d'une feuille de
+		styles externe.
+		Firefox semble cependant leur donner un petit avantage en les explorant après les styles de la
+		feuilles externe : ils peuvent donc être légèrement prioritaires si toutes les autres règles de
+		priorité sont neutres.
+	</p>
+	
+	<h2>L'inspecteur.</h2>
+	<p>Il existe un outil particulièrement pratique, fourni par la plupart des navigateurs et souvent nommé
+		"l'inspecteur".
+		On l'active en faisant un clic droit sur un des éléments de la page web affichée :<br/>
+		<code>clic droit -> inspecter</code>
+	</p>
+	<p>L'inspecteur présente des quantités d'informations, aussi bien sur le code HTML, que sur 
+		les règles CSS appliquées à l'élément sur lequel on a cliqué.
+		Il montre très bien en particulier la règle qui est active et celles qui ont été annulées
+		à cause d'une priorité inférieure (elles sont rayées).
+	</p>
+	<p class="center">
+		<img src="img/priorities-1.png" alt="L'inspecteur de styles, dans Chrome"/>
+	</p>
+	
+	<h2 id="userstyles">La feuille de styles utilisateur.</h2>
+	
+	<p>La feuille de styles utilisateur permet à l'utilisateur, c'est à dire l'internaute, de définir
+		ses propres styles, qui seront appliqués à toutes les pages affichées.
+	</p>
+	<p>Cette possibilité est peu utilisée et n'est finalement pas très utile car les styles définis
+		par l'utilisateur sont appliqués à toutes les pages, sans qu'il soit possible de faire de différence
+		d'un site à l'autre.
+	</p>
+	<p>Chrome a désactivé cette possibilité. Firefox ne l'active plus par défaut. Il est cependant possible
+		de l'activer en procédant de la façon suivante :
+	</p>
+	<ul>
+		<li>Taper <code>about:config</code> dans la barre d'adresse.
+			Ceci fait apparaître les options de configuration de Firefox.
+		</li>
+		<li>En s'aidant de la zone de recherche, trouvez l'option<br/>
+			<code>toolkit.legacyUserProfileCustomizations.stylesheets</code>.
+		</li>
+		<li>Positionner cette option sur <code>true</code>.
+		</li>
+		<li>Redémarrer Firefox.
+		</li>
+	</ul>
+	
+	<p>Les styles utilisateur doivent être écrits dans un fichier nommé <code>userContent.css</code>
+		et enregistré dans le dossier de profil. 
+		Pour créer ou éditer ce fichier procéder de la façon suivante :
+	</p>
+	<ul>
+		<li>Taper <code>about:support</code> dans la barre d'adresse.
+		</li>
+		<li>Chercher <code>Profile folder</code> et cliquer sur le bouton <code>Open folder</code>.
+			Le dossier de profil s'ouvre dans l'explorateur Windows.
+		</li>
+		<li>Créer si nécessaire un sous-dossier nommé <code>chrome</code> (en minuscules).
+		</li>
+		<li>Créer ou éditer le fichier <code>userContent.css</code> : écrire les styles utilisateur dans
+			ce fichier.
+		</li>
+		<li>Redémarrer Firefox.
+		</li>
+	</ul>
+	
+	<h2>Et les attributs HTML ?</h2>
+	
+	<p>A une époque déjà lointaine, il était courant de définir une mise en forme directement par 
+		des attributs HTML.		
+	</p>
+<div class="syntaxe"><code>	
+<tag>h1</tag><tag>font</tag> color="blue">Titre de la page<tag>/font</tag><tag>h1</tag>
+</code></div>
+
+	<p>Les styles CSS sont TOUJOURS prioritaires sur les attributs HTML. 
+		Ces derniers ne devraient d'ailleurs plus être utilisés puisqu'ils ne sont plus standardisés
+		depuis HTML5.
+	</p>
+
+				
+				
+			</main>
+			<p>&nbsp;</p><div class="adsense-in-article">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-6434138622132038"
+     data-ad-slot="7328470077"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+		</div>
+	</div>
+		<footer id="footer">
+		<a href="../v2-contact.html">Contact</a> &nbsp; &bull; &nbsp; 
+		<a href="../v2-copyright.html">Copyright</a> &nbsp; &bull; &nbsp; 
+		<a href="../v2-privacy.html">Vie privée</a> &nbsp; &bull; &nbsp; 
+<!--		<a href="http://stylescss.free.fr/v2-lexique.php">Lexique</a> &bull; -->
+		Lexique
+	</footer>
+	<div id="privacy" title="Protection de la vie privée">
+		<p class="center">
+		<input type="button" value="Accepter les cookies" onclick="allowCookies()"/>
+		</p>
+	</div>
+</body>
+<!-- Mirrored from stylescss.free.fr/v2-tutoriels/priorities.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Apr 2020 14:58:44 GMT -->
+</html>
