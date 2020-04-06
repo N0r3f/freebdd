@@ -143,7 +143,10 @@
 
 /* icon support */
 .ui-menu-icons {
-	position: relative;
+	display:block;
+	width: 5vw;
+	height: 5vh;
+	position: absolute;
 }
 .ui-menu-icons .ui-menu-item-wrapper {
 	padding-left: 2em;
