@@ -127,6 +127,7 @@ select{vertical-align:middle}
     left: 12px;
 }
 .wincontent {
+	font-size: 0.8em;
     padding: 10px;
     min-width: 200px;
     min-height: 140px;
@@ -252,7 +253,7 @@ div > button:hover {
   90% {margin-left: 2%; width: 102%;}
   95% {margin-left: 1%; width: 101%;}
   100% {margin-left: 0%; width: 100%;}
-}}}}
+}
 
 #templateLink {
     position: absolute;
@@ -269,12 +270,12 @@ div > button:hover {
 #window1 {	top: 1%; left: 60%;}
 #window2 {	top: 250px; left: 300px;}
 #window3 {	top: 325px; left: 520px;}
-#window4 {	top: 125px; left: 420px;}
+#window4 {	top: 25px; left: 120px;}
 #window0 .wincontent {	width: 660px; height: 400px;	}
 #window1 .wincontent {	width: 500px; height: 300px;	}
 #window2 .wincontent {	width: 400px; height: 350px;	}
 #window3 .wincontent {	width: 400px; height: 350px;	}
-#window4 .wincontent {	width: 400px; height: 350px;	}
+#window4 .wincontent {	width: 600px; height: 350px;	}
 @media screen and (max-width:960px){
 	#window0 {	left: 10px;	}
 	#window4 {	left: 50px;	}	
