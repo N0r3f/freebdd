@@ -1,103 +1,117 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-	<meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" href="css/jquery-ui.css">
-	<link rel="canonical" href="" />
-	<script src="js/jquery-1.12.4.js"></script>
-	<script src="js/jquery-ui.js"></script>
-	<script src="js/script.js"></script>	
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
-	<title>Défiweb</title>
-</head>
-<body>
-<div id="desktop">
 
-	
-		<div class="window closed" data-title="HTML5">
-		<h1>HyperText Markup Language</h1>
-		<iframe 
- src="https://jaetheme.com/balises-html5/"
- width="100%" height="750vh"
- ></iframe> 
-		</div>
-		<div class="window closed" data-title="CSS3">
-		<h1>Cascade Style Sheet</h1>
-		<iframe 
- src="html/stylescss/stylescss.free.fr/index.html"
- width="100%" height="750vh"
- ></iframe>
-	</div>
-		<div class="window closed" data-title="Javascript">
-			
-		</div>
-		<div class="window closed" data-title="PHP">
-			
-		</div>
-		<div class="window" id="bienvenue" data-title="Bienvenue!">
-			<h1>Comment nous rejoindre et contribuer?</h1>
-			<p>Installer GIT pour Windows ---------> https://git-scm.com/downloads
-</p><p>Se créer un compte sur GitHub ------> https://github.com/</p>
-			<p>Rendez-vous sur votre boîte mail pour cliquer sur le lien d'invitation</p>
-			<p>Créer un répertoire sur le bureau et nommez-le github</p>
-			<hr />
-			<p><strong>Ouvrez une invite de commande en tapant CMD dans le menu démarrer de windows</strong></p>
-		<p>cd<span>_____________________________________/*se positionner dans un répertoire</span></p>
-		<p>dir<span>_____________________________________/*voir le contenu d'un répertoire</span></p>
-		<p>tree<span>____________________________________/*voir l'arborescence à partir d'un répertoire
-</span></p>
-<p>cd ..<span>_____________________________________/*revenir en arrière</span></p>
-<p>cd /.<span>_____________________________________/*revenir à la racine</span></p>
-<p>copy<span>_____________________________________/*copier un répertoire ou un fichier</span></p>
-<p>copy NOM DU REPERTOIRE/*.*<span>________________/*copier l'intégralité d'un répertoire</span></p>
-<p>robocopy<span>__________________________________/*copier un répertoire et ses fichiers</span></p>
-<p>mkdir<span>_____________________________________/*créer un répertoire</span></p>
-<p>start NOM_DU_PROGRAMME<span>___________________/*permet de démarrer un programme</span></p>
-		<p>cls<span>_________________________________________/*clean le terminal</span></p>
-		</div>
-		
-		<div id="fullscreen"><button id="fullscreen">
- <input type="image" src="img/fullscreen.svg" name="fullscreen" id="fullscreen">
-<script>
- 
-function fullscreen(element) {
-   return (element.requestFullscreen ||
-      element.webkitRequestFullscreen ||
-      element.mozRequestFullScreen ||
-      element.msRequestFullscreen).call(element);
-} 
-  
-var $bouton = document.getElementById('fullscreen')
- 
-$bouton.addEventListener('click', function() {
-   
-   fullscreen(document.body);
-   if (document.fullscreenElement) { 
-    document.exitFullscreen() 
-  } else { 
-    document.documentElement.requestFullscreen() 
-   
-}});
- 
-</script>
-</button></div>
-				
-		<div id="taskbar">		
-		</div>
-		
-		<div id="icons">
-			<a class="openWindow" class="transformation" data-id="0"><img src="img/html5-brands.svg" alt="HTML5" title="HTML5"/></a>
-			<a class="openWindow" data-id="1"><img src="img/css3-alt-brands.svg" alt="CSS3" title="CSS3"/></a>
-			<a class="openWindow" data-id="2"><img src="img/js-square-brands.svg" alt="Javascript" title="Javascript"/></a>
-			<a class="openWindow" data-id="3"><img src="img/php-brands.svg" alt="PHP" title="PHP"/></a>
-			<a class="openWindow" data-id="4"><img src="img/home-solid.svg" alt="HOME" title="HOME"/></a>
-		</div>	
-	</div>
-	
-	
- 		
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="canonical" href="" />
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>FreeBDD</title>
+</head>
+
+<body>
+    <div id="desktop">
+
+
+        <div class="window closed" data-title="HTML5">
+            <h1>HyperText Markup Language</h1>
+            <iframe src="https://jaetheme.com/balises-html5/" width="100%" height="750vh"></iframe>
+        </div>
+        <div class="window closed" data-title="CSS3">
+            <h1>Cascade Style Sheet</h1>
+            <iframe src="html/stylescss/stylescss.free.fr/index.html" width="100%" height="750vh"></iframe>
+        </div>
+        <div class="window closed" data-title="Javascript">
+
+        </div>
+        <div class="window closed" data-title="PHP">
+
+        </div>
+        <div class="window" id="bienvenue" data-title="Bienvenue!">
+            <h1>Comment nous rejoindre et contribuer?</h1>
+            <p>Installer GIT pour Windows ---------> https://git-scm.com/downloads</p>
+            <p>Se créer un compte sur GitHub ------> https://github.com/</p>
+            <p>Rendez-vous sur votre boîte mail pour cliquer sur le lien d'invitation</p>
+            <p>Créer un répertoire sur le bureau et nommez-le github</p>
+            <hr />
+            <p><strong>Ouvrez une invite de commande en tapant CMD dans le menu démarrer de windows</strong></p>
+            <p>git --version<span>_________/*Si cette commande retourne le numéro de version, Git est bien
+					installé</span></p>
+            <p>git clone URL<span>_________/*Remplacer URL par le lien du repository github</span></p>
+            <p>git add --all<span>_________/*Permet de charger les fichiers après modification</span></p>
+            <p>git commit -m "Initial commit"<span>_________/*Permet d'identifier les modifications</span></p>
+            <p>git push -u origin master<span>_________/*Propulse les fichiers modifiés sur le repository</span></p>
+            <span><a href="https://git-scm.com/book/fr/v2/D%C3%A9marrage-rapide-Installation-de-Git">Aller plus loin
+					grâce au git book</a>&nbsp;&nbsp;
+				<a href="https://github.com/N0r3f/freebdd">Notre dépôt</a></span>
+            <hr>
+            <p><strong>Les principales commandes utiles sous windows</strong></p>
+            <p>cd<span>_____________________________________/*se positionner dans un répertoire</span></p>
+            <p>dir<span>_____________________________________/*voir le contenu d'un répertoire</span></p>
+            <p>tree<span>____________________________________/*voir l'arborescence à partir d'un répertoire</span></p>
+            <p>cd ..<span>_____________________________________/*revenir en arrière</span></p>
+            <p>cd /.<span>_____________________________________/*revenir à la racine</span></p>
+            <p>copy<span>_____________________________________/*copier un répertoire ou un fichier</span></p>
+            <p>copy NOM DU REPERTOIRE/*.*<span>________________/*copier l'intégralité d'un répertoire</span></p>
+            <p>robocopy<span>__________________________________/*copier un répertoire et ses fichiers</span></p>
+            <p>mkdir<span>_____________________________________/*créer un répertoire</span></p>
+            <p>start NOM_DU_PROGRAMME<span>___________________/*permet de démarrer un programme</span></p>
+            <p>cls<span>_________________________________________/*clean le terminal</span></p>
+            <p>del<span>__________________________________________/*permet de supprimer un fichier</span></p>
+            <p>rd ou rmdir<span>____________________________________/*permet de supprimer un dossier</span></p>
+            <p>takeown<span>_______________________________________/*permet de devenir propriétaire des fichiers</span>
+            </p>
+            <p>icalcs<span>_________________________________________/*permet de redéfinir les permissions de fichiers,
+					vous devez être
+					propriétaire des fichiers pour cela.</span></p>
+        </div>
+
+        <div id="fullscreen"><button id="fullscreen">
+				<input type="image" src="img/fullscreen.svg" name="fullscreen" id="fullscreen">
+				<script>
+
+					function fullscreen(element) {
+						return (element.requestFullscreen ||
+							element.webkitRequestFullscreen ||
+							element.mozRequestFullScreen ||
+							element.msRequestFullscreen).call(element);
+					}
+
+					var $bouton = document.getElementById('fullscreen')
+
+					$bouton.addEventListener('click', function () {
+
+						fullscreen(document.body);
+						if (document.fullscreenElement) {
+							document.exitFullscreen()
+						} else {
+							document.documentElement.requestFullscreen()
+
+						}
+					});
+
+				</script>
+			</button></div>
+
+        <div id="taskbar">
+        </div>
+
+        <div id="icons">
+            <a class="openWindow" class="transformation" data-id="0"><img src="img/html5-brands.svg" alt="HTML5" title="HTML5" /></a>
+            <a class="openWindow" data-id="1"><img src="img/css3-alt-brands.svg" alt="CSS3" title="CSS3" /></a>
+            <a class="openWindow" data-id="2"><img src="img/js-square-brands.svg" alt="Javascript" title="Javascript" /></a>
+            <a class="openWindow" data-id="3"><img src="img/php-brands.svg" alt="PHP" title="PHP" /></a>
+            <a class="openWindow" data-id="4"><img src="img/home-solid.svg" alt="HOME" title="HOME" /></a>
+        </div>
+    </div>
+
+
+
 </body>
 
 </html>
