@@ -182,6 +182,9 @@ div a img {
 /* fin de l'ajout seb */
 
 #desktop {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
     position: fixed;
     height: 100%;
@@ -197,9 +200,11 @@ div a img {
 .window {
     display: flex;
     flex-direction: column;
-    flex-wrap: no-wrap;
+    flex-wrap: wrap;
     position: absolute;
     overflow: scroll;
+    scrollbar-color: grey darkgrey;
+    scrollbar-width: thin;
     border: 2px solid #333;
     background: #EEE;
     border-radius: 0;
@@ -234,40 +239,48 @@ div a img {
 }
 
 .windowHeader {
+    cursor: move;
+    display: block;
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-bottom: 3px solid #008cd2;
     background-color: #131d22;
     text-align: right;
-    border-bottom: 3px solid #008cd2;
     padding: 2px;
-    cursor: move;
     height: 28px;
+    opacity: 100%;
 }
 
 .activeWindow .windowHeader {
+    display: block;
     background-color: #33afff;
+    width: 100%;
+    height: 5%;
     opacity: 100%;
 }
 
 .windowHeader>span {
     display: inline-block;
+    position: relative;
     cursor: pointer;
     border: 2px solid #131d22;
+    border-radius: 5px;
     margin-left: 4px;
     font-size: 19px;
     padding: 2px 10px;
     font-family: "Arial Black", Gadget, sans-serif;
-    border-radius: 5px;
     line-height: 20px;
     width: 12px;
     height: 20px;
-    position: relative;
     overflow: hidden;
-    opacity: 100%;
     color: #008cd2;
 }
 
 .windowHeader>span:hover {
     background: rgba(255, 255, 255, 0.3);
-    opacity: 100%;
 }
 
 .windowHeader>span.winclose:hover {
@@ -281,7 +294,6 @@ div a img {
     position: absolute;
     top: 6px;
     left: 10px;
-    opacity: 100%;
 }
 
 .winminimize>span {
@@ -323,6 +335,12 @@ div a img {
     margin: 0px 3px 0 10px;
     line-height: 29px;
     font-size: 17px;
+}
+
+iframe {
+    display: block;
+    align-self: center;
+    z-index: 5000;
 }
 
 
@@ -401,8 +419,8 @@ div>button:hover {
     display: block;
     position: absolute;
     z-index: 10;
-    height: 5vh;
-    width: 5vw;
+    height: 8vh;
+    width: 8vw;
     top: 0;
     left: 0;
     bottom: 0px;
@@ -417,6 +435,14 @@ div>button:hover {
     cursor: pointer;
     opacity: 50%;
     padding: 2px;
+}
+
+#icons a img {
+    display: block;
+    position: relative;
+    padding: 5%;
+    width: 100%;
+    height: 100%;
 }
 
 #icons a:hover {
